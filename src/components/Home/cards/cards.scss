@@ -301,16 +301,16 @@ $font-xSmall: 12px;
     background-color: bisque;
     box-shadow: 1px 1px 0px 0px black;
     margin-left: auto;
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     // padding: 1px;
     @media screen and (min-width:1101px) {
         display: none;
     }
 
     @media screen and (max-width: 699px) {
-        width: 16px;
-        height: 16px;
+        width: 18px;
+        height: 18px;
     }
 }
 .flip-back:active{
