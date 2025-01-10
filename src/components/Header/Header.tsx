@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Header.scss';
-import logo from '../../assets/header/Frame 9.png';
+import logo from '@assets/header/Frame 9.png';
 import ContactUs from '../get-in-touch-button/ContactUs';
 
 const Header: React.FC = () => {
