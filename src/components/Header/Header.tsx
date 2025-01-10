@@ -93,7 +93,9 @@ const Header: React.FC = () => {
           </div>
         </div>
           <nav className={`nav-list ${isMenuOpen ? 'open' : ''}`}>
-          <ul className="mob-list">
+          <ul className="mob-list"
+            onClick={toggleMenu}
+          >
             <li>
               <NavLink
                 to="/"
