@@ -105,6 +105,7 @@ $font-xSmall: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 888;
   @media screen and (min-width: 1100px) {
     display:none;
   }
@@ -115,6 +116,7 @@ $font-xSmall: 12px;
   top:0;
   z-index: 1000;
   width: 100%;
+  z-index: 888;
   @media screen and (min-width: 1100px) {
     display:none;
   }
@@ -137,6 +139,7 @@ $font-xSmall: 12px;
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out 0.1s, box-shadow 1s ease-in-out, opacity 1s;
   opacity: 0;
+  z-index: 888;
   // display: none;
 }
 .nav-list.open ul{
