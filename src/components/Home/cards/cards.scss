@@ -121,19 +121,7 @@ $font-xSmall: 12px;
     transform: rotateY(180deg);
 }
 
-.card-wrapper .card:hover{
-    transform: rotateY(-180deg);
-}
 
-/* Reduce box shadow during the flip */
-.card-wrapper:hover {
-    transition: box-shadow 0.3s ;
-    animation: restoreShadow 0.6s forwards;
-  }
-.card-wrapper:not(:hover) {
-    transition: box-shadow 0.3s ;
-    animation: unHoverShadow 0.6s forwards;
-  }
   
   /* Restore box shadow after the flip is complete */
 //   .card-wrapper:hover .card {
@@ -142,6 +130,20 @@ $font-xSmall: 12px;
   
   /* Keyframe to restore shadow after flip */
  @media  screen and (min-width:1101px) { 
+
+    .card-wrapper .card:hover{
+        transform: rotateY(-180deg);
+    }
+    
+    /* Reduce box shadow during the flip */
+    .card-wrapper:hover {
+        transition: box-shadow 0.3s ;
+        animation: restoreShadow 0.6s forwards;
+      }
+    .card-wrapper:not(:hover) {
+        transition: box-shadow 0.3s ;
+        animation: unHoverShadow 0.6s forwards;
+      }
 
     .card-wrapper .card:hover{
         transform: rotateY(-180deg);
