@@ -1,0 +1,65 @@
+@import url('../src/styles/fonts.scss');
+
+
+:root {
+  --font-xSmall: 12px;
+  --font-small: 20px;
+  --font-medium: 24px;
+  --font-large: 60px;
+  --font-xlarge: 80px;
+}
+
+@media screen and (max-width: 1600px) {
+  :root {
+    --font-xSmall: 12px;
+    --font-small: 20px;
+    --font-medium: 24px;
+    --font-large: 48px;
+    --font-xlarge: 52px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  :root {
+    --font-xSmall: 12px;
+    --font-small: 16px;
+    --font-medium: 20px;
+    --font-large: 35px;
+    --font-xlarge: 40px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  :root {
+    --font-xSmall: 12px;
+    --font-small: 12px;
+    --font-medium: 12px;
+    --font-large: 24px;
+    --font-xlarge: 24px;
+  }
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Clash Display';
+  -webkit-tap-highlight-color: transparent; 
+}
+
+a {
+  color: inherit; /* Inherits the text color from the parent element */
+  text-decoration: none; /* Removes the underline */
+}
+
+.main{
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  // padding: 0px 60px;
+  position: relative;
+  background-color: #FFF9E3;
+  overflow-x: clip;
+}
