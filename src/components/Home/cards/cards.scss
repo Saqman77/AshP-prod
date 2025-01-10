@@ -41,6 +41,15 @@ $font-xSmall: 12px;
     
 }
 
+.card-wrapper.restore-shadow{
+    transition: box-shadow 0.3s ;
+    animation: restoreShadow 0.6s forwards;
+}
+.card-wrapper.unhover-shadow{
+    transition: box-shadow 0.3s ;
+    animation: unHoverShadow 0.6s forwards;
+}
+
 @media screen and (max-width: 1250px) {
     .card-wrapper{
         max-width: 300px;
