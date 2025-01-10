@@ -1,9 +1,9 @@
 import './Home.scss'
-import arrow from '@assets/home/Frame 42.svg'
-import reading from '@assets/home/muslim woman writing something in a notebook 1.png'
-import Cards from '@components/Home/cards/Cards'
-import { cardContent } from '@components/Home/cards/cardContent'
-import ContactUs from '@components/get-in-touch-button/ContactUs'
+import arrow from '/src/assets/home/Frame 42.svg'
+import reading from '/src/assets/home/muslim woman writing something in a notebook 1.png'
+import Cards from '../../components/Home/cards/Cards'
+import { cardContent } from '../../components/Home/cards/cardContent'
+import ContactUs from '../../components/get-in-touch-button/ContactUs'
 import {  useRef } from 'react'
 
 const Home = () => {
