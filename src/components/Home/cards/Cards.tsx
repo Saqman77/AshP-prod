@@ -51,7 +51,7 @@ const Cards = ({ id, head, backGround, cardImg, desc }: Props) => {
           <div className="flip-button" onClick={handleFlip}>
             <p className="flip-text"> Flip to learn more</p>
             <div className="flip-img">
-              <img src={flip} alt="flip-img" />
+              <img src={flip} alt="flip-img" className='flip-icon'/>
             </div>
           </div>
         </div>
@@ -64,7 +64,7 @@ const Cards = ({ id, head, backGround, cardImg, desc }: Props) => {
           <div className="card-heading-back">
             <p className="heading-back">{head}</p>
             <div className="flip-back" onClick={handleFlip}>
-              <img src={flip} alt="flip-img" />
+              <img src={flip} alt="flip-img" className='flip-icon' />
             </div>
           </div>
           <div className="card-img">

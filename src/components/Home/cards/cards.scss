@@ -38,13 +38,6 @@ $font-xSmall: 12px;
     cursor: pointer;
     // margin-left: 60px;
     // justify-content: space-around;
-     &.restore-shadow {
-    animation: restoreShadow 0.6s forwards;
-  }
-
-  &.unhover-shadow {
-    animation: unHoverShadow 0.6s forwards;
-  }
     
 }
 
@@ -128,7 +121,19 @@ $font-xSmall: 12px;
     transform: rotateY(180deg);
 }
 
+.card-wrapper .card:hover{
+    transform: rotateY(-180deg);
+}
 
+/* Reduce box shadow during the flip */
+.card-wrapper:hover {
+    transition: box-shadow 0.3s ;
+    animation: restoreShadow 0.6s forwards;
+  }
+.card-wrapper:not(:hover) {
+    transition: box-shadow 0.3s ;
+    animation: unHoverShadow 0.6s forwards;
+  }
   
   /* Restore box shadow after the flip is complete */
 //   .card-wrapper:hover .card {
@@ -234,7 +239,11 @@ $font-xSmall: 12px;
 }
 
 .card-img{
-    width: 100%;
+    width: 200px;
+    margin: 0 auto;
+    @media  screen and (max-width:699px) {
+        width: 150px
+    }
 }
 
 .cardImg{
@@ -269,6 +278,12 @@ $font-xSmall: 12px;
     height: min-content;
     display: flex;
     align-items: center;
+    width: 20px;
+    height: 20px;
+}
+
+.flip-icon{
+    width: 100%;
 }
 
 @media screen and (max-width: 1100px) {
@@ -286,9 +301,16 @@ $font-xSmall: 12px;
     background-color: bisque;
     box-shadow: 1px 1px 0px 0px black;
     margin-left: auto;
+    width: 16px;
+    height: 16px;
     // padding: 1px;
     @media screen and (min-width:1101px) {
         display: none;
+    }
+
+    @media screen and (max-width: 699px) {
+        width: 12px;
+        height: 12px;
     }
 }
 .flip-back:active{
