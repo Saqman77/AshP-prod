@@ -8,9 +8,10 @@ type Props = {
   backGround: string | number | undefined;
   cardImg: string;
   desc: string;
+  isDragging: boolean;
 };
 
-const Cards = ({ id, head, backGround, cardImg, desc }: Props) => {
+const Cards = ({ id, head, backGround, cardImg, desc, isDragging }: Props) => {
   const [rotate, setRotate] = useState(false);
   const [animationClass, setAnimationClass] = useState('');
 
@@ -28,7 +29,7 @@ const Cards = ({ id, head, backGround, cardImg, desc }: Props) => {
   };
 
   return (
-    <div className={`card-wrapper ${animationClass}`} id={id}>
+    <div className={`card-wrapper ${animationClass} ${isDragging ? 'no-hover' : ''}`} id={id}>
       <div
         className="card"
         style={ window.innerWidth < 1100 

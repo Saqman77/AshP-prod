@@ -6,10 +6,10 @@
   --font-small: 20px;
   --font-medium: 24px;
   --font-large: 60px;
-  --font-xlarge: 80px;
+  --font-xlarge: clamp(40px, 4.1vw, 100px);
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1250px) {
   :root {
     --font-xSmall: 12px;
     --font-small: 20px;
@@ -25,17 +25,17 @@
     --font-small: 16px;
     --font-medium: 20px;
     --font-large: 35px;
-    --font-xlarge: 40px;
+    --font-xlarge: clamp(24px, 6.4vw, 40px);
   }
 }
 
 @media screen and (max-width: 900px) {
   :root {
     --font-xSmall: 12px;
-    --font-small: 12px;
+    --font-small: 14px;
     --font-medium: 12px;
     --font-large: 24px;
-    --font-xlarge: 24px;
+    --font-xlarge: clamp(24px, 6vw, 40px);
   }
 }
 
@@ -62,4 +62,5 @@ a {
   position: relative;
   background-color: #FFF9E3;
   overflow-x: clip;
+  justify-content: space-between;
 }
