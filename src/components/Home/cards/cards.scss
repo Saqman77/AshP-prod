@@ -21,7 +21,17 @@ $font-xSmall: 12px;
     $font-xlarge: 24px;
   }
 
+//   @keyframes appear {
+//     from{
+//         scale: 0.5;
+//         opacity:0;
+//     }
 
+//     to{
+//         scale: 1;
+//         opacity: 1;
+//     }
+// }
 
 
 .card-wrapper{
@@ -32,14 +42,20 @@ $font-xSmall: 12px;
     flex: 1;
     max-width: 320px;
     width: 100%;
-    scroll-snap-align: start;
+    scroll-snap-align: none start;
+    scroll-snap-stop: normal;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
+    // animation: appear linear;
+    // animation-timeline: view();
+    // animation-range: entry 0% cover 40%;
     // cursor: pointer;
     // margin-left: 60px;
     // justify-content: space-around;
     
 }
+
+
 
 .card-wrapper.no-hover{
 
@@ -50,11 +66,11 @@ $font-xSmall: 12px;
 
 .card-wrapper.restore-shadow{
     transition: box-shadow 0.3s ;
-    animation: restoreShadow 0.6s forwards;
+    animation: restoreShadow 0.6s forwards ease-in 0.2s;
 }
 .card-wrapper.unhover-shadow{
     transition: box-shadow 0.3s ;
-    animation: unHoverShadow 0.6s forwards;
+    animation: unHoverShadow 0.6s forwards ease-in 0.2s;
 }
 
 @media screen and (max-width: 1250px) {
