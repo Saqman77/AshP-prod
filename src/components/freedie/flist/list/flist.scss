@@ -11,18 +11,18 @@
 }
 
 .profile{
-    width: 5%;
+    width: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
     @media screen and (max-width: 1100px) {
-        width:10%;
+        width:15%;
     }
     @media screen and (max-width: 600px) {
-        width:12%;
+        width:20%;
     }
     @media screen and (max-width: 400px) {
-        width:15%;
+        width:20%;
     }
     
 }
@@ -155,9 +155,9 @@
 }
 
 .l-container:hover .prof-container{
-    background: linear-gradient(180deg, #ffffff, #ffffff);
+    background: linear-gradient(90deg, #D54974 40%, #9C98BD 80%);
     border-radius: 36% 64% 44% 56% / 55% 71% 29% 45% ;
-    box-shadow: 1px 3px 4px 5px #0000003b;
+    box-shadow: 20px 2px 20px 0px #9c98bd, -7px 1px 20px 0px #d54973;
     // padding: 4px;
 }
 
