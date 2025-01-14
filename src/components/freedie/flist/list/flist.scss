@@ -6,7 +6,8 @@
     border-bottom: 1px solid black;
     border-top: 1px solid black;
     background-color: #D54974;
-    transition: all 0.5s ease;
+    transition: background 0.1s ;
+    transition-delay: 0s;
     align-items: center;
     flex: 1;
 }
@@ -40,7 +41,8 @@
     border-radius: 82% 18% 57% 43% / 31% 63% 37% 69% ;
     box-shadow: 1px 0px 4px 1px #0000007a;
     padding: 2px;
-    transition: all 0.5s ease;
+    transition: background 0.5s , border-radius 0.5s ease, ;
+    transition-delay: 0.5s, 0.2s, ;
     // border: 4px solid transparent; /* Create space for the border */
     background: linear-gradient(45deg, #D54974, #eee38e6c); /* Gradient definition */
     background-clip: padding-box; /* Clip the background to the padding box */
@@ -50,7 +52,8 @@
 .prof-img{
     width: 100%;
     display: block;
-    transition: all 0.5s ease;
+    transition: border-radius 0.5s ease;
+    transition-delay: 0.2s;
     border-radius: 82% 18% 57% 43% / 31% 63% 37% 69% ;
     
 }
@@ -140,21 +143,27 @@
     color:#d5497323;
     background-image: linear-gradient(90deg, #eee38e00, #eee38e00);
     animation: scroll-list 4s forwards;
+    animation-delay: .5s;
     @media screen and (max-width: 1100px) {
         animation: scroll-list 2s forwards;
+        animation-delay: .6s;
     }
     @media screen and (max-width: 600px) {
         animation: scroll-list 1.5s forwards;
+        animation-delay: .1s;
     }
 }
 .l-container:hover .role{
-    color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.13);
     animation: scroll-role 3s forwards;
+    animation-delay: 1s;
     @media screen and (max-width: 1100px) {
         animation: scroll-role 1.5s forwards;
+        animation-delay: .5s;
     }
     @media screen and (max-width: 600px) {
-        animation: scroll-role 1s forwards;
+        animation: scroll-role 2s forwards;
+        animation-delay: .5s;
     }
 }
 .l-container:hover .prof-img{
@@ -164,9 +173,9 @@
 .l-container:hover .prof-container{
     background: linear-gradient(90deg, #D54974 40%, #9C98BD 80%);
     border-radius: 36% 64% 44% 56% / 55% 71% 29% 45% ;
-    box-shadow: 20px 2px 20px 0px #9c98bd, -7px 1px 20px 0px #d54973;
+    // box-shadow: 20px 2px 20px 0px #9c98bd, -7px 1px 20px 0px #d54973;
      @media screen and (max-width: 1100px) {
-        box-shadow: 6px 2px 20px 0px #9c98bd, -7px 1px 20px 0px #d54973;
+        // box-shadow: 6px 2px 20px 0px #9c98bd, -7px 1px 20px 0px #d54973;
      }
     // padding: 4px;
 }
@@ -180,8 +189,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.5s ease-in 0.2ms;
-    
+    // transition: all 0.5s ease-in 0.2ms;
+    transition-delay: 1.5s;
     margin-left: 10px;
     margin-right: 10px;
     @media screen and (max-width: 1100px) {
@@ -200,9 +209,10 @@
     height: 100%;
     // object-fit: cover;
     display: block;
-    transition: all 0.5s ease;
+    transition: background-color 0.5s ,transform 0.5s ease,box-shadow 0.5s ;
+    transition-delay: 0.2s, 1s, 1s;
     border-radius: 50%;
-    background-color: #D54974;
+    background-color: #d5497300;
 }
 .l-container:hover .f-button img{
 //  opacity: 1;
