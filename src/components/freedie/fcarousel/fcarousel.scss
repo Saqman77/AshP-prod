@@ -12,6 +12,7 @@
     top:0;
     left:0;
     max-height: 100vh;
+    max-height: 100svh;
     animation: open 0.5s linear forwards;
     @media screen and (max-width:1200px) {
         background: linear-gradient(to top, rgb(0 0 0 / 96%), rgb(0, 0, 0));
@@ -101,6 +102,9 @@
 .close:hover{
     opacity: 1;
 }
+.close:active{
+    opacity: 1;
+}
 
 .pagers{
     display: flex;
@@ -134,11 +138,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-weight: 500;
     @media screen and (max-width:900px) {
         font-size: var(--font-large);
     }
     @media screen and (max-width:400px) {
-        font-size: var(--font-medium);
+        font-size: var(--font-xlarge);
     }
 }
 @media screen and (min-width: 1100px) {
