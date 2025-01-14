@@ -155,9 +155,9 @@ const FCarousel: React.FC<CarouselProps> = ({ startIndex, isVisible, onClose }) 
                         : "No name available"}
                   </p>
                   <img src={freedie.length > 0 && currentIndex > 0
-                      ? freedie[currentIndex - 1].name
+                      ? freedie[currentIndex - 1].imgSrc
                       : freedie.length > 0
-                      ? freedie[0].imgSrc
+                      ? freedie[1].imgSrc
                       : "No img available"} alt="prev-prof" />
                 </div>
               </div>
