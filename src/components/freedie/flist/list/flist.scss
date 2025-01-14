@@ -143,6 +143,12 @@
 .l-container:hover .role{
     color: rgba(0, 0, 0, 0);
     animation: scroll-role 3s forwards;
+    @media screen and (max-width: 1100px) {
+        animation: scroll-role 1.5s forwards;
+    }
+    @media screen and (max-width: 600px) {
+        animation: scroll-role 1s forwards;
+    }
 }
 .l-container:hover .prof-img{
     border-radius: 36% 64% 44% 56% / 55% 71% 29% 45% ;
