@@ -133,6 +133,12 @@
     color:#d5497323;
     background-image: linear-gradient(90deg, #eee38e00, #eee38e00);
     animation: scroll-list 4s forwards;
+    @media screen and (max-width: 1100px) {
+        animation: scroll-list 2s forwards;
+    }
+    @media screen and (max-width: 600px) {
+        animation: scroll-list 1.5s forwards;
+    }
 }
 .l-container:hover .role{
     color: rgba(0, 0, 0, 0);
