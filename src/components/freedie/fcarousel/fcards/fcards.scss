@@ -136,6 +136,10 @@ display: flex;
     height:100%;
     font-size: var(--font-xsmall);
     font-weight: 500;
+    @media screen and (max-width:600px){
+        font-weight: 400;
+        height: min-content;
+    }
     // margin-bottom: auto;
 }
 
