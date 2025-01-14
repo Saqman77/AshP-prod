@@ -5,7 +5,7 @@
     padding: 10px;
     border-bottom: 1px solid black;
     border-top: 1px solid black;
-    background-color: #D54974;
+    background-color: #ff737f;
     transition: background 0.1s ;
     transition-delay: 0s;
     align-items: center;
@@ -39,7 +39,7 @@
     width:100%;
     // height: 100%;
     border-radius: 82% 18% 57% 43% / 31% 63% 37% 69% ;
-    box-shadow: 1px 0px 4px 1px #0000007a;
+    box-shadow: 1px 0px 4px 1px #00000038;
     padding: 2px;
     transition: background 0.5s , border-radius 0.5s ease, ;
     transition-delay: 0.5s, 0.2s, ;
@@ -143,26 +143,26 @@
     color:#d5497323;
     background-image: linear-gradient(90deg, #eee38e00, #eee38e00);
     animation: scroll-list 4s forwards;
-    animation-delay: .5s;
+    animation-delay: .1s;
     @media screen and (max-width: 1100px) {
-        animation: scroll-list 2s forwards;
+        animation: scroll-list 1s forwards;
         animation-delay: .6s;
     }
     @media screen and (max-width: 600px) {
-        animation: scroll-list 1.5s forwards;
+        animation: scroll-list .5s forwards;
         animation-delay: .1s;
     }
 }
 .l-container:hover .role{
     color: rgba(0, 0, 0, 0.13);
     animation: scroll-role 3s forwards;
-    animation-delay: 1s;
+    animation-delay: .5s;
     @media screen and (max-width: 1100px) {
-        animation: scroll-role 1.5s forwards;
+        animation: scroll-role 1s forwards;
         animation-delay: .5s;
     }
     @media screen and (max-width: 600px) {
-        animation: scroll-role 2s forwards;
+        animation: scroll-role 1s forwards;
         animation-delay: .5s;
     }
 }
@@ -209,8 +209,8 @@
     height: 100%;
     // object-fit: cover;
     display: block;
-    transition: background-color 0.5s ,transform 0.5s ease,box-shadow 0.5s ;
-    transition-delay: 0.2s, 1s, 1s;
+    transition: background-color 0.5s ,transform 0.5s ease;
+    transition-delay: 0.2s, .5s;
     border-radius: 50%;
     background-color: #d5497300;
 }
@@ -218,5 +218,5 @@
 //  opacity: 1;
  background-color: #9c98bd;
  transform: rotate(360deg);
- box-shadow: 0px 0px 6px 2px #d549738f;
+//  box-shadow: 0px 0px 6px 2px #d549738f;
 }
