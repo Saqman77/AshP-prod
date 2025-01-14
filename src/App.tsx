@@ -5,11 +5,11 @@ import Contact from './pages/Contact/Contact';
 import Freedie from './pages/Freedie/Freedie';
 import Home from './pages/Home/Home';
 import Portfolio from './pages/Portfolio/Portfolio';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
-    <Router>
+    <HashRouter>
       <div className="main">
         <Header />
         <Routes>
@@ -20,7 +20,7 @@ const App = () => {
         </Routes>
         <Footer />
       </div>
-    </Router>
+    </HashRouter>
   );
 };
 
