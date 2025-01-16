@@ -8,6 +8,7 @@ import TREE from '../../../../assets/freedi/linktree-logo-icon.svg'
 import YT from '../../../../assets/freedi/youtube.png'
 import SC from '../../../../assets/freedi/soundcloud.svg'
 import BANDC from '../../../../assets/freedi/bandcamp.png'
+import GIT from '../../../../assets/freedi/github.png'
 import { useEffect, useRef } from 'react'
 
 interface FCardsProps {
@@ -108,7 +109,7 @@ const FCards: React.FC<FCardsProps> = (
                 {yt === ''? (<></>) : (<a href={yt} className='f-social'><img src={YT} alt="social-icon" /></a>) }
                 {sc === ''? (<></>) : (<a href={sc} className='f-social'><img src={SC} alt="social-icon" /></a>) }
                 {bandC === ''? (<></>) : (<a href={bandC} className='f-social'><img src={BANDC} alt="social-icon" /></a>) }
-                {git === ''? (<></>) : (<a href={git} className='f-social'><img src={BANDC} alt="social-icon" /></a>) }
+                {git === ''? (<></>) : (<a href={git} className='f-social'><img src={GIT} alt="social-icon" /></a>) }
               </div>
         </div>
        </div>
