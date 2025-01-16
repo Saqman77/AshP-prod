@@ -4,8 +4,8 @@
 :root {
   --font-xSmall: 12px;
   --font-small: 20px;
-  --font-medium: 24px;
-  --font-large: 60px;
+  --font-medium: clamp(20px, 1.6vw, 30px);
+  --font-large: clamp(30px, 3vw, 60px);
   --font-xlarge: clamp(40px, 4.1vw, 80px);
 }
 
@@ -31,9 +31,9 @@
 
 @media screen and (max-width: 900px) {
   :root {
-    --font-xSmall: 12px;
-    --font-small: 10px;
-    --font-medium: 12px;
+    --font-xSmall: 10px;
+    --font-small: 12px;
+    --font-medium: 16px;
     --font-large: clamp(18px, 3vw, 24px);
     --font-xlarge: clamp(20px, 5vw, 40px);
   }
