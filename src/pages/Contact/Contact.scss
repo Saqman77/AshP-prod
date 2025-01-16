@@ -1,3 +1,6 @@
+
+
+
 .c-wrapper{
     
     width: 100%;
@@ -44,11 +47,15 @@
 
 .c-desc{
     font-size: var(--font-medium);
-    font-weight: 500;
-    color: rgb(0, 0, 0);
+    font-weight: 600;
+    color:#D54974;
     margin-top: 24px;
-    text-align: right;
+    text-align: center;
     margin-bottom: 124px;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    background: linear-gradient(to top, #EEE38E 40%, #e74d3c00 40%);
     @media screen and (max-width: 900px) {
         flex-wrap: wrap;
         font-size: var(--font-medium);
@@ -67,10 +74,9 @@
 }
 
 .contact{
-    color:#D54974;
+    color:#000000;
     font-weight: 600;
     font-size: var(--font-large);
-    background: linear-gradient(to top, #EEE38E 40%, #e74d3c00 40%);
     width: min-content;
     text-wrap: nowrap;
     text-align: center;

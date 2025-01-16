@@ -15,12 +15,12 @@ const Contact = () => {
         </div>
         <div className="c-right">
           <p className="c-desc">
-            We are always read to help you and answer your questions!
+            We are always ready to help you and answer your questions!
           </p>
         </div>
       </div>
       <div className="c-bottom">
-        <p className='contact c-colour'>
+        <p className='contact '>
           Contact:
         </p>
         <div className='contact-info'>
