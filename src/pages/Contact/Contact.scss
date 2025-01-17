@@ -82,6 +82,30 @@
     }
 }
 
+@media screen and (max-width: 900px) {
+    @keyframes mail {
+        to{
+            transform: rotate(45deg) translate3d(0px, 500%, 0px);
+            scale: 0.7;
+            opacity: 0.5;
+        }
+    }
+    @keyframes mail2 {
+        to{
+            transform: rotate(45deg) translate3d(-300px, 500%, 0px);
+            scale: 1;
+            opacity: 1;
+        }
+    }
+    @keyframes mail3 {
+        to{
+            transform: rotate(45deg) translate3d(-200px, 500%, 0px);
+            scale: 0.5;
+            opacity: 0;
+        }
+    }
+}
+
 .top-bg{
     grid-area: 1/1;
     position: relative;
