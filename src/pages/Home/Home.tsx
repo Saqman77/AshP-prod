@@ -5,6 +5,7 @@ import Cards from '../../components/Home/cards/Cards'
 import { cardContent } from '../../components/Home/cards/cardContent'
 import ContactUs from '../../components/get-in-touch-button/ContactUs'
 import { useEffect, useRef, useState } from 'react'
+import Schedule from '../../components/schedule/Schedule'
 // import { useThemeContext } from '../../utils/ThemeContextProvider'
 
 const Home = () => {
@@ -88,18 +89,12 @@ const Home = () => {
         <div className="left-content">
           <div className="main-heading">
             <p className="heading-text">
-              Shaping your stories into <br />
-              <span className="strong"> great writing,</span>
-              &nbsp;one <span className="color-text"> edit</span>
-              &nbsp;at a<br />
-              time..
-            </p>
+              Shaping your stories into 
+              <span className="strong"> great writing,</span> one<span className="color-text"> edit</span> at atime..</p>
           </div>
 
           <div className="left-desc">
-            Start your journey with a complimentary 30-minute consultation call,
-            <br />
-            a manuscript assessment, and a free sample edit of your chosen text.
+            Start your journey with a complimentary 30-minute consultation call, a manuscript assessment, and a free sample edit of your chosen text.
           </div>
           <div className="button-wrapper">
             <div className="arrow">
@@ -114,6 +109,7 @@ const Home = () => {
 
               <div className="button-container">
                 <ContactUs />
+                <Schedule/>
               </div>
             </div>
           </div>

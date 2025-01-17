@@ -49,7 +49,7 @@ const Header: React.FC = () => {
       >
         <div className="nav-wrapper">
           <NavLink to="/" className="logo">
-            <img src={logo} alt="Logo" className="header-logo" onClick={toggleMenu}/>
+            <img src={logo} alt="Logo" className="header-logo" onClick={closeMenu}/>
           </NavLink>
           <nav className="nav">
             <ul>
