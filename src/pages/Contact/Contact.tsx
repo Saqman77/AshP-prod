@@ -3,7 +3,7 @@ import FB from '../../assets/freedi/Facebook.png'
 import INSTA from '../../assets/freedi/insta.png'
 import X from '../../assets/freedi/X.png'
 import LINK from '../../assets/freedi/linked.png'
-import bg from  '../../assets/contact/Vector.svg'
+// import bg from  '../../assets/contact/Vector.svg'
 
 const Contact = () => {
   return (
