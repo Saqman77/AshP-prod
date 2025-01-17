@@ -11,8 +11,8 @@
     position: fixed;
     top:0;
     left:0;
-    max-height: 100vh;
-    max-height: 100svh;
+    // max-height: 100svh;
+    // max-height: 100vh;
     animation: open 0.5s linear forwards;
     @media screen and (max-width:1200px) {
         background: linear-gradient(to top, rgb(0 0 0 / 96%), rgb(0, 0, 0));
