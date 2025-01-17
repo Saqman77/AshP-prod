@@ -353,9 +353,25 @@ $font-xSmall: 12px;
         padding-left: 10px;
         font-weight: 600;
     }
+    .button-wrapper{
+    display: flex;
+    position: relative;
+    padding: 0 10px 0;
+    }
 
     .arrow{
-        width: 40px;
+        width: 16px;
+        position: absolute;
+        top: 8px;
+        left: -2px;
+    }
+
+    .button-heading{
+        margin-bottom: 20px;
+    }
+
+    .button-desc{
+        font-size: 12px;
     }
 
     .services-heading{
