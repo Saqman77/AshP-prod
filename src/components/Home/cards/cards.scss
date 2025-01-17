@@ -297,7 +297,7 @@ $font-xSmall: 12px;
     @media screen and (max-width: 1100px) {
         justify-content: space-evenly;
         padding: 7px 19px;
-        background-color: #7163DE;
+        background-color: #d54973e1;
         border-radius: 7px;
         box-shadow: 2px 3px 0px 0px black;
     }
@@ -306,7 +306,7 @@ $font-xSmall: 12px;
 .flip-text{
     font-size: var(--font-small);
     font-weight: 600;
-    color: #EAEAEA;
+    color: black;
     display: flex;
     @media screen and (min-width: 1100px) {
         display: none;
@@ -333,11 +333,11 @@ $font-xSmall: 12px;
 }
 
 .flip-back{
-    border: 1px solid #7163DE;
+    border: 1px solid rgba(213, 73, 115, 0.8823529412);
     display: flex;
     align-items: center;
     border-radius: 50%;
-    background-color: #7163DE;
+    background-color: bisque;
     box-shadow: 1px 1px 0px 0px black;
     margin-left: auto;
     width: 18px;
@@ -355,5 +355,5 @@ $font-xSmall: 12px;
 .flip-back:active{
     box-shadow: 0px 0px 0px 0px black;
     border: 1px solid bisque;
-    background-color: #7163DE;
+    background-color: rgba(213, 73, 115, 0.8823529412);
 }
