@@ -1,6 +1,6 @@
 import './Home.scss'
 import arrow from '/src/assets/home/Frame 42.svg'
-import reading from '/src/assets/home/muslim woman writing something in a notebook 1.png'
+import reading from '/src/assets/home/muslim woman writing something in a notebook.png'
 import Cards from '../../components/Home/cards/Cards'
 import { cardContent } from '../../components/Home/cards/cardContent'
 import ContactUs from '../../components/get-in-touch-button/ContactUs'

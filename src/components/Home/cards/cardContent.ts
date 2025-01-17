@@ -1,7 +1,7 @@
 export const cardContent = [
     {
       id: "Video consultation call", // Same as the heading
-      imgSrc: "../Frame21.svg",
+      imgSrc: "../Frame.svg",
       heading: "Video consultation call",
       backgroundColor: "#7163DE80",
       description: "We offer a free, quick 30 minute video consultation call to give you clarity and offer our advice on any write-ups and content you have..."
@@ -22,7 +22,7 @@ export const cardContent = [
     },
     {
       id: "Video consultation call", // Same as the heading
-      imgSrc: "../Frame21.svg",
+      imgSrc: "../Frame.svg",
       heading: "Video consultation call",
       backgroundColor: "#7163DE80",
       description: "We offer a free, quick 30 minute video consultation call to give you clarity and offer our advice on any write-ups and content you have..."
