@@ -8,12 +8,17 @@
     box-shadow: inset 2px 1px 4px 1px #ffffff8c, -4px -4px 8px 0px #71717152 inset, 4px 7px 4px 0px #00000087;
     // max-height: 500px;
     // overflow-y: auto;
+
+    @media screen and (max-width: 1000px) {
+        padding: 10px;
+    }
 }
 
 .f-ul{
     list-style-type: none;
     border: 1px solid black;
-    
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 .f-ul li{

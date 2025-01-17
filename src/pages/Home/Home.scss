@@ -91,12 +91,12 @@ $font-xSmall: 12px;
     from{
         color: rgba(0, 0, 0, 0.473);
         background-size: 0% 100%;
-        background-image: linear-gradient(90deg, #d54973, #d54973);
+        background-image: linear-gradient(90deg, #7163DE, #7163DE);
     }
     to{
         background-size: 100% 100%;
-        color: rgba(0, 0, 0, 0);
-        background-image: linear-gradient(90deg, #D54974, #D54974);
+        color: rgba(0, 0, 0, 0.336);
+        background-image: linear-gradient(90deg, #7163DE, #7163DE);
         // background-color: #d54973;
     }
 }
@@ -107,13 +107,13 @@ $font-xSmall: 12px;
     font-size: var(--font-small);
     font-weight: 500;
     color: rgb(0, 0, 0);
-    background-image: linear-gradient(90deg, #D54974, #D54974);
+    // background-image: linear-gradient(90deg, #610F7F, #610F7F);
     // background-size: 0% 100%;
     background-repeat: no-repeat;
     background-clip: text;
-    animation: scroll-reveal linear forwards;
-    animation-timeline: view();
-    animation-range:  contain 20vh;
+    animation: scroll-reveal 1s linear forwards;
+    // animation-timeline: view();
+    // animation-range:  contain 20vh;
      @media screen and (max-width:1101px) {
         animation: none;
         background-image: linear-gradient(90deg, #d5497300, #d5497300);
@@ -127,13 +127,13 @@ $font-xSmall: 12px;
 .strong{
     font-weight: 600;
     width: max-content;
-    background: linear-gradient(to top, #D9D9D9 40%, #e74d3c00 40%);
+    background: linear-gradient(to top, #9C98BD 40%, #e74d3c00 40%);
 }
 
 .color-text{
-    color:#D54974;
+    color:#7163DE;
     font-weight: 600;
-    background: linear-gradient(to top, #EEE38E 40%, #e74d3c00 40%);
+    background: linear-gradient(to top, #fadf63 40%, rgba(231, 77, 60, 0) 40%);
 }
 .button-wrapper{
     display: flex;
