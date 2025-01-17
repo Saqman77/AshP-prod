@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Header.scss';
-import logo from '/src/assets/header/Frame 8.png';
+import logo from '/src/assets/header/Frame 9.png';
 import ContactUs from '../get-in-touch-button/ContactUs';
+import { useThemeContext } from '../../utils/ThemeContextProvider';
 
 const Header: React.FC = () => {
   const [isHidden, setIsHidden] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // State for mobile menu toggle
+  const { isMenuOpen, toggleMenu, closeMenu } = useThemeContext();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,7 +18,7 @@ const Header: React.FC = () => {
       // Check if the user is scrolling up or down
       if (currentScrollY > lastScrollY) {
         setIsHidden(true); // Scrolling down
-        setIsMenuOpen(false);
+        closeMenu();
       } else {
         setIsHidden(false); // Scrolling up
       }
@@ -33,11 +34,11 @@ const Header: React.FC = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [lastScrollY]);
+  }, [lastScrollY, closeMenu]);
 
-  const toggleMenu = () => {
-    setIsMenuOpen((prev) => !prev); // Toggle menu open state
-  };
+  // const toggleMenu = () => {
+  //   setIsMenuOpen((prev) => !prev); // Toggle menu open state
+  // };
 
   return (
     <>
@@ -48,7 +49,7 @@ const Header: React.FC = () => {
       >
         <div className="nav-wrapper">
           <NavLink to="/" className="logo">
-            <img src={logo} alt="Logo" className="header-logo" />
+            <img src={logo} alt="Logo" className="header-logo" onClick={toggleMenu}/>
           </NavLink>
           <nav className="nav">
             <ul>
@@ -100,7 +101,7 @@ const Header: React.FC = () => {
               <NavLink
                 to="/"
                 end
-                className={({ isActive }) => (isActive ? 'header-active' : '')}
+                className={({ isActive }) => (isActive ? 'header-active link' : 'link')}
               >
                 Home
               </NavLink>
@@ -108,7 +109,7 @@ const Header: React.FC = () => {
             <li>
               <NavLink
                 to="/portfolio"
-                className={({ isActive }) => (isActive ? 'header-active' : '')}
+                className={({ isActive }) => (isActive ? 'header-active link' : 'link')}
               >
                 About
               </NavLink>
@@ -116,7 +117,7 @@ const Header: React.FC = () => {
             <li>
               <NavLink
                 to="/freedie"
-                className={({ isActive }) => (isActive ? 'header-active' : '')}
+                className={({ isActive }) => (isActive ? 'header-active link' : 'link')}
               >
                 Freedie
               </NavLink>

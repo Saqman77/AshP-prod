@@ -102,7 +102,7 @@ $font-xSmall: 12px;
 }
 
 .nav ul li:hover{
-  color: #7163DE;
+  color: #D54974;
 }
 
 .mob-nav{
@@ -205,8 +205,9 @@ box-shadow: inset 2px 2px 0px 0px #000000cf;
 // transition: transform 0.3s ease-in-out 0.1s, box-shadow 0.5s ease-in-out;
 }
 
-.header-active{
+.link{
   width: 100%;
+  display: block;
 }
 
 .menu-btn {

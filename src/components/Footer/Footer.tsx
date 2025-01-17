@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import './Footer.scss';
-import logo from '/src/assets/header/Frame 8.png';
+import logo from '/src/assets/header/Frame 9.png';
 import linkeding from '/src/assets/footer/linkedin.png'
 import instagram from '/src/assets/footer/instagram.png'
 import twitter from '/src/assets/footer/twitter.png'

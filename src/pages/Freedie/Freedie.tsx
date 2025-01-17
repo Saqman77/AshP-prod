@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import wheel from '../../assets/freedi/Spark 42.svg';
+import wheel from '../../assets/freedi/Brutalist 52.png';
 import gear from '../../assets/freedi/Brutalist Shape 181 (1).svg';
 import FLists from '../../components/freedie/flist/FLists';
 import './Freedie.scss';

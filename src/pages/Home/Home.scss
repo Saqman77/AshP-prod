@@ -91,12 +91,12 @@ $font-xSmall: 12px;
     from{
         color: rgba(0, 0, 0, 0.473);
         background-size: 0% 100%;
-        background-image: linear-gradient(90deg, #7163DE, #7163DE);
+        background-image: linear-gradient(90deg, #D54974, #D54974);
     }
     to{
         background-size: 100% 100%;
         color: rgba(0, 0, 0, 0.336);
-        background-image: linear-gradient(90deg, #7163DE, #7163DE);
+        background-image: linear-gradient(90deg, #D54974, #D54974);
         // background-color: #d54973;
     }
 }
@@ -131,9 +131,9 @@ $font-xSmall: 12px;
 }
 
 .color-text{
-    color:#7163DE;
+    color:#D54974;
     font-weight: 600;
-    background: linear-gradient(to top, #fadf63 40%, rgba(231, 77, 60, 0) 40%);
+    background: linear-gradient(to top, #FFC90C7D 40%, rgba(231, 77, 60, 0) 40%);
 }
 .button-wrapper{
     display: flex;
