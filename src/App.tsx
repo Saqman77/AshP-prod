@@ -6,6 +6,7 @@ import Freedie from './pages/Freedie/Freedie';
 import Home from './pages/Home/Home';
 import Portfolio from './pages/Portfolio/Portfolio';
 import { HashRouter, Routes, Route } from "react-router-dom";
+import { ReactLenis } from '@studio-freight/react-lenis'
 
 const App = () => {
   return (

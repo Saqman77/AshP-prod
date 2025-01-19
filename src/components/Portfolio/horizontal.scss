@@ -1,0 +1,83 @@
+
+.h-container{
+    width: 100%;
+    height: 250vh;
+    overflow-x: hidden;
+    // position: relative;
+    // top: 0;
+}
+
+.h-wrapper{
+    position: absolute;
+    top: 0;
+    width: 400vw;
+    height: 100vh;
+    transform: translateY(0);
+    will-change: transform;
+    @media screen and (max-width: 900px) {
+        padding-top: 20em;
+    }
+}
+
+.h-card{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 2px 2px 19px 1px #000000b5;
+}
+
+#h-card1{
+    top:50%;
+    left: 20%;
+    background: rgb(213, 238, 255);
+}
+#h-card2{
+    top: 25%;
+    left: 40%;
+    background: rgb(175, 143, 250);
+}
+#h-card3{
+    top:45%;
+    left: 60%;
+    background: rgb(251, 149, 255);
+}
+#h-card4{
+    top: 15%;
+    left: 80%;
+    background: rgb(172, 149, 255);
+}
+
+.h-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.h-heading{
+    width: 100%;
+    font-size: 40vw;
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+    color: #7163DE;
+}
+
+.outro{
+    position: absolute;
+    top: 150vh;
+    width: 100%;
+    height: 100vh;
+}
+
+.outro h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // width: max-content;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}
