@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from 'react'
+import { useRef } from 'react'
 import img1 from '../../assets/about/Aisha Panjwaneey.jpeg'
 import img2 from '../../assets/about/AshPReads-EditingServices-Logo.png'
 import img3 from '../../assets/about/AshPReads-EditingServices-Paid BR.png'

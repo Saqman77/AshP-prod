@@ -1,5 +1,5 @@
 
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import Horizontal from "../../components/Portfolio/Horizontal"
 import Scroll from "../../components/Portfolio/Scroll"
 import './Portfolio.scss'
