@@ -464,6 +464,15 @@ $font-xSmall: 12px;
 }
 
 @media screen and (max-width: 500px) {
+    .home-content-top{
+        margin-bottom: 40px;
+    }
+    .services-heading{
+        justify-content: left;
+        padding-left: 10px;
+        margin-bottom: 40px;
+    }
+
     .left-btn{
         left: 25px;
     }
@@ -474,6 +483,14 @@ $font-xSmall: 12px;
 }
 
 @media screen and (max-width: 400px) {
+    .home-content-top{
+        margin-bottom: 10px;
+    }
+    .services-heading{
+        justify-content: left;
+        padding-left: 10px;
+        margin-bottom: 10px;
+    }
     .left-btn, .right-btn{
         width: 35px;
         height: 35px;

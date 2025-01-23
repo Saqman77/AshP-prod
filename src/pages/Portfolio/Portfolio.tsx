@@ -1,11 +1,25 @@
+
+import { useEffect } from "react";
 import Horizontal from "../../components/Portfolio/Horizontal"
 import Scroll from "../../components/Portfolio/Scroll"
 import './Portfolio.scss'
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
 
 const Portfolio = () => {
+
+ // Empty dependency array ensures this runs only on mount and unmount
+
+
+
+
   return (
     <div className="a-container">
-      <h1
+      {/* <h1
         style={{
           position:'fixed',
           color: 'red',
@@ -20,7 +34,7 @@ const Portfolio = () => {
 
       >
         Under construction
-      </h1>
+      </h1> */}
       <Horizontal/>
       <Scroll/>
     </div>

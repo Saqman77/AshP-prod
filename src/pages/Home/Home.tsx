@@ -6,6 +6,7 @@ import { cardContent } from '../../components/Home/cards/cardContent'
 import ContactUs from '../../components/get-in-touch-button/ContactUs'
 import { useEffect, useRef, useState } from 'react'
 import Schedule from '../../components/schedule/Schedule'
+import { useThemeContext } from '../../utils/ThemeContextProvider'
 // import { useThemeContext } from '../../utils/ThemeContextProvider'
 
 const Home = () => {
@@ -13,6 +14,23 @@ const Home = () => {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollStart, setScrollStart] = useState(0);
+    // const {isActive, removeClass} = useThemeContext();
+
+    
+  
+    // useEffect(()=>{
+      
+    //   if(isActive){
+    //     removeClass();
+    //     document.documentElement.classList.remove('active')
+    //     document.body.classList.remove('active')
+    //   }
+      // else{
+      //   document.documentElement.classList.remove('active')
+      //   document.body.classList.remove('active')
+      // }
+    // },[])
+  
   // const { toggleMenu } = useThemeContext();
 
   const timeoutRef = useRef<NodeJS.Timeout | null>(null); // Ref to manage timeout

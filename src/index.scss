@@ -3,8 +3,11 @@ html, body{
     height: 100%;
     // height: auto;
     min-height: max-content;
-    background-color: #FFF9E3;
+    // background-color: #FFF9E3;
     // overflow-y: auto;
+}
+body{
+    // background-color: #FFF9E3;
 }
 
 #root{
@@ -25,7 +28,7 @@ html, body{
     // padding: 0px 60px;
     height: 100%;
     position: relative;
-    
+    background-color: #FFF9E3;
     overflow-x: clip;
     justify-content: space-between;
   }

@@ -36,6 +36,9 @@ const Header: React.FC = () => {
     };
   }, [lastScrollY, closeMenu]);
 
+
+
+
   // const toggleMenu = () => {
   //   setIsMenuOpen((prev) => !prev); // Toggle menu open state
   // };
@@ -66,6 +69,7 @@ const Header: React.FC = () => {
                 <NavLink
                   to="/portfolio"
                   className={({ isActive }) => (isActive ? 'header-active' : '')}
+                  
                 >
                   About
                 </NavLink>

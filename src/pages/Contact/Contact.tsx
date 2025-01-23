@@ -4,8 +4,22 @@ import INSTA from '../../assets/freedi/insta.png'
 import X from '../../assets/freedi/X.png'
 import LINK from '../../assets/freedi/linked.png'
 import Schedule from '../../components/schedule/Schedule'
+// import { useThemeContext } from '../../utils/ThemeContextProvider'
+// import { useEffect } from 'react'
 
 const Contact = () => {
+
+      // const {isActive,removeClass} = useThemeContext();
+      
+      
+      // useEffect(()=>{
+      //   if(isActive){
+      //     removeClass();
+      //     document.documentElement.classList.remove('active')
+      //     document.body.classList.remove('active')
+      //   }
+      // },[])
+    
   return (
     <div className="c-wrapper">
       <div className='c-t-wrapper'>

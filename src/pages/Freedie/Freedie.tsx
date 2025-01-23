@@ -4,11 +4,24 @@ import gear from '../../assets/freedi/Brutalist Shape 181 (1).svg';
 import FLists from '../../components/freedie/flist/FLists';
 import './Freedie.scss';
 import FCarousel from '../../components/freedie/fcarousel/FCarousel';
+// import { useThemeContext } from '../../utils/ThemeContextProvider';
 
 const Freedie: React.FC = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [isCarouselVisible, setCarouselVisible] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+
+      // const {isActive,removeClass} = useThemeContext();
+      
+      
+      // useEffect(()=>{
+      //   if(isActive){
+      //     removeClass();
+      //     document.documentElement.classList.remove('active')
+      //     document.body.classList.remove('active')
+      //   }
+      // },[])
+    
 
   useEffect(() => {
     if (isCarouselVisible) {
