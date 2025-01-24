@@ -6,7 +6,7 @@ import { cardContent } from '../../components/Home/cards/cardContent'
 import ContactUs from '../../components/get-in-touch-button/ContactUs'
 import { useEffect, useRef, useState } from 'react'
 import Schedule from '../../components/schedule/Schedule'
-// import { useThemeContext } from '../../utils/ThemeContextProvider'
+import { useThemeContext } from '../../utils/ThemeContextProvider'
 // import { useThemeContext } from '../../utils/ThemeContextProvider'
 
 const Home = () => {

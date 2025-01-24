@@ -415,13 +415,13 @@ const Scroll = () => {
 
                     <div className="panel-left">
                         <ul className='services-list'>
-                            <li id='list1'><p className='s-text'>Developmental</p></li>
-                            <li id='list2'><p className='s-text'>Line</p></li>
-                            <li id='list3'><p className='s-text'>Copy Editor</p></li>
-                            <li id='list4'><p className='s-text'>Proofreader</p></li>
-                            <li id='list5'><p className='s-text'>Translator</p></li>
-                            <li id='list6'><p className='s-text'>Beta Reader</p></li>
-                            <li id='list7'><p className='s-text'>Sensitivity Reader</p></li>
+                            <li id='list1'><p className='s-text'>Proofreading</p></li>
+                            <li id='list2'><p className='s-text'>Beta Reading</p></li>
+                            <li id='list3'><p className='s-text'>Copy Editing</p></li>
+                            <li id='list4'><p className='s-text'>Line Editing</p></li>
+                            <li id='list5'><p className='s-text'>Manuscript Assessment</p></li>
+                            <li id='list6'><p className='s-text'>Critique Reports</p></li>
+                            <li id='list7'><p className='s-text'>Revisions</p></li>
                         </ul>
 
 
@@ -444,17 +444,17 @@ const Scroll = () => {
 
 
                         <ul className='cert-list'>
-                            <li id='list1'><p className='cert-text'>Digital Marketing</p></li>
-                            <li id='list2'><p className='cert-text'>Freelancing</p></li>
-                            <li id='list3'><p className='cert-text'>Video Editing</p></li>
-                            <li id='list4'><p className='cert-text'>Graphic Design</p></li>
-                            <li id='list5'><p className='cert-text'>Communication & Soft Skills</p></li>
-                            <li id='list6'><p className='cert-text'>Creative Writing</p></li>
-                            <li id='list7'><p className='cert-text'>Digital Literacy</p></li>
+                            <li id='list1'><p className='cert-text'>Curriculum Desig</p></li>
+                            <li id='list2'><p className='cert-text'>Teacher Training</p></li>
+                            <li id='list3'><p className='cert-text'>Educational Leadership</p></li>
+                            <li id='list4'><p className='cert-text'>Content Development</p></li>
+                            <li id='list5'><p className='cert-text'>CV Writing</p></li>
+                            <li id='list6'><p className='cert-text'>Special Education Support</p></li>
+                            {/* <li id='list7'><p className='cert-text'>Digital Literacy</p></li>
                             <li id='list7'><p className='cert-text'>AI in Teaching</p></li>
                             <li id='list7'><p className='cert-text'>Google Soft Skills Certification</p></li>
                             <li id='list7'><p className='cert-text'>Pathways to Publishing</p></li>
-                            <li id='list7'><p className='cert-text'>AI for Editors</p></li>
+                            <li id='list7'><p className='cert-text'>AI for Editors</p></li> */}
                         </ul>
 
                     </div>
