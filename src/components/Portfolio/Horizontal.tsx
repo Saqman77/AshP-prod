@@ -72,13 +72,13 @@ const Horizontal: React.FC = () => {
         ScrollTrigger.create({
           trigger: wrapper.current,
           start: 'top top',
-          end: '+=500vh',
-          scrub: true,
+          end: '+=400vh',
+          scrub: 1,
           pin: true,
           onUpdate: (self) => {
             gsap.to(wrapper.current, {
               x: `${-350 * self.progress}vw`,
-              duration: 1,
+              duration: 0.5,
               ease: 'power1.out',
             });
           },
@@ -89,7 +89,7 @@ const Horizontal: React.FC = () => {
         ScrollTrigger.create({
           trigger: 'card.id',
           start: 'top top',
-          end: '+=400vh',
+          end: '+=600vh',
           scrub: 1,
           onUpdate: (self) => {
             gsap.to(card.id, {
@@ -157,33 +157,11 @@ const Horizontal: React.FC = () => {
         </section>
         <section className='outro'>
             <h3>
-              {/* <span className='outro-span'>We are a sibling</span>
-              <span className='outro-span'> duo with more than two</span>
-              <span className='outro-span'> decades of freelance editing experience</span>
-              <span className='outro-span'> between us. Our flexible rates and payment plans accommodate various</span>
-              <span className='outro-span'> budgets, and we offer a complimentary 30-minute video consultation call,</span>
-              <span className='outro-span'>a manuscript assessment, and an short editing sample of your chosen text.</span>  */}
-              <span className='outro-span'>
-                <span className='space' ></span>
-                  Ash P brings over two decades of experience in literary editing across diverse genres and online content. Known among peers as "the book surgeon," she specializes in safe-for-work nonfiction and fiction. She is actively expanding her expertise into new adult (NA), young adult (YA), and children's fiction, as well as graphic novels, memoirs, and comics, particularly those aimed at younger readers.
-                
-                <span className='space' ></span>
-                  Since 2003, she has contributed her expertise to over 200 fiction and nonfiction manuscripts,
-                  collaborating with best-selling authors and an award-winning publisher. Her services include developmental editing, manuscript critiques,
-                  line and copyediting, proofreading, authenticity, sensitivity, and beta reading. She also uses her skills to create and compile in-house style guides,
-                  translate and transcribe subtitles for websites and social media content. She has particular expertise in working with ESL authors, helping to bring structure
-                  to their stories while preserving their unique voices. With a BA in Mass Communication, Education, and English literature, and a background in early childhood education, she is particularly well-suited for manuscripts related to children.
-                
-                <span className='space' > </span>
-                  Ash P is a volunteer editor for #RevPit. She is also a member of the Comic Book Editors Alliance,
-                  where she is one of many editors being mentored by Steve Colle for comic book editing.
-                  She is an active participant in several supportive social spaces and networks for editors like the Neurodivergent
-                  Publishing Lounge and the Editors' Lair on Discord, and the Editors Tea Club and EFA BIPOC Chapter on Slack.
-                
-                Whether working with seasoned authors, ESL, or first-time writers, Ash focuses on polishing manuscripts while retaining each writer's voice, and ensuring their message resonates clearly with their intended audience.
-                A self-proclaimed logophile and librocubicularist, she is often found studying a new skill or reading a book on something she loves, in her free time.
-                
-              </span>
+            <span className='outro-span'>
+                Since 2003, Ash P Reads Editing Services has contributed their expertise to over 200 fiction and non-fiction manuscripts, along with extensive website and social media content. Founded by Ash P, this family-run editing service has collaborated with best-selling authors and an award-winning publisher. They have particular expertise in working with ESL authors, helping bring structure to their stories and developing their unique writing voices. Both editors bring valuable backgrounds in early childhood and special education, making them particularly well suited for manuscripts related to children and education.
+                <span className=" outro-span bold">Cultivating stories, one edit at a time</span>
+              </span> 
+
             </h3>
         </section>
     </div>

@@ -1,44 +1,51 @@
 export const cardContent = [
     {
-      id: "Video consultation call", // Same as the heading
+      id: "Consultation", // Same as the heading
       imgSrc: "../Frame 21.svg",
-      heading: "Video consultation call",
+      heading: "Consultation",
       backgroundColor: "#7163DE80",
-      description: "We offer a free, quick 30 minute video consultation call to give you clarity and offer our advice on any write-ups and content you have..."
+      description: "You have a manuscript, but you aren’t sure what comes next? Book a complimentary 30-minute video consultation call to discuss your editing needs."
     },
     {
       id: "Manuscript assessment",
       imgSrc: "../Thesis-pana 1.svg",
       heading: "Manuscript assessment",
       backgroundColor: "#E9B50080",
-      description: "We can assess any manuscripts or papers for errors and mistakes, offering you the best possible content suggestions to help you excel.."
+      description: "Is your manuscript feeling incomplete? Our manuscript evaluation provides a roadmap to transform your draft from promising to powerful."
     },
     {
-      id: "Editing samples",
+      id: "Developmental Edit",
       imgSrc: "../Learning-pana 1.svg",
-      heading: "Editing samples",
+      heading: "Developmental Edit",
       backgroundColor: "#F0195B33",
-      description: "Want a sample of our service? Fear not, just submit a text paragraph of your choice and see how the magic happens!"
+      description: "Our developmental editing will dig deep, offering targeted feedback and strategic improvements to elevate your story’s structure, character development, and narrative impact"
     },
     {
-      id: "Video consultation call", // Same as the heading
+      id: "Line and Copyediting combo", // Same as the heading
       imgSrc: "../Frame 21.svg",
-      heading: "Video consultation call",
+      heading: "Line and Copyediting combo",
       backgroundColor: "#7163DE80",
-      description: "We offer a free, quick 30 minute video consultation call to give you clarity and offer our advice on any write-ups and content you have..."
+      description: "50-word sentences? Sticky phrasing? Dialogue tag or action beat? CMOS or New Hart’s? Manuscript mysteries got you stuck? Our line and copyediting combo cuts through the clutter of wordy drafts, transforming it into polished prose."
     },
     {
-      id: "Manuscript assessment",
+      id: "Proofreading",
       imgSrc: "../Thesis-pana 1.svg",
-      heading: "Manuscript assessment",
+      heading: "Proofreading",
       backgroundColor: "#E9B50080",
-      description: "We can assess any manuscripts or papers for errors and mistakes, offering you the best possible content suggestions to help you excel.."
+      description: "Typos hiding in plain sight? Punctuation playing tricks? Our proofreading service ensures your manuscript is clean, clear, and error-free as is humanly possible. Only the Creator is perfect!"
     },
     {
-      id: "Editing samples",
+      id: "Reader Services",
       imgSrc: "../Learning-pana 1.svg",
-      heading: "Editing samples",
+      heading: "Reader Services",
       backgroundColor: "#F0195B33",
-      description: "Want a sample of our service? Fear not, just submit a text paragraph of your choice and see how the magic happens!"
+      description: "Does your manuscript need a Beta Reader? Maybe you require a Sensitivity or Authenticity Reader. Email us for our rates and list of topics."
+    },
+    {
+      id: "Other services",
+      imgSrc: "../Learning-pana 1.svg",
+      heading: "Other services",
+      backgroundColor: "#F0195B33",
+      description: "Need an Urdu to English translation? Transcribing or Subtitles? Drop us a line and ask us what else we can do. We got you!"
     },
   ];

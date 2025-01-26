@@ -25,8 +25,8 @@ const ParallaxImage: React.FC<ParallaxImageProps> = ({ src, alt, className }) =>
       if (imageRef.current) {
         const rect = imageRef.current.getBoundingClientRect();
         bounds.current = {
-          top: rect.top + window.scrollY,
-          bottom: rect.bottom + window.scrollY,
+          top: rect.top + window.scrollY ,
+          bottom: rect.bottom + window.scrollY ,
         };
       }
     };
@@ -36,7 +36,7 @@ const ParallaxImage: React.FC<ParallaxImageProps> = ({ src, alt, className }) =>
         currentTranslateY.current = lerp(
           currentTranslateY.current,
           targetTranslateY.current,
-          0.1
+          0.2
         );
         if (Math.abs(currentTranslateY.current - targetTranslateY.current) > 0.01) {
           imageRef.current.style.transform = `translateY(${currentTranslateY.current}px) scale(1.25)`;
@@ -81,10 +81,10 @@ const ParallaxImage: React.FC<ParallaxImageProps> = ({ src, alt, className }) =>
       style={{
         willChange: "transform",
         transform: "translateY(0) scale(1.25)",
-        backgroundImage: `url(${src})`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "100%",
-        backgroundPosition: "100% 100%",
+        // backgroundImage: `url(${src})`,
+        // backgroundRepeat: "no-repeat",
+        // backgroundSize: "100%",
+        // backgroundPosition: "100% 100%",
       }}
     />
   );

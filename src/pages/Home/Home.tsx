@@ -107,12 +107,31 @@ const Home = () => {
         <div className="left-content">
           <div className="main-heading">
             <p className="heading-text">
-              Shaping your stories into 
-              <span className="strong"> great writing,</span> one<span className="color-text"> edit</span> at atime..</p>
+
+              We are a sibling duo with more than<span> </span> 
+
+              <span className="strong">  
+
+                two decades 
+
+              </span>
+
+              <span> </span>of freelance<span> </span>
+
+              <span className="color-text">
+
+                editing experience 
+
+              </span> 
+
+              <span> </span>between us.
+
+              </p>
+
           </div>
 
           <div className="left-desc">
-            Start your journey with a complimentary 30-minute consultation call, a manuscript assessment, and a free sample edit of your chosen text.
+          We want your message to resonate clearly with your readers so our flexible rates and payment plans fit all budgets.
           </div>
           <div className="button-wrapper">
             <div className="arrow">
