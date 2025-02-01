@@ -31,8 +31,8 @@
 }
 
 .ace path{
-    stroke: #9489fa;
-    fill: #9f95f8;
+    stroke: #9489fa41;
+    fill: #ff6dce7d;
     // width: 100%;
 }
 
@@ -116,6 +116,7 @@
     top: 150vh;
     width: 100%;
     height: 100vh;
+    z-index: 3;
     @media screen and (max-width:1250px) {
         top:150vh
     }
@@ -145,7 +146,7 @@
 }
 
 .outro h3 .outro-span{
-    color: rgba(0, 0, 0, 0.062);
+    color: rgba(255, 255, 255, 0.171);
     background-image: linear-gradient(to right, #f4f9e9,#f5bbbb);
     background-size: 0% 100%;
     background-clip: text;

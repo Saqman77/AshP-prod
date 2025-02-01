@@ -1,0 +1,287 @@
+.wish-main{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: 50px;
+    position: relative;
+    perspective: 1000px;
+    max-height: 900px;
+    // transform-style: preserve-3d;
+    transition: transform 0.3s ease-in-out 0.1s, box-shadow 0.3s ease-in-out;
+    @media screen and (max-width:800px) {
+        max-height: 900px;
+        grid-auto-flow: dense;
+        max-width: 500px;
+    }
+}
+
+.wish-box{
+    width: 100%;
+    scroll-snap-align: none start;
+    scroll-snap-stop: normal;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    height: 100%;
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: 16px 17px 0px 0px black;
+    max-height: fit-content;
+}
+
+.wish-wrapper{
+    // transition: box-shadow 0.3s ease-in-out;
+    
+    
+    // perspective: 1000px;
+    width: 100%;
+    scroll-snap-align: none start;
+    scroll-snap-stop: normal;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease-in-out 0.1s, box-shadow 0.3s ease-in-out;
+    // transform: rotateY(-180deg);
+    // width: 100%;
+    transform: rotateY(0deg);
+}
+
+
+@media screen and (min-width:1250px) {
+    
+
+.wish-main .wish-box:hover .wish-wrapper{
+    transform: rotateY(-180deg);
+    // transition: box-shadow 0.3s;
+    
+}
+
+/* Reduce box shadow during the flip */
+.wish-main .wish-box {
+    transition: box-shadow 0.3s ;
+    animation: restoreShadow 0.6s forwards;
+//     transform: rotateY(-180deg);
+  }
+  .wish-main .wish-box:not(:hover) {
+    transition: box-shadow 0.3s ;
+    animation: unHoverShadow 0.6s forwards;
+  }
+
+}
+
+
+
+.wish-front, .wish-back{
+    width: 100%;
+    height: 100%;
+    padding: 2em;
+    position: absolute;
+    backface-visibility: hidden;
+    top: 0;
+    left: 0;
+
+}
+
+.wish-heading{
+    display: flex;
+    justify-content: left;
+}
+
+.wish-main .wish-wrapper .flip-button, .wish-main .wish-wrapper .flip-button:active {
+    margin-top: auto;
+}
+
+
+.wish-front{
+    display: flex;
+    flex-direction: column;
+    transform: rotateY(0deg);
+    background-color: #8CDE6380;
+}
+
+.wish-front.not{
+    display: flex;
+    flex-direction: column;
+    transform: rotateY(0deg);
+    background-color: #FCCCC8;
+}
+
+.wish-head{
+    font-size: var(--font-large);
+}
+
+.wish-desc{
+    font-size: var(--font-small);
+    font-weight: 700;
+    margin: 1em 0
+}
+
+.wish-back{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: rotateY(180deg);
+    background-color: #8CDE6380;
+}
+.wish-back.not{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: rotateY(180deg);
+    background-color:  #FCCCC8;
+}
+
+.wish-list ul li{
+    list-style-type: none;
+    font-size: var(--font-small);
+    font-weight: 700;
+    margin-bottom: 6px;
+    text-decoration: underline;
+    list-style-type: square;
+    margin-left: 1em;
+}
+
+.w-list-heading{
+    font-size: var(--font-medium);
+    font-weight: 700;
+    margin-bottom: 2em;
+    display: flex;
+}
+
+.wish-bottom p{
+    font-size: var(--font-medium);
+    font-weight: 700;
+}
+
+@keyframes restoreShadow {
+    0%{
+        box-shadow: 16px 17px 0px 0px black;
+    }
+
+    25%{
+        box-shadow: 5px 6px 0px 0px black;
+    }
+
+    50%{
+        box-shadow: 5px 6px 0px 0px rgba(0, 0, 0, 0.027);
+    }
+
+    75%{
+        box-shadow: 5px 6px 0px 0px rgba(0, 0, 0, 0.411);
+    }
+
+    100%{
+        box-shadow: 16px 17px 0px 0px black;
+    }
+  }
+  @keyframes unHoverShadow {
+    0%{
+        box-shadow: 16px 17px 0px 0px black;
+    }
+
+    25%{
+        box-shadow: 5px 6px 0px 0px black;
+    }
+
+    50%{
+        box-shadow: 5px 6px 0px 0px rgba(0, 0, 0, 0.027);
+    }
+
+    75%{
+        box-shadow: 5px 6px 0px 0px rgba(0, 0, 0, 0.411);
+    }
+
+    100%{
+        box-shadow: 16px 17px 0px 0px black;
+    }
+  }
+
+  .wish-main .wish-wrapper .flip-button{
+    // font-size: var(--font-xSmall);
+    // font-weight: 500;
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 1100px) {
+        justify-content: space-evenly;
+        padding: 7px 19px;
+        background-color: #d54973e1;
+        border-radius: 7px;
+        box-shadow: 2px 3px 0px 0px black;
+    }
+}
+
+.wish-main .wish-wrapper .flip-text{
+    font-size: var(--font-small);
+    font-weight: 600;
+    color: black;
+    display: flex;
+    font-family: 'Euphorigenic', sans-serif;
+    @media screen and (min-width: 1100px) {
+        display: none;
+    }
+}
+
+.wish-main .wish-wrapper .flip-img{
+    height: min-content;
+    display: flex;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+}
+
+.wish-main .wish-wrapper .flip-icon{
+    width: 100%;
+}
+
+@media screen and (max-width: 1100px) {
+    .wish-main .wish-wrapper .flip-button:active{
+        transform: translate(2px, 3px);
+        box-shadow: 1px 1px 0px 0px black;
+    }
+}
+
+.wish-main .wish-wrapper .flip-back{
+    border: 1px solid rgba(213, 73, 115, 0.8823529412);
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    background-color: bisque;
+    box-shadow: 1px 1px 0px 0px black;
+    margin-left: auto;
+    width: 18px;
+    height: 18px;
+    // padding: 1px;
+    @media screen and (min-width:1101px) {
+        display: none;
+    }
+
+    @media screen and (max-width: 699px) {
+        width: 18px;
+        height: 18px;
+    }
+}
+.wish-main .wish-wrapper .flip-back:active{
+    box-shadow: 0px 0px 0px 0px black;
+    border: 1px solid bisque;
+    background-color: rgba(213, 73, 115, 0.8823529412);
+}
+
+.wish-wrapper.no-hover{
+
+    @media screen and (min-width:1101px) {
+        pointer-events: none;
+    }
+}
+
+.wish-box.restore-shadow{
+    transition: box-shadow 0.3s ;
+    animation: restoreShadow 0.6s forwards ease-in 0.2s;
+}
+.wish-box.unhover-shadow{
+    transition: box-shadow 0.3s ;
+    animation: unHoverShadow 0.6s forwards ease-in 0.2s;
+}

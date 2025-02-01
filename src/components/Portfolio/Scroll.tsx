@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
 import { services } from './services'
-import img1 from '../../assets/about/Aisha Panjwaneey.jpeg'
+import img1 from '../../assets/about/Ash P.jpg'
 import img2 from '../../assets/about/AshPReads-EditingServices-Logo.png'
-import img3 from '../../assets/about/AshPReads-EditingServices-Paid BR.png'
-import img4 from '../../assets/about/AshPReads-Editng Services-Line or Content Editing.png'
+import img3 from '../../assets/about/Ash P bio.png'
+import img4 from '../../assets/about/Hira P Bio .png'
 import img5 from '../../assets/about/Hira.jpg'
 import ParallaxImage from './ParallaxImage'
 import './scroll.scss'
@@ -402,7 +402,7 @@ const Scroll = ({ startIndex, isVisible, onClose, onItemClick }: ScrollProps) =>
             </div>
 
             <div className='ash-img'>
-                <ParallaxImage src={img2} alt="" className='s-imgs' />
+                <ParallaxImage src={img2} alt="" className='s-imgs bg' />
             </div>
 
         </section>
@@ -490,7 +490,7 @@ const Scroll = ({ startIndex, isVisible, onClose, onItemClick }: ScrollProps) =>
 
                 <div className='ash-img'>
 
-                    <ParallaxImage src={img3} alt="" className='s-imgs' />
+                    <ParallaxImage src={img3} alt="" className='s-imgs  bg' />
 
                 </div>
 
@@ -532,17 +532,14 @@ const Scroll = ({ startIndex, isVisible, onClose, onItemClick }: ScrollProps) =>
                                     Certifications & Courses
                                 </h3>
                                 <ul className='cert-list'>
-                                    <li id='list1'><p className='cert-text'>Digital Marketing</p></li>
-                                    <li id='list2'><p className='cert-text'>Freelancing</p></li>
-                                    <li id='list3'><p className='cert-text'>Video Editing</p></li>
-                                    <li id='list4'><p className='cert-text'>Graphic Design</p></li>
-                                    <li id='list5'><p className='cert-text'>Communication & Soft Skills</p></li>
-                                    <li id='list6'><p className='cert-text'>Creative Writing</p></li>
-                                    <li id='list7'><p className='cert-text'>Digital Literacy</p></li>
-                                    <li id='list7'><p className='cert-text'>AI in Teaching</p></li>
-                                    <li id='list7'><p className='cert-text'>Google Soft Skills Certification</p></li>
-                                    <li id='list7'><p className='cert-text'>Pathways to Publishing</p></li>
-                                    <li id='list7'><p className='cert-text'>AI for Editors</p></li>
+                                    <li id='list1'><p className='cert-text'>Certification in UCL Leadership development program</p></li>
+                                     <li id='list2'><p className='cert-text'>
+                                        Certificate in professional studies in education from Bradford College  (an associate college of the University of Bradford)
+                                    </p></li> 
+                                    <li id='list3'><p className='cert-text'>APTIS C1 English Proficiency</p></li>
+                                    <li id='list4'><p className='cert-text'>Special Ed training at PAIIExAKU-IED, and HumQadam Foundation</p></li>
+                                    <li id='list5'><p className='cert-text'>Multiple Microsoft certifications, including Microsoft Innovative Educator</p></li>
+                                    <li id='list6'><p className='cert-text'>Google Soft Skills Certification</p></li>
                                 </ul>
                             </div>
                             <div className='qual-section2'>
@@ -565,7 +562,7 @@ const Scroll = ({ startIndex, isVisible, onClose, onItemClick }: ScrollProps) =>
         </div>
 
         <div className='ash-img'>
-            <ParallaxImage src={img5} alt="" className='s-imgs' />
+            <ParallaxImage src={img5} alt="" className='s-imgs bg' />
         </div>
 
         </section>
@@ -608,8 +605,7 @@ const Scroll = ({ startIndex, isVisible, onClose, onItemClick }: ScrollProps) =>
 
             <span>
 
-                Hira P brings 30 years of experience as an educationist and four years as an editorial professional
-                , specializing in proofreading and beta reading, including a year of copyediting. 
+            Hira P brings 30 years of experience as an educationist and four years as an editorial professional, specializing in proofreading and beta reading, including a year of copyediting. 
 
             </span> 
 
@@ -623,8 +619,7 @@ const Scroll = ({ startIndex, isVisible, onClose, onItemClick }: ScrollProps) =>
 
             <span>
 
-                Her professional journey includes extensive experience in curriculum design
-                , and teacher training, which has honed her ability to communicate effectively and adapt to the diverse needs of her students. 
+            Her professional journey includes extensive experience in curriculum design, and teacher training, which has honed her ability to communicate effectively and adapt to the diverse needs of her students. 
 
             </span>
 
@@ -637,9 +632,7 @@ const Scroll = ({ startIndex, isVisible, onClose, onItemClick }: ScrollProps) =>
             > </span>
 
             <span>
-            This has led Hira to have a passion for language and a keen eye for detail
-            . She is committed to delivering excellence and helping clients achieve their vision through well-crafted written materials
-            . Hira P is a verified reader on IAX.
+            This has led Hira to have a passion for language and a keen eye for detail. She is committed to delivering excellence and helping clients achieve their vision through well-crafted written materials. Hira P is a verified reader on IAX.
             </span>
 
         </span>
@@ -653,7 +646,7 @@ const Scroll = ({ startIndex, isVisible, onClose, onItemClick }: ScrollProps) =>
                 <div className='ash-img'>
 
  
-                    <ParallaxImage src={img4} alt="" className='s-imgs' />
+                    <ParallaxImage src={img4} alt="" className='s-imgs bg' />
 
                 </div>
 

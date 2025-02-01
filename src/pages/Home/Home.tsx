@@ -3,14 +3,19 @@ import arrow from '/src/assets/home/Frame 42.svg'
 import reading from '/src/assets/home/muslim woman writing something in a notebook 1.png'
 import Cards from '../../components/Home/cards/Cards'
 import { cardContent } from '../../components/Home/cards/cardContent'
+import { testContent } from '../../components/Home/testimonial/testContent'
 import ContactUs from '../../components/get-in-touch-button/ContactUs'
 import { useEffect, useRef, useState } from 'react'
 import Schedule from '../../components/schedule/Schedule'
+import CardsContainer from '../../components/Home/wish/Wishs'
+import Wishs from '../../components/Home/wish/Wishs'
+import Tests from '../../components/Home/testimonial/Tests'
 // import { useThemeContext } from '../../utils/ThemeContextProvider'
 // import { useThemeContext } from '../../utils/ThemeContextProvider'
 
 const Home = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
+  const testCarouselRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollStart, setScrollStart] = useState(0);
@@ -89,6 +94,17 @@ const Home = () => {
       }
     }
   };
+  const testRight = () => {
+    const testCarousel = testCarouselRef.current as HTMLElement | null;
+    if (testCarousel) {
+      const test = testCarousel.querySelector('.test'); // Assuming the class of each card is `.card`.
+      if (test) {
+        const cardWidth = (test as HTMLElement).offsetWidth;
+        testCarousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
+      }
+    }
+  };
+  
 
   const moveLeft = () => {
     const carousel = carouselRef.current as HTMLElement | null;
@@ -100,6 +116,18 @@ const Home = () => {
       }
     }
   };
+
+  const testLeft = () => {
+    const testCarousel = testCarouselRef.current as HTMLElement | null;
+    if (testCarousel) {
+      const test = testCarousel.querySelector('.test-wrapper'); // Assuming the class of each card is `.card`.
+      if (test) {
+        const cardWidth = (test as HTMLElement).offsetWidth;
+        testCarousel.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+      }
+    }
+  };
+  
 
   return (
     <div className="home-wrapper">
@@ -191,6 +219,53 @@ const Home = () => {
           </div>
           <div className="right-btn" onClick={moveRight}>
             R
+          </div>
+        </div>
+      </div>
+
+      <div className="wish-section">
+        <div className="wish-header">
+          <p>
+            Ash P Reads Manuscript <span className="color-text">Wish List</span>
+          </p>
+        </div>
+        <div className="wish-container ">
+            <Wishs/>
+        </div>
+      </div>
+
+      <div className="test-section">
+        <div className="tests-heading">
+          <p>
+          Client’s <span className="color-text">Testimonials</span>
+          </p>
+        </div>
+        <div className="tests-wrapper">
+          <div
+            className={!isDragging ? 'test-carousel' : 'test-carousel dragging'}
+            ref={testCarouselRef}
+            onMouseDown={handleMouseDown}
+            style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
+          >
+            {testContent.map((card) => {
+              return (
+                <Tests
+                  key={card.id}
+                  head={card.heading}
+                  desc={card.description}
+                  isDragging={isDragging}
+                  {...card}
+                />
+              );
+            })}
+          </div>
+          <div className='lft-rgt'>
+            <div className="test-left-btn" onClick={testLeft}>
+              <span className='test-indicator'></span>
+            </div>
+            <div className="test-right-btn" onClick={testRight}>
+              <span className='test-indicator'></span>
+            </div>
           </div>
         </div>
       </div>
