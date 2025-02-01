@@ -1,7 +1,7 @@
 import './Contact.scss'
 import FB from '../../assets/freedi/Facebook.png'
 import INSTA from '../../assets/freedi/insta.png'
-import X from '../../assets/freedi/X.png'
+// import X from '../../assets/freedi/X.png'
 import LINK from '../../assets/freedi/linked.png'
 import TREE from '../../assets/freedi/linktree-logo-icon.svg'
 import Schedule from '../../components/schedule/Schedule'
@@ -73,14 +73,14 @@ const Contact = () => {
             </div>
             <ul className="c-info">
               <li><span className='tag'>Email:</span>ashpreads@gmail.com</li>
-              <li><span className='tag'>Email:</span>ashpreads@gmail.com</li>
+              {/* <li><span className='tag'>Email:</span>ashpreads@gmail.com</li> */}
             </ul>
           </div>
             <div className='location-wrapper'>
               <div className="list-heading"><p className='lists-head'>Location</p></div>
               <ul className="c-location">
                 <li><span className='tag'>Location:</span> Karachi, Pakistan</li>
-                <li><span className='tag'>Location:</span> Karachi, Pakistan</li>
+                {/* <li><span className='tag'>Location:</span> Karachi, Pakistan</li> */}
               </ul>
             </div>
           <ul className="c-socials">
