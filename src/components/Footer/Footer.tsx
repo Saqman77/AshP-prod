@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
           <ul>
             <li>
               <a href="https://www.facebook.com/AshPReads" target="_blank" rel="noopener noreferrer" className='social'>
-                <img src={FB} alt="twitter-logo" className='social-img' />
+                <img src={FB} alt="facebook-logo" className='social-img' />
               </a>
             </li>
             <li>
