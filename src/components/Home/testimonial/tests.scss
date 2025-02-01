@@ -76,8 +76,8 @@ $font-xSmall: 12px;
 }
 
 @media screen and (max-width: 900px){
-    .test{
-        
+    .test-content{
+      font-size: var(--font-xlarge);
     }
 }
 

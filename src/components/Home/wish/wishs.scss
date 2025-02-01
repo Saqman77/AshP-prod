@@ -11,7 +11,7 @@
     // transform-style: preserve-3d;
     transition: transform 0.3s ease-in-out 0.1s, box-shadow 0.3s ease-in-out;
     @media screen and (max-width:800px) {
-        max-height: 900px;
+        max-height: fit-content;
         grid-auto-flow: dense;
         max-width: 500px;
     }

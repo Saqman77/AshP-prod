@@ -243,7 +243,7 @@ $font-xSmall: 12px;
 }
 
 @media screen and (max-width: 900px) {
-    .right-img{
+    .img-container, .right-img{
         display: none;
     }
 }
