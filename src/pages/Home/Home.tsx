@@ -283,7 +283,7 @@ const Home = () => {
                   key={card.id}
                   head={card.heading}
                   desc={card.description}
-                  isDragging={isDragging}
+                  // isDragging={isDragging}
                   {...card}
                 />
               );
