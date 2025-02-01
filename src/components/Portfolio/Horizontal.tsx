@@ -38,7 +38,7 @@ const Horizontal: React.FC = () => {
           gsap.to('.h-heading',{
             color: '#7163DE',
           })
-        }
+        },
         // markers: true,
       },
     });
@@ -89,7 +89,7 @@ const Horizontal: React.FC = () => {
         ScrollTrigger.create({
           trigger: 'card.id',
           start: 'top top',
-          end: '+=600vh',
+          end: '+=500vh',
           scrub: 1,
           onUpdate: (self) => {
             gsap.to(card.id, {

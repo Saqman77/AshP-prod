@@ -7,7 +7,7 @@ export const cardContent = [
       description: "You have a manuscript, but you aren’t sure what comes next? Book a complimentary 30-minute video consultation call to discuss your editing needs."
     },
     {
-      id: "Manuscript assessment",
+      id: "Manuscript Evaluation",
       imgSrc: "../Manuscript Evaluation.png",
       heading: "Manuscript assessment",
       backgroundColor: "#E9B50080",

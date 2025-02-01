@@ -1,6 +1,6 @@
 .wish-main{
     height: auto;
-    min-height: 100vh;
+    min-height: 70vh;
     width: 100%;
     display: grid;
     grid-auto-flow: column;
@@ -8,13 +8,15 @@
     gap: 50px;
     position: relative;
     perspective: 1000px;
-    max-height: 900px;
+    // max-height: 50vh;
     // transform-style: preserve-3d;
     transition: transform 0.3s ease-in-out 0.1s, box-shadow 0.3s ease-in-out;
     @media screen and (max-width:800px) {
-        max-height: fit-content;
+        min-height: 90vh;
         grid-auto-flow: dense;
         max-width: 500px;
+        gap: 20px;
+        padding: 1em;
     }
 }
 
@@ -84,7 +86,9 @@
     backface-visibility: hidden;
     top: 0;
     left: 0;
-
+    @media screen and (max-width: 1250px) {
+        padding: 1em 1em;
+    }
 }
 
 .wish-heading{
@@ -112,13 +116,24 @@
 }
 
 .wish-head{
-    font-size: var(--font-large);
+    font-size: var(--font-medium);
+    text-decoration: underline;
+    @media screen and (max-width:1250px) {
+        font-size: var(--font-xlarge);
+    }
 }
 
 .wish-desc{
-    font-size: var(--font-small);
+    font-size: var(--font-medium);
     font-weight: 700;
-    margin: 1em 0
+    margin: 1em 0 2em;
+    // letter-spacing: 3px;
+    @media screen and (max-width:1250px) {
+        font-size: var(--font-medium);
+    }
+    @media screen and (max-width:900px) {
+        font-size: var(--font-small);
+    }
 }
 
 .wish-back{
@@ -144,6 +159,14 @@
     text-decoration: underline;
     list-style-type: square;
     margin-left: 1em;
+    @media screen and (max-width:1250px) {
+        font-size: var(--font-small);
+        margin-bottom: 0px;
+    }
+    @media screen and (max-width:400px) {
+        font-size: var(--font-small);
+        margin-bottom: 0px;
+    }
 }
 
 .w-list-heading{
@@ -151,11 +174,18 @@
     font-weight: 700;
     margin-bottom: 2em;
     display: flex;
+    @media screen and (max-width:1250px) {
+        font-size: var(--font-large);
+        margin-bottom: 0.5em;
+    }
 }
 
 .wish-bottom p{
     font-size: var(--font-medium);
-    font-weight: 700;
+    font-weight: 400;
+    @media screen and (max-width:1250px) {
+        font-size: var(--font-medium);
+    }
 }
 
 @keyframes restoreShadow {

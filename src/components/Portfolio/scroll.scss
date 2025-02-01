@@ -17,7 +17,7 @@
 .s-imgs.bg{
     // position: absolute;
     width: 100%;
-    // height: 100%;
+    height: 100%;
     object-fit: cover;
     // object-position: bottom;
     // top: 20%;
@@ -62,16 +62,29 @@
 .ash-img{
     overflow: hidden;
     width: 100%;
-    height: 100%;
+    height: auto;
     grid-column: 1;
     grid-row: 1;
     position: relative;
     z-index: 1;
+    // height: 100%;
+    max-height: 100vh;
+}
+.panel.projects-hira .ash-img,.panel.hira .ash-img{
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    grid-column: 1;
+    grid-row: 1;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    // max-height: 100vh;
 }
 
 .ash2-img{
     width: 100%;
-    // height: 100%;
+    height: 100%;
     overflow: hidden;
     position: relative;
     display: flex;
@@ -309,8 +322,9 @@ h3.cert-heading{
 
 .panel{
     width: 100vw;
-    height: 100vh;
-    height: 100lvh;
+    min-height: 100vh;
+    min-height: 100lvh;
+    height: auto;
     position: relative;
     display: grid;
     // justify-content: space-between;
@@ -335,8 +349,9 @@ section.our-work{
 
 section.our-work .work-wrapper{
     width: 100%;
-    height: 100vh;
-    height: 100lvh;
+    min-height: 100vh;
+    min-height: 100lvh;
+    height: auto;
     grid-column: 1;
     grid-row: 1;
     position: relative;
@@ -369,17 +384,8 @@ section.our-work .work-wrapper{
 
 .past-work{
     width: 100%;
-    // height: 100%;
-    // grid-column: 1;
-    // grid-row: 1;
-    // position: relative;
-    // z-index: 0;
-    
     display: grid;
     grid-auto-flow: dense;
-    // grid-template-columns: repeat(4, minmax(300px, 1fr));
-    // grid-template-rows: min-content;
-    // grid-auto-rows: 1fr;
     padding: 4em;
     gap: 10px;
 
@@ -577,9 +583,9 @@ section.our-work .work-wrapper{
     @media screen and (max-width: 1000px) {
         padding: 1em ;
         grid-row-end: 4;
-        grid-template-rows: 300px auto;
+        grid-template-rows: 200px auto;
         grid-auto-flow: dense;
-        grid-template-columns: 1fr;
+        // grid-template-columns: 1fr;
     }
     @media screen and (max-width: 400px) {
         grid-template-rows: 200px auto;
@@ -630,6 +636,7 @@ section.our-work .work-wrapper{
     flex-direction: column;
     grid-column-start: 1;
     grid-column-end: 5;
+    justify-content: center;
 }
     
     @media screen and (max-width:1000px) {
@@ -730,11 +737,15 @@ section.our-work .work-wrapper{
     padding: 0em 4em 0 4em;
     @media screen and ( max-width:1250px) {
         grid-column: 2/4;
-        padding: 0em 2em 2em;
+        padding: 0em 1em 1em;
     }
     @media screen and ( max-width:1000px) {
-        grid-column: 1/4;
+        grid-column: 2/4;
         padding: 0em 2em 2em;
+    }
+    @media screen and ( max-width:600px) {
+        grid-column: 1/5;
+        padding: 0em 1em 1em;
     }
 }
 
@@ -753,6 +764,11 @@ section.our-work .work-wrapper{
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
 
+}
+
+.panel.projects .ash-img{
+    width: 100%;
+    height: 100%;
 }
 
 .panel.projects .panel-front{
@@ -843,8 +859,11 @@ section.our-work .work-wrapper{
     padding: 1em;
     justify-content: center;
     text-align: center;
-    line-height: 1.5em;
+    line-height: 1em;
     letter-spacing: 2px;
+    @media screen and (max-width:1250px) {
+        font-size: var(--font-medium);
+    }
 }
 
 .panel.projects .panel-bottom{

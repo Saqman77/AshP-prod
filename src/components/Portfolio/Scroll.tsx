@@ -51,7 +51,7 @@ const Scroll = ({ startIndex, isVisible, onClose, onItemClick }: ScrollProps) =>
               scrollTrigger: {
                 trigger: '.ash',
                 start: 'clamp(-50% top)',
-                end: 'clamp(center center)',
+                end: 'clamp(top center)',
                 scrub: 1,
                 refreshPriority: 1,
                 preventOverlaps:true,
@@ -68,7 +68,7 @@ const Scroll = ({ startIndex, isVisible, onClose, onItemClick }: ScrollProps) =>
                         ease: 'Power2.easeIn',
                         scrollTrigger: {
                             trigger: '.ash',
-                            start: 'clamp(top 10%)',
+                            start: 'clamp(30% top)',
                             end: 'clamp(+=400px)',
                             scrub:true,
                             preventOverlaps:true,
@@ -93,7 +93,7 @@ const Scroll = ({ startIndex, isVisible, onClose, onItemClick }: ScrollProps) =>
               scrollTrigger: {
                 trigger: ".ash",
                 start: 'clamp(-30% top)',
-                end: 'clamp(+=200px )',
+                end: 'clamp(+=100px )',
                 // markers: true,
                 scrub: true,
                 onLeave:()=>{
@@ -104,7 +104,7 @@ const Scroll = ({ startIndex, isVisible, onClose, onItemClick }: ScrollProps) =>
                         stagger:0.1,
                         scrollTrigger:{
                             trigger:'.ash .cert-list',
-                            start:'-40% top',
+                            start:'-20% top',
                             end:'+=600px',
                             scrub: true
                         }
@@ -146,7 +146,7 @@ const Scroll = ({ startIndex, isVisible, onClose, onItemClick }: ScrollProps) =>
                         ease: 'Power2.easeIn',
                         scrollTrigger: {
                             trigger: '.hira',
-                            start: 'clamp(top 10%)',
+                            start: 'clamp(-10% 20%)',
                             end: 'clamp(+=400px)',
                             scrub:true,
                             preventOverlaps:true,
@@ -170,8 +170,8 @@ const Scroll = ({ startIndex, isVisible, onClose, onItemClick }: ScrollProps) =>
             //   repeat:2,
               scrollTrigger: {
                 trigger: ".hira",
-                start: 'clamp(-30% top)',
-                end: 'clamp(+=200px )',
+                start: 'clamp(-40% top)',
+                end: 'clamp(+=100px )',
                 // markers: true,
                 // onEnter: tl.revert,
                 scrub: true,
