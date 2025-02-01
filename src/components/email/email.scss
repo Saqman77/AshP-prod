@@ -1,4 +1,4 @@
-.schedule-button button{
+.email-button button{
     background: none; /* Removes default background */
     border: none; /* Removes default border */
     padding: 0; /* Removes default padding */
@@ -13,17 +13,18 @@
     z-index: 2;
 }
 
-.schedule-button{
-  width: max-content;
-}
+.email-button{
+    width: max-content;
+  }
+  
 
-.schedule-button button{
+.email-button button{
     width: max-content;
     padding: 10px;
-    background: #EEE38E;
+    background: #7163DE;
     border: 1px solid #201D06;
     box-shadow: 3px 6px 0px 1px black;
-    color: #000000;
+    color: #ffffff;
     font-size: var(--font-small);
     font-weight: 600;
     @media screen and (max-width: 1100px) {
@@ -40,7 +41,7 @@
     }
 }
 
-.schedule-button button:hover{
+.email-button button:hover{
     box-shadow: 1px 3px 0px 1px black;
     transform: translate3d(2px, 2px, 0px);
     @media screen and (max-width: 1100px) {

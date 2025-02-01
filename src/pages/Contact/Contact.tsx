@@ -4,6 +4,7 @@ import INSTA from '../../assets/freedi/insta.png'
 import X from '../../assets/freedi/X.png'
 import LINK from '../../assets/freedi/linked.png'
 import Schedule from '../../components/schedule/Schedule'
+import Email from '../../components/email/Email'
 // import { useThemeContext } from '../../utils/ThemeContextProvider'
 // import { useEffect } from 'react'
 
@@ -54,7 +55,10 @@ const Contact = () => {
               </div>
         </div>
       </div>
-      <Schedule/>
+      <div className='c-b-wrapper'>
+        <Schedule/>
+        <Email/>
+      </div>
       <div className="c-bottom">
         <p className='contact '>
           Contact:

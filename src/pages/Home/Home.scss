@@ -95,6 +95,7 @@ $font-xSmall: 12px;
     font-size: var(--font-xlarge);
     font-weight: 500;
     margin-bottom: 24px;
+    font-family: 'Euphorigenic', sans-serif;
     // padding-left: 44px;
     animation: Left ease 1s forwards;
     @media screen and (max-width:900px) {
@@ -226,6 +227,7 @@ $font-xSmall: 12px;
 
 .services-heading{
     font-size: var(--font-large);
+    font-family: 'Euphorigenic', sans-serif;
 }
 
 @media  screen and (max-width: 1300px) {
@@ -258,6 +260,7 @@ $font-xSmall: 12px;
     display: flex;
     justify-content: center;
     margin-bottom: 16px;
+    font-family: 'Euphorigenic', sans-serif;
 }
 
 

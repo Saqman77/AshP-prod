@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/euphorigenic');
+
 @font-face {
     font-family: 'Clash Display';
     src: url('/src/assets/fonts/ClashDisplay-Variable.woff2') format('woff2'),
@@ -53,6 +55,29 @@
     font-weight: 600; /* Semibold */
     font-style: normal;
   }
+  @font-face {
+    font-family: 'Candara';
+    src: url('/src/assets/fonts/Candara_Bold.ttf') format('ttf'),
+         url('/src/assets/fonts/Candara_Bold.ttf') format('ttf');
+    font-weight: 600; /* Regular */
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Candara';
+    src: url('/src/assets/fonts/Candara.ttf') format('ttf'),
+         url('/src/assets/fonts/Candara.ttf') format('ttf');
+    font-weight: 400; /* Regular */
+    font-style: normal;
+  }
+  
+
+
+  @font-face {
+     font-family: 'Eupho';
+     src: url('/src/assets/fonts/euphorigenic.ttf') format('ttf'),
+}
+     
+
 
   
 

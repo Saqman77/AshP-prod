@@ -68,9 +68,9 @@ const Cards = ({ id, head, backGround, cardImg, desc, isDragging }: Props) => {
               <img src={flip} alt="flip-img" className='flip-icon' />
             </div>
           </div>
-          <div className="card-img">
+          {/* <div className="card-img">
             <img src={cardImg} alt="" className="cardImg" />
-          </div>
+          </div> */}
           <div className="card-desc">
             <p className="back-desc">{desc}</p>
           </div>

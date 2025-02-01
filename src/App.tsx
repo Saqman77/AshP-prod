@@ -10,6 +10,7 @@ import { HashRouter, Routes, Route, } from "react-router-dom";
 // import {ReactLenis} from '@studio-freight/react-lenis';
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useState } from 'react';
 // // import { useThemeContext } from './utils/ThemeContextProvider';
 // import { useEffect} from 'react';
 // import { useEffect, useRef } from 'react';
@@ -31,6 +32,13 @@ const App = () => {
   //   }
   // },[])
 
+  const [key, setKey] = useState(0);
+
+  // Generate a unique key on load
+  useEffect(() => {
+    setKey(Date.now());
+  }, []);
+
 
 
   return (
@@ -42,7 +50,7 @@ const App = () => {
           <Routes >
             <Route path="/" element={<Home />} />
             <Route path="/freedie" element={<Freedie />} />
-            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/portfolio" element={<Portfolio key={key.toString()} />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
           <Footer />

@@ -49,6 +49,11 @@ $font-xSmall: 12px;
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
+  &.header-blur.portfolio {
+    background-color: #fff9e300;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
 
   &.header-transparent {
     background-color: transparent;

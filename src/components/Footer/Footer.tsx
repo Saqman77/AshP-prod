@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom';
 import './Footer.scss';
 import logo from '/src/assets/header/Frame 9.png';
+import logo1 from '../../assets/footer/BIPOC-Chapter-300x300.png';
+import logo2 from '../../assets/footer/ETC+Member+Circle.png';
+import logo3 from '../../assets/footer/pro_reader.png';
+import logo4 from '../../assets/footer/Simple_Logo_ALT.png';
 import linkeding from '/src/assets/footer/linkedin.png'
 import instagram from '/src/assets/footer/instagram.png'
 import twitter from '/src/assets/footer/twitter.png'
@@ -16,9 +20,13 @@ const Footer: React.FC = () => {
       <div className="footer-container">
         {/* Logo Section */}
         <div className="footer-logo">
-          <Link to="/">
+          <Link to="/" className='logos reads'>
             <img src={logo} alt="main-logo" className="logo" />
           </Link>
+          <a href="" className='logos'><img src={logo1} alt="" /></a>
+          <a href="" className='logos'><img src={logo2} alt="" /></a>
+          <a href="" className='logos'><img src={logo3} alt="" /></a>
+          <a href="" className='logos'><img src={logo4} alt="" /></a>
         </div>
 
         {/* Navigation Links */}

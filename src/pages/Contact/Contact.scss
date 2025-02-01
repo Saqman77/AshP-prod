@@ -47,7 +47,18 @@
     margin-bottom: auto;
 }
 
-.c-wrapper .schedule-button {
+ .c-wrapper .email-button{
+    margin-right: auto;
+    margin-left: 1vw;
+    @media screen and (max-width:900px) {
+        margin-left: 2vw;
+    }
+}
+
+.c-b-wrapper{
+    display: flex;
+    justify-content: left;
+    align-items: center;
     margin-top: 40px;
     margin-bottom: 40px;
     @media screen and (max-width:900px) {
@@ -172,6 +183,7 @@
     font-size: var(--font-xlarge);
     font-weight: 500;
     text-wrap: nowrap;
+    font-family: 'Euphorigenic', sans-serif;
     // margin-bottom: 62px;
     color: #f9f9f9;
     @media screen and (max-width: 900px) {

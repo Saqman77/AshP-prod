@@ -159,7 +159,7 @@ const Horizontal: React.FC = () => {
             <h3>
             <span className='outro-span'>
                 Since 2003, Ash P Reads Editing Services has contributed their expertise to over 200 fiction and non-fiction manuscripts, along with extensive website and social media content. Founded by Ash P, this family-run editing service has collaborated with best-selling authors and an award-winning publisher. They have particular expertise in working with ESL authors, helping bring structure to their stories and developing their unique writing voices. Both editors bring valuable backgrounds in early childhood and special education, making them particularly well suited for manuscripts related to children and education.
-                <span className=" outro-span bold">Cultivating stories, one edit at a time</span>
+                <span className=" outro-span bold">Cultivating stories, one edit at a time.</span>
               </span> 
 
             </h3>
