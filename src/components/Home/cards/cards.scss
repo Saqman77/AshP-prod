@@ -252,7 +252,7 @@ $font-xSmall: 12px;
 .card-heading{
     font-size: var(--font-small);
     font-weight: 600;
-    margin-bottom: auto;
+    margin: auto;
     text-align: center;
     font-family: 'Euphorigenic', sans-serif;
 }
@@ -275,15 +275,16 @@ $font-xSmall: 12px;
 }
 
 .card .card-img{
-    width: 200px;
+    width: 100%;
     height: 150px;
     // margin: 0 auto;
     align-self: center;
     user-select: none;
     display: flex;
     -webkit-user-select: none;
+    opacity: 0.5;
     @media  screen and (max-width: 900px) {
-        width: 150px;
+        // width: 150px;
         height: 100px;
     }
 }

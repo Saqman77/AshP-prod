@@ -3,6 +3,7 @@ import FB from '../../assets/freedi/Facebook.png'
 import INSTA from '../../assets/freedi/insta.png'
 import X from '../../assets/freedi/X.png'
 import LINK from '../../assets/freedi/linked.png'
+import TREE from '../../assets/freedi/linktree-logo-icon.svg'
 import Schedule from '../../components/schedule/Schedule'
 import Email from '../../components/email/Email'
 // import { useThemeContext } from '../../utils/ThemeContextProvider'
@@ -71,8 +72,8 @@ const Contact = () => {
               </p>
             </div>
             <ul className="c-info">
-              <li><span className='tag'>Phone:</span> +92 000-0000</li>
-              <li><span className='tag'>Email:</span> example@example.com</li>
+              <li><span className='tag'>Email:</span>ashpreads@gmail.com</li>
+              <li><span className='tag'>Email:</span>ashpreads@gmail.com</li>
             </ul>
           </div>
             <div className='location-wrapper'>
@@ -83,10 +84,10 @@ const Contact = () => {
               </ul>
             </div>
           <ul className="c-socials">
-            <li><a href=""><img src={FB} alt="" className='social' /></a></li>
-            <li><a href=""><img src={INSTA} alt="" className='social' /></a></li>
-            <li><a href=""><img src={X} alt="" className='social' /></a></li>
-            <li><a href=""><img src={LINK} alt="" className='social' /></a></li>
+            <li><a href="https://www.facebook.com/AshPReads"><img src={FB} alt="" className='social' /></a></li>
+            <li><a href="https://www.instagram.com/ashpreads"><img src={INSTA} alt="" className='social' /></a></li>
+            <li><a href="https://linktr.ee/ashpreads"><img src={TREE} alt="" className='social' /></a></li>
+            <li><a href="https://www.linkedin.com/in/ashpreads/"><img src={LINK} alt="" className='social' /></a></li>
           </ul>
         </div>
       </div>

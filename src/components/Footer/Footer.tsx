@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import './Footer.scss';
-import logo from '/src/assets/header/Frame 9.png';
+import logo from '/src/assets/header/Frame 9 copy.png';
 import logo1 from '../../assets/footer/BIPOC-Chapter-300x300.png';
 import logo2 from '../../assets/footer/ETC+Member+Circle.png';
 import logo3 from '../../assets/footer/pro_reader.png';
@@ -8,7 +8,8 @@ import logo4 from '../../assets/footer/Simple_Logo_ALT.png';
 import logo5 from '../../assets/footer/R&R logo final-03 (1).png';
 import linkeding from '/src/assets/footer/linkedin.png'
 import instagram from '/src/assets/footer/instagram.png'
-import twitter from '/src/assets/footer/twitter.png'
+// import twitter from '/src/assets/footer/twitter.png'
+import FB from '/src/assets/freedi/Facebook.png'
 
 const Footer: React.FC = () => {
   return (
@@ -24,11 +25,11 @@ const Footer: React.FC = () => {
           <Link to="/" className='logos reads'>
             <img src={logo} alt="main-logo" className="logo" />
           </Link>
-          <a href="" className='logos'><img src={logo1} alt="" /></a>
-          <a href="" className='logos'><img src={logo2} alt="" /></a>
-          <a href="" className='logos'><img src={logo3} alt="" /></a>
-          <a href="" className='logos'><img src={logo4} alt="" /></a>
-          <a href="" className='logos'><img src={logo5} alt="" /></a>
+          <a href="https://www.the-efa.org/chapters/bipoc" className='logos'><img src={logo1} alt="" /></a>
+          <a href="https://www.editorsteaclub.org" className='logos'><img src={logo2} alt="" /></a>
+          <a href="https://www.netgalley.com/member/profile" className='logos'><img src={logo3} alt="" /></a>
+          <a href="https://www.indieauthorconnect.com" className='logos'><img src={logo4} alt="" /></a>
+          <a href="https://reviseresub.com/" className='logos'><img src={logo5} alt="" /></a>
         </div>
 
         {/* Navigation Links */}
@@ -53,17 +54,17 @@ const Footer: React.FC = () => {
         <div className="footer-social">
           <ul>
             <li>
-              <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className='social'>
-                <img src={twitter} alt="twitter-logo" className='social-img' />
+              <a href="https://www.facebook.com/AshPReads" target="_blank" rel="noopener noreferrer" className='social'>
+                <img src={FB} alt="twitter-logo" className='social-img' />
               </a>
             </li>
             <li>
-              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className='social'>
+              <a href="https://www.instagram.com/ashpreads" target="_blank" rel="noopener noreferrer" className='social'>
                 <img src={instagram} alt="instagram-logo" className='social-img' />
               </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className='social'>
+              <a href="https://www.linkedin.com/in/ashpreads/" target="_blank" rel="noopener noreferrer" className='social'>
                 <img src={linkeding} alt="linkedin-logo" className='social-img' />
               </a>
             </li>

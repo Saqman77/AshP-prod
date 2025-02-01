@@ -155,7 +155,7 @@ h3.q-heading{
 h3.cert-heading{
     // font-family: 'Euphorigenic', sans-serif;
     color: #FEFFFE;
-    font-size: var(--font-large);
+    font-size: var(--font-medium);
     line-height: 1;
     letter-spacing: 2px;
     font-weight: 600;
@@ -764,6 +764,7 @@ section.our-work .work-wrapper{
         grid-row: 1;
         position: relative;
         z-index: 2;
+        opacity: 0;
         // backdrop-filter: blur(7px) brightness(0.8);
         // -webkit-backdrop-filter: blur(7px) brightness(0.8);
         display: grid;
@@ -785,6 +786,7 @@ section.our-work .work-wrapper{
         grid-row: 1;
         position: relative;
         z-index: 2;
+        opacity: 0;
         // backdrop-filter: blur(7px) brightness(0.8);
         // -webkit-backdrop-filter: blur(7px) brightness(0.8);
         display: grid;

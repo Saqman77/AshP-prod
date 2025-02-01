@@ -93,7 +93,7 @@ $font-xSmall: 12px;
 
 .heading-text{
     font-size: var(--font-xlarge);
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 24px;
     // font-family: 'Euphorigenic', sans-serif;
     // padding-left: 44px;
@@ -123,7 +123,7 @@ $font-xSmall: 12px;
     margin-bottom: 24px;
     // padding-left: 44px;
     font-size: var(--font-small);
-    font-weight: 500;
+    font-weight: 600;
     color: rgb(0, 0, 0);
     // background-image: linear-gradient(90deg, #610F7F, #610F7F);
     // background-size: 0% 100%;
@@ -219,6 +219,7 @@ $font-xSmall: 12px;
     width: 407px;
     overflow: hidden;
     animation: Right 1s ease forwards ;
+    box-shadow: 16px 14px 0px 3px black;
 }
 
 .right-img{
@@ -372,7 +373,7 @@ $font-xSmall: 12px;
     gap: 100px;
     overflow-x: auto;
     scrollbar-width: none;
-    scroll-snap-type:x mandatory;
+    scroll-snap-type:x proximity;
     scroll-behavior: smooth;
     overflow-y: hidden;
     width: 100%;

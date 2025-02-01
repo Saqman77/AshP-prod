@@ -23,7 +23,7 @@ interface FCardsProps {
 
   mail: string;
 
-  phone: string;
+  // phone: string;
 
   fb: string;
 
@@ -54,7 +54,7 @@ const FCards: React.FC<FCardsProps> = (
     desc,
     role,
     mail,
-    phone,
+    // phone,
     fb,
     insta,
     x,
@@ -116,7 +116,7 @@ const FCards: React.FC<FCardsProps> = (
        <div className="card-bottom">
         <div className="f-contact">
           <div className="mail-wrapper"><p className='mail'><span className='mail-span'>E-mail:&nbsp; </span><a href="mailto:example@gmail.com?subject=Hello&body=This is an example"  className='freed-a'>{mail}</a></p></div>
-          <div className="phone-wrapper"><p className='phone'><span className='phone-span'>phone:&nbsp; </span>{phone}</p></div>
+          {/* <div className="phone-wrapper"><p className='phone'><span className='phone-span'>phone:&nbsp; </span>{phone}</p></div> */}
         </div>
        </div>
     </div>

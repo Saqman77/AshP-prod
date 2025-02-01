@@ -1,13 +1,13 @@
 import './Home.scss'
 import arrow from '/src/assets/home/Frame 42.svg'
-import reading from '/src/assets/home/muslim woman writing something in a notebook 1.png'
+import reading from '/src/assets/home/image 9.png'
 import Cards from '../../components/Home/cards/Cards'
 import { cardContent } from '../../components/Home/cards/cardContent'
 import { testContent } from '../../components/Home/testimonial/testContent'
 import ContactUs from '../../components/get-in-touch-button/ContactUs'
 import { useEffect, useRef, useState } from 'react'
 import Schedule from '../../components/schedule/Schedule'
-import CardsContainer from '../../components/Home/wish/Wishs'
+// import CardsContainer from '../../components/Home/wish/Wishs'
 import Wishs from '../../components/Home/wish/Wishs'
 import Tests from '../../components/Home/testimonial/Tests'
 // import { useThemeContext } from '../../utils/ThemeContextProvider'
@@ -64,19 +64,49 @@ const Home = () => {
       setIsDragging(false);
     // }, 500); // Delay of 100ms
   };
+  const handleTestMouseDown = (e: React.MouseEvent) => {
+    const testCarousel = testCarouselRef.current;
+    if (testCarousel) {
+      setIsDragging(true);
+      setStartX(e.clientX); // Record initial mouse position
+      setScrollStart(testCarousel.scrollLeft); // Record initial scroll position
+    }
+  };
+
+  const handleTestMouseMove = (e: MouseEvent) => {
+    if (!isDragging) return;
+
+    const testCarousel = testCarouselRef.current;
+    if (testCarousel) {
+      const deltaX = e.clientX - startX; // Difference in mouse position
+      testCarousel.scrollLeft = scrollStart - deltaX; // Adjust scroll position
+    }
+  };
+
+  const handleTestMouseUp = () => {
+    // timeoutRef.current = setTimeout(() => {
+      setIsDragging(false);
+    // }, 500); // Delay of 100ms
+  };
 
   useEffect(() => {
     if (isDragging) {
       document.addEventListener('mousemove', handleMouseMove);
+      document.addEventListener('mousemove',  handleTestMouseMove);
       document.addEventListener('mouseup', handleMouseUp);
+      document.addEventListener('mouseup', handleTestMouseUp);
     } else {
       document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mousemove', handleTestMouseMove);
       document.removeEventListener('mouseup', handleMouseUp);
+      document.removeEventListener('mouseup', handleTestMouseUp);
     }
 
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mousemove',handleTestMouseMove);
       document.removeEventListener('mouseup', handleMouseUp);
+      document.removeEventListener('mouseup', handleTestMouseUp);
 
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current); // Clear timeout on cleanup
@@ -244,7 +274,7 @@ const Home = () => {
           <div
             className={!isDragging ? 'test-carousel' : 'test-carousel dragging'}
             ref={testCarouselRef}
-            onMouseDown={handleMouseDown}
+            onMouseDown={handleTestMouseDown}
             style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
           >
             {testContent.map((card) => {
