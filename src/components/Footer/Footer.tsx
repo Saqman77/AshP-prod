@@ -28,6 +28,13 @@ const Footer: React.FC = () => {
             <img src={logo} alt="main-logo" className="main-logo" />
           </Link>
           <div className='members'>
+            <p
+              style={{
+                fontSize:'24px',
+                fontWeight:'700',
+                margin:'auto'
+              }}
+            >Memberships:</p>
             <a href="https://www.the-efa.org/chapters/bipoc" className='logos'><img src={logo1} alt="" /></a>
             <a href="https://www.editorsteaclub.org" className='logos'><img src={logo2} alt="" /></a>
             <a href="https://www.netgalley.com/member/profile" className='logos'><img src={logo3} alt="" /></a>
