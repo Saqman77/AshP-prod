@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Header.scss';
-import logo from '/src/assets/header/Frame 8.svg';
+import logo from '/src/assets/header/ash p logo.svg';
 import ContactUs from '../get-in-touch-button/ContactUs';
 import { useThemeContext } from '../../utils/ThemeContextProvider';
 
@@ -79,7 +79,7 @@ const Header: React.FC = () => {
                   to="/freedie"
                   className={({ isActive }) => (isActive ? 'header-active' : '')}
                 >
-                  Freedie
+                  FrEdiBuddies
                 </NavLink>
               </li>
             </ul>
@@ -123,7 +123,7 @@ const Header: React.FC = () => {
                 to="/freedie"
                 className={({ isActive }) => (isActive ? 'header-active link' : 'link')}
               >
-                Freedie
+                FrEdiBuddies
               </NavLink>
             </li>
           </ul>

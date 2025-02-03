@@ -40,7 +40,7 @@ const Portfolio = ({ key }: PortfolioProps) => {
       }
     };
 
- },[])
+ },[key])
  const handleItemClick = (index: number) => {
   setSelectedIndex(index);
   setServVisible(true);

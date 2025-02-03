@@ -1,12 +1,12 @@
 import './Home.scss'
-import arrow from '/src/assets/home/Frame 42.svg'
+// import arrow from '/src/assets/home/Frame 42.svg'
 import reading from '/src/assets/home/image 9.png'
 import Cards from '../../components/Home/cards/Cards'
 import { cardContent } from '../../components/Home/cards/cardContent'
 import { testContent } from '../../components/Home/testimonial/testContent'
-import ContactUs from '../../components/get-in-touch-button/ContactUs'
+// import ContactUs from '../../components/get-in-touch-button/ContactUs'
 import { useEffect, useRef, useState } from 'react'
-import Schedule from '../../components/schedule/Schedule'
+// import Schedule from '../../components/schedule/Schedule'
 // import CardsContainer from '../../components/Home/wish/Wishs'
 import Wishs from '../../components/Home/wish/Wishs'
 import Tests from '../../components/Home/testimonial/Tests'
@@ -60,9 +60,9 @@ const Home = () => {
   };
 
   const handleMouseUp = () => {
-    // timeoutRef.current = setTimeout(() => {
+    timeoutRef.current = setTimeout(() => {
       setIsDragging(false);
-    // }, 500); // Delay of 100ms
+    }, 400); // Delay of 100ms
   };
   const handleTestMouseDown = (e: React.MouseEvent) => {
     const testCarousel = testCarouselRef.current;
@@ -84,9 +84,9 @@ const Home = () => {
   };
 
   const handleTestMouseUp = () => {
-    // timeoutRef.current = setTimeout(() => {
+    timeoutRef.current = setTimeout(() => {
       setIsDragging(false);
-    // }, 500); // Delay of 100ms
+    }, 2000); // Delay of 100ms
   };
 
   useEffect(() => {
@@ -127,7 +127,7 @@ const Home = () => {
   const testRight = () => {
     const testCarousel = testCarouselRef.current as HTMLElement | null;
     if (testCarousel) {
-      const test = testCarousel.querySelector('.test'); // Assuming the class of each card is `.card`.
+      const test = testCarousel.querySelector('.test-wrapper'); // Assuming the class of each card is `.card`.
       if (test) {
         const cardWidth = (test as HTMLElement).offsetWidth;
         testCarousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
@@ -139,7 +139,7 @@ const Home = () => {
   const moveLeft = () => {
     const carousel = carouselRef.current as HTMLElement | null;
     if (carousel) {
-      const card = carousel.querySelector('.card-wrapper'); // Assuming the class of each card is `.card`.
+      const card = carousel.querySelector('.card'); // Assuming the class of each card is `.card`.
       if (card) {
         const cardWidth = (card as HTMLElement).offsetWidth;
         carousel.scrollBy({ left: -cardWidth, behavior: 'smooth' });
@@ -191,23 +191,7 @@ const Home = () => {
           <div className="left-desc">
           We want your message to resonate clearly with your readers so our flexible rates and payment plans fit all budgets.
           </div>
-          <div className="button-wrapper">
-            <div className="arrow">
-              <img src={arrow} alt="arrow-pointing image" className="arrow" />
-            </div>
-            <div className="inner-container">
-              <div className="button-heading">
-                <p className="button-desc">
-                  Let’s collaborate to elevate your writing to its full potential!
-                </p>
-              </div>
 
-              <div className="button-container">
-                <ContactUs />
-                <Schedule/>
-              </div>
-            </div>
-          </div>
         </div>
 
         <div className="right-content">
@@ -256,7 +240,7 @@ const Home = () => {
       <div className="wish-section">
         <div className="wish-header">
           <p>
-            Ash P Reads Manuscript <span className="color-text">Wish List</span>
+          Ash P Reads Editing Services <span className="color-text">Manuscript&nbsp;Wish&nbsp;List</span>
           </p>
         </div>
         <div className="wish-container ">
@@ -267,7 +251,7 @@ const Home = () => {
       <div className="test-section">
         <div className="tests-heading">
           <p>
-          Client’s <span className="color-text">Testimonials</span>
+          Client <span className="color-text">Testimonials</span>
           </p>
         </div>
         <div className="tests-wrapper">

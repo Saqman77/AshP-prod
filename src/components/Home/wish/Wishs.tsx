@@ -2,6 +2,8 @@ import { useState } from 'react';
 import flip from '/src/assets/home/uis_flip-v.png';
 import './wishs.scss'
 
+
+
 const Wishs = () => {
 
 
@@ -18,14 +20,14 @@ const Wishs = () => {
         }
     
         // Clear the animation class after the animation completes
-        setTimeout(() => setAnimationClass(''), 600);
+        // setTimeout(() => setAnimationClass(''), 600);
       };
 
   return (
     <div className='wish-main'>
         <div className={`wish-box ${animationClass}`}>
             <div className={`wish-wrapper`}
-                         style={ window.innerWidth < 1100 
+                         style={ window.innerWidth < 1250 
                             ? rotate 
                             ? { transform: 'rotateY(-180deg)' } : { transform: 'rotateY(0deg)' }
                            : {}}
@@ -56,7 +58,7 @@ const Wishs = () => {
                 <div className="wish-list">
                         <div className="w-list-heading">
                             <p>
-                                Compatible Genres:
+                                Compatible Genres
                             </p>
 
                             <div className="flip-back" onClick={handleFlip}>
@@ -81,17 +83,17 @@ const Wishs = () => {
                             <li>Horror (MG only)</li>
                         </ul>
                     </div>
-                    <div className="wish-bottom">
+                    {/* <div className="wish-bottom">
                         <p>
                             Ideally, manuscripts ranging between 50k-80k words.
                         </p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
         <div className={`wish-box ${animationClass}`}>
             <div className={`wish-wrapper`}
-                         style={ window.innerWidth < 1100 
+                         style={ window.innerWidth < 1250 
                             ? rotate 
                             ? { transform: 'rotateY(-180deg)' } : { transform: 'rotateY(0deg)' }
                            : {}}
@@ -119,7 +121,7 @@ const Wishs = () => {
                 <div className="wish-list">
                         <div className="w-list-heading">
                             <p>
-                                Incompatible Genres:
+                                Incompatible Genres
                             </p>
 
                             <div className="flip-back" onClick={handleFlip}>
@@ -132,17 +134,17 @@ const Wishs = () => {
                             <li>Historical Fiction </li>
                             <li>Historical Romance</li>
                             <li>Bully Romance</li>
-                            <li>NSFW contentl</li>
+                            <li>NSFW content</li>
                             <li>LGBTQIAP+</li>
                             <li>Violent Horror </li>
                             <li>Gore</li>
                         </ul>
                     </div>
-                    <div className="wish-bottom">
+                    {/* <div className="wish-bottom">
                         <p>
                         Manuscripts of 100k words or more.
                         </p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

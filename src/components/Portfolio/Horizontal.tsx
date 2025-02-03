@@ -140,7 +140,7 @@ const Horizontal: React.FC = () => {
         <section className='h-wrapper'
             ref={wrapper}
         >
-            <h1 className='h-heading'>Who we are?</h1>
+            <h1 className='h-heading'>Who Are We?</h1>
 
             <div className="h-card" id='h-card1'>
                 <img src="../Frame 21.svg" alt="card-img" />
@@ -158,7 +158,7 @@ const Horizontal: React.FC = () => {
         <section className='outro'>
             <h3>
             <span className='outro-span'>
-                Since 2003, Ash P Reads Editing Services has contributed their expertise to over 200 fiction and non-fiction manuscripts, along with extensive website and social media content. Founded by Ash P, this family-run editing service has collaborated with best-selling authors and an award-winning publisher. They have particular expertise in working with ESL authors, helping bring structure to their stories and developing their unique writing voices. Both editors bring valuable backgrounds in early childhood and special education, making them particularly well suited for manuscripts related to children and education.
+                Since 2003, Ash P Reads Editing Services has contributed their expertise to over 200 fiction and nonfiction manuscripts, along with extensive website and social media content. Founded by Ash P, this family-run editing service has collaborated with best-selling authors and an award-winning publisher. They have particular expertise in working with ESL authors, helping bring structure to their stories and developing their unique writing voices. Both editors bring valuable backgrounds in early childhood and special education, making them particularly well suited for manuscripts related to children and education.
                 <span className=" outro-span bold">Cultivating stories, one edit at a time.</span>
               </span> 
 

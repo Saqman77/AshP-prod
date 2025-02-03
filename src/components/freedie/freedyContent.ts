@@ -3,7 +3,7 @@ export const freedie = [
         id:'Daniel-Panjwaneey',
         name:'Daniel Panjwaneey',
         imgSrc:'./dan.jpg',
-        desc:"Daniel Arthur Panjwaneey is a multifaceted creative force from Karachi, Pakistan, with extensive experience as a Producer, Curator, and Audio Engineer. Renowned for his innovative approach to music and sound, he is also celebrated as Alien Panda Jury, his avant-garde musical alias, and Kukido, a testament to his culinary prowess as a professional cook. A former bassist for the acclaimed band The D/A Method, Daniel's diverse talents and passion for creativity make him a dynamic figure in both the arts and gastronomy.",
+        desc:"establishing himself as a creative force in audio production and engineering. From 2010 to 2014, Daniel was part of the globally acclaimed Coke Studio (Pakistan) during seasons 4, 5, and 6, where he contributed as an assistant audio engineer. His expertise further flourished as the Chief Audio Engineer at A for Aleph from 2016 to 2021. In 2021, Daniel founded Cape Monze Records, an independent label that reflects his passion for discovering and nurturing talent. ",
         role:'Producer/Curator/Audio-Engineer',
         eMail:'someemmail@com.mailg',
         fb:'https://www.facebook.com/danielpanjwaneey',
@@ -72,6 +72,26 @@ export const freedie = [
         soundcloud:'',
         bandcamp:'',
         github:'https://github.com/Saqman77'
+    },
+    {
+        id:'Beenish-Sarfaraz',
+        name:'Beenish Sarfaraz',
+        imgSrc:'',
+        desc:"Beenish Sarfaraz is a visual artist and educator based in Karachi, Pakistan. Her interest lies in cultural and heritage stories, environment and social-engaged art making. Currently, she is a faculty member at Beaconhouse National University. Previously, she has worked on projects with Coke Studio (2018), Geo TV Network, Centre of Arts-based Methodologies and Wellbeing, British Council, State Bank Museum-Pakistan, Manchester Museum, ShirkatGah and DAWN. She uses inquiry and play as her method of research.",
+        role:'Graphic Designer/Creative Non-fiction Writer ',
+        eMail:'beenish.s.ali@gmail.com',
+        // phone:'+92-0900-78601',
+        fb:'https://www.facebook.com/saqlainh3/',
+        insta:'https://www.instagram.com/svqlvin_dp_hvider/',
+        x:'https://www.instagram.com/svqlvin_dp_hvider/',
+        linkedIn:'https://www.linkedin.com/in/saqlainhaider77/',
+        spotify:'',
+        linktree:'',
+        youtube:'',
+        soundcloud:'',
+        bandcamp:'',
+        github:'',
+        default:'https://beenishsarfaraz.cargo.site/'
     },
     
 ]

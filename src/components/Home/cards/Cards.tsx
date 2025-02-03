@@ -1,6 +1,6 @@
 import './cards.scss';
 import flip from '/src/assets/home/uis_flip-v.png';
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 
 type Props = {
   id: string;
@@ -14,6 +14,8 @@ type Props = {
 const Cards = ({ id, head, backGround, cardImg, desc, isDragging }: Props) => {
   const [rotate, setRotate] = useState(false);
   const [animationClass, setAnimationClass] = useState('');
+
+  const img = cardImg
 
   const handleFlip = () => {
     if (!rotate) {
@@ -43,9 +45,11 @@ const Cards = ({ id, head, backGround, cardImg, desc, isDragging }: Props) => {
             background: backGround,
           }}
         >
-          <div className="card-img">
-            <img src={cardImg} alt="" className="cardImg" />
-          </div>
+          <Suspense>
+            <div className="card-img">
+              <img src={img} alt="" className="cardImg" />
+            </div>
+          </Suspense>
           <div className="card-heading">
             <p>{head}</p>
           </div>

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import './Footer.scss';
-import logo from '/src/assets/header/Frame 8.svg';
+import logo from '/src/assets/header/ash p logo.svg';
 import logo1 from '../../assets/footer/BIPOC-Chapter-300x300.png';
 import logo2 from '../../assets/footer/ETC+Member+Circle.png';
 import logo3 from '../../assets/footer/pro_reader.png';
@@ -9,8 +9,10 @@ import logo5 from '../../assets/footer/R&R logo final-03 (1).png';
 import linkeding from '/src/assets/footer/linkedin.png'
 import instagram from '/src/assets/footer/instagram.png'
 // import twitter from '/src/assets/footer/twitter.png'
-import FB from '/src/assets/freedi/Facebook.png'
-
+import FB from '/src/assets/footer/icons8-facebook-48.png'
+import Blue from '/src/assets/footer/Bluesky_Logo.svg.png'
+// import favR from '/src/assets/footer/favorited_reviews.png'
+import threads from '/src/assets/footer/threads-app-icon.png'
 const Footer: React.FC = () => {
   return (
     <footer className="footer">
@@ -22,30 +24,32 @@ const Footer: React.FC = () => {
       <div className="footer-container">
         {/* Logo Section */}
         <div className="footer-logo">
-          <Link to="/" className='logos reads'>
-            <img src={logo} alt="main-logo" className="logo" />
+          <Link to="/" className=' reads'>
+            <img src={logo} alt="main-logo" className="main-logo" />
           </Link>
-          <a href="https://www.the-efa.org/chapters/bipoc" className='logos'><img src={logo1} alt="" /></a>
-          <a href="https://www.editorsteaclub.org" className='logos'><img src={logo2} alt="" /></a>
-          <a href="https://www.netgalley.com/member/profile" className='logos'><img src={logo3} alt="" /></a>
-          <a href="https://www.indieauthorconnect.com" className='logos'><img src={logo4} alt="" /></a>
-          <a href="https://reviseresub.com/" className='logos'><img src={logo5} alt="" /></a>
+          <div className='members'>
+            <a href="https://www.the-efa.org/chapters/bipoc" className='logos'><img src={logo1} alt="" /></a>
+            <a href="https://www.editorsteaclub.org" className='logos'><img src={logo2} alt="" /></a>
+            <a href="https://www.netgalley.com/member/profile" className='logos'><img src={logo3} alt="" /></a>
+            <a href="https://www.indieauthorconnect.com" className='logos'><img src={logo4} alt="" /></a>
+            <a href="https://reviseresub.com/" className='logos'><img src={logo5} alt="" /></a>
+          </div>
         </div>
 
         {/* Navigation Links */}
         <nav className="footer-nav">
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/contact">Contact Us</Link>
             </li>
             <li>
-              <Link to="/freedie">freddy buddy</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
               <Link to="/portfolio">About</Link>
             </li>
             <li>
-              <Link to="/contact">Contact Us</Link>
+              <Link to="/freedie">FrEdiBuddies</Link>
             </li>
           </ul>
         </nav>
@@ -66,6 +70,16 @@ const Footer: React.FC = () => {
             <li>
               <a href="https://www.linkedin.com/in/ashpreads/" target="_blank" rel="noopener noreferrer" className='social'>
                 <img src={linkeding} alt="linkedin-logo" className='social-img' />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.threads.net/@ashpreads" target="_blank" rel="noopener noreferrer" className='social'>
+                <img src={threads} alt="threads-logo" className='social-img' />
+              </a>
+            </li>
+            <li>
+              <a href="https://bsky.app/profile/ashpreads.bsky.social" target="_blank" rel="noopener noreferrer" className='social'>
+                <img src={Blue} alt="Blue-logo" className='social-img' />
               </a>
             </li>
           </ul>

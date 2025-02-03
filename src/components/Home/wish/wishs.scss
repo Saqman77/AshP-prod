@@ -1,6 +1,6 @@
 .wish-main{
     height: auto;
-    min-height: 70vh;
+    // min-height: 70vh;
     width: 100%;
     display: grid;
     grid-auto-flow: column;
@@ -8,28 +8,41 @@
     gap: 50px;
     position: relative;
     perspective: 1000px;
-    // max-height: 50vh;
+    min-height: 600px;
     // transform-style: preserve-3d;
     transition: transform 0.3s ease-in-out 0.1s, box-shadow 0.3s ease-in-out;
-    @media screen and (max-width:800px) {
-        min-height: 90vh;
+    @media screen and (max-width:1250px) {
+        // min-height: auto;
+        justify-content: center;
+        grid-auto-columns: max-content;
         grid-auto-flow: dense;
+        grid-auto-rows: 1fr;
         max-width: 500px;
-        gap: 20px;
+        gap: 50px;
         padding: 1em;
     }
 }
 
 .wish-box{
     width: 100%;
-    scroll-snap-align: none start;
-    scroll-snap-stop: normal;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
     height: 100%;
     transition: box-shadow 0.3s ease-in-out;
     box-shadow: 16px 17px 0px 0px black;
     max-height: fit-content;
+    perspective: 1000px;
+    @media screen and (max-width:1250px) {
+        max-width:450px;
+        min-height: 550px;
+    }
+
+    @media screen and (max-width:600px) {
+        max-width:300px;
+        min-height: 400px;
+    }
 }
 
 .wish-wrapper{
@@ -38,17 +51,17 @@
     
     // perspective: 1000px;
     width: 100%;
-    scroll-snap-align: none start;
-    scroll-snap-stop: normal;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
     height: 100%;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: auto;
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.3s ease-in-out 0.1s, box-shadow 0.3s ease-in-out;
-    // transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
     // width: 100%;
     transform: rotateY(0deg);
 }
@@ -67,7 +80,7 @@
 .wish-main .wish-box {
     transition: box-shadow 0.3s ;
     animation: restoreShadow 0.6s forwards;
-//     transform: rotateY(-180deg);
+    // transform: rotateY(-180deg);
   }
   .wish-main .wish-box:not(:hover) {
     transition: box-shadow 0.3s ;
@@ -82,23 +95,33 @@
     width: 100%;
     height: 100%;
     padding: 2em;
-    position: absolute;
+    grid-area: 1/1;
     backface-visibility: hidden;
-    top: 0;
-    left: 0;
+    
     @media screen and (max-width: 1250px) {
-        padding: 1em 1em;
+        padding: 2em 2em;
+    }
+    @media screen and (max-width: 900px) {
+        padding: 1em 1em 2em;
     }
 }
 
 .wish-heading{
     display: flex;
-    justify-content: left;
+    justify-content: center;
+    align-items: center;
+    // margin-top: 5em;
+    text-align: center;
+    flex: 2;
+    // margin-bottom: auto;
+    @media screen and (max-width: 1250px) {
+        // margin-top: 4em;
+    }
 }
 
-.wish-main .wish-wrapper .flip-button, .wish-main .wish-wrapper .flip-button:active {
-    margin-top: auto;
-}
+// .wish-main .wish-wrapper .flip-button, .wish-main .wish-wrapper .flip-button:active {
+//     // margin-top: auto;
+// }
 
 
 .wish-front{
@@ -106,6 +129,28 @@
     flex-direction: column;
     transform: rotateY(0deg);
     background-color: #8CDE6380;
+    justify-content: space-evenly;
+}
+
+.wish-front .wish-desc:last-child{
+    font-size: var(--font-small);
+    font-weight:400;
+    margin: 0em 0 1.5em;
+    @media screen and (max-width:1250px) {
+        font-size: var(--font-small);
+    }
+    @media screen and (max-width:1199px) {
+        font-size: var(--font-small);
+    }
+    @media screen and (max-width:900px) {
+        font-size: var(--font-small);
+    }
+    @media screen and (max-width:600px) {
+        font-size: var(--font-small);
+    }
+    @media screen and (max-width:400px) {
+        font-size: var(--font-small);
+    }
 }
 
 .wish-front.not{
@@ -113,80 +158,153 @@
     flex-direction: column;
     transform: rotateY(0deg);
     background-color: #FCCCC8;
+    justify-content: space-evenly;
 }
 
 .wish-head{
-    font-size: var(--font-medium);
-    text-decoration: underline;
+    font-size: var(--font-large);
+    // text-decoration: underline;
+    letter-spacing: 2px;
+    font-family: "Euphorigenic";
     @media screen and (max-width:1250px) {
+        font-size: var(--font-large);
+    }
+    @media screen and (max-width:900px) {
         font-size: var(--font-xlarge);
     }
 }
 
-.wish-desc{
-    font-size: var(--font-medium);
-    font-weight: 700;
-    margin: 1em 0 2em;
+.wish-desc, .wish-front.not .wish-desc{
+    font-size: clamp(24px,2vw,30px);
+    font-weight:500;
+    margin: 0em 0 .5em;
+    flex: 1;
     // letter-spacing: 3px;
     @media screen and (max-width:1250px) {
-        font-size: var(--font-medium);
+        font-size: clamp(24px,2vw,30px);
     }
     @media screen and (max-width:900px) {
-        font-size: var(--font-small);
+        font-size: var(--font-large);
     }
 }
 
-.wish-back{
+.wish-front.not .wish-desc{
+    // letter-spacing: 2px;
+    margin: auto 0 1.5em;
+    
+    // line-height: 1.5em;
+}
+
+.wish-front.not .wish-description{
+    flex: 2;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    // flex-direction: column;
+    justify-content: end;
+}
+
+.wish-back{
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
     transform: rotateY(180deg);
     background-color: #8CDE6380;
 }
 .wish-back.not{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     transform: rotateY(180deg);
     background-color:  #FCCCC8;
 }
 
+.wish-list{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100%;
+}
+.wish-list ul{
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: max-content max-content;
+    // gap: 10px 50px;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1;
+    row-gap: 5px;
+    @media screen and (max-width:1250px) {
+        // gap: 10px 10px;
+    }
+}
 .wish-list ul li{
+    // text-align: center;
     list-style-type: none;
     font-size: var(--font-small);
     font-weight: 700;
-    margin-bottom: 6px;
-    text-decoration: underline;
+    // margin-bottom: 6px;
+    // border: 2px solid black;
+    // width: fit-content;
+    // text-decoration: underline;
     list-style-type: square;
-    margin-left: 1em;
+    // margin-left: 1em;
+    // border-radius: 1em;
+    // padding: .3em;
     @media screen and (max-width:1250px) {
+        font-size: var(--font-small);
+        margin-bottom: 0px;
+    }
+    @media screen and (max-width:1199px) {
+        font-size: var(--font-medium);
+        margin-bottom: 0px;
+    }
+    @media screen and (max-width:600px) {
         font-size: var(--font-small);
         margin-bottom: 0px;
     }
     @media screen and (max-width:400px) {
-        font-size: var(--font-small);
+        font-size: var(--font-xsmall);
         margin-bottom: 0px;
     }
 }
 
+.w-list-heading p{
+    font-family: "Euphorigenic";
+    margin: auto;
+    @media screen and (max-width:1250px){
+        margin: 0;
+        margin-bottom: auto;
+    }
+}
 .w-list-heading{
-    font-size: var(--font-medium);
+    font-size: var(--font-large);
     font-weight: 700;
-    margin-bottom: 2em;
+    // margin-bottom: 2em;
+    letter-spacing: 2px;
     display: flex;
+    justify-content: center;
+    text-align: center;
+    // margin-top: auto;
+    // margin-bottom: auto;
+    // align-items: center;
+    flex-direction: column-reverse;
+    flex: 2;
     @media screen and (max-width:1250px) {
         font-size: var(--font-large);
-        margin-bottom: 0.5em;
+        // margin-bottom: 0.5em;
+    }
+    @media screen and (max-width:800px) {
+        font-size: var(--font-xlarge);
+        // margin-bottom: 0.5em;
     }
 }
 
-.wish-bottom p{
-    font-size: var(--font-medium);
-    font-weight: 400;
-    @media screen and (max-width:1250px) {
-        font-size: var(--font-medium);
-    }
-}
+// .wish-bottom p{
+//     font-size: var(--font-medium);
+//     font-weight: 400;
+//     @media screen and (max-width:1250px) {
+//         font-size: var(--font-medium);
+//     }
+// }
 
 @keyframes restoreShadow {
     0%{
@@ -238,10 +356,11 @@
     align-items: center;
     @media screen and (max-width: 1100px) {
         justify-content: space-evenly;
-        padding: 7px 19px;
+        padding: 10px 19px;
         background-color: #d54973e1;
         border-radius: 7px;
         box-shadow: 2px 3px 0px 0px black;
+        // max-width: 300px;
     }
 }
 
@@ -250,8 +369,8 @@
     font-weight: 600;
     color: black;
     display: flex;
-    font-family: 'Euphorigenic', sans-serif;
-    @media screen and (min-width: 1100px) {
+    // font-family: 'Euphorigenic', sans-serif;
+    @media screen and (min-width: 1250px) {
         display: none;
     }
 }
@@ -268,12 +387,12 @@
     width: 100%;
 }
 
-@media screen and (max-width: 1100px) {
-    .wish-main .wish-wrapper .flip-button:active{
-        transform: translate(2px, 3px);
-        box-shadow: 1px 1px 0px 0px black;
-    }
-}
+// @media screen and (max-width: 1100px) {
+//     .wish-main .wish-wrapper .flip-button:active{
+//         transform: translate(2px, 3px);
+//         box-shadow: 1px 1px 0px 0px black;
+//     }
+// }
 
 .wish-main .wish-wrapper .flip-back{
     border: 1px solid rgba(213, 73, 115, 0.8823529412);
@@ -283,10 +402,11 @@
     background-color: bisque;
     box-shadow: 1px 1px 0px 0px black;
     margin-left: auto;
-    width: 18px;
-    height: 18px;
+    width: 36px;
+    height: 36px;
+    margin-bottom: auto;
     // padding: 1px;
-    @media screen and (min-width:1101px) {
+    @media screen and (min-width:1250px) {
         display: none;
     }
 
@@ -310,9 +430,9 @@
 
 .wish-box.restore-shadow{
     transition: box-shadow 0.3s ;
-    animation: restoreShadow 0.6s forwards ease-in 0.2s;
+    animation: restoreShadow 0.3s forwards ;
 }
 .wish-box.unhover-shadow{
     transition: box-shadow 0.3s ;
-    animation: unHoverShadow 0.6s forwards ease-in 0.2s;
+    animation: unHoverShadow 0.3s forwards;
 }

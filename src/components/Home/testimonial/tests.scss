@@ -57,10 +57,10 @@ $font-xSmall: 12px;
 }
 
 .test-heading{
-  font-size: var(--font-large);
+  font-size: var(--font-medium);
     font-weight: 700;
     text-align: right;
-    margin-top: 1em;
+    // margin-top: 1em;
 }
 
 .test-front{
@@ -68,19 +68,22 @@ $font-xSmall: 12px;
   height: 100%;
   display: flex;
   flex-direction: column-reverse;
-  justify-content: space-between;
+  justify-content: space-around;
   @media screen and (max-width:600px) {
     justify-content: space-around;
   }
 }
 
 .test-content{
-  font-size: var(--font-large);
+  font-size: var(--font-medium);
 }
 
 @media screen and (max-width: 900px){
     .test-content{
-      font-size: var(--font-xlarge);
+      font-size: var(--font-medium);
+    }
+    .test-heading{
+      font-size: var(--font-large);
     }
 }
 
