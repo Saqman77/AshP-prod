@@ -24,15 +24,20 @@ const Footer: React.FC = () => {
       <div className="footer-container">
         {/* Logo Section */}
         <div className="footer-logo">
-          <Link to="/" className=' reads'>
+          <Link to="/" className='reads'>
             <img src={logo} alt="main-logo" className="main-logo" />
           </Link>
           <div className='members'>
             <p
               style={{
                 fontSize:'24px',
-                fontWeight:'700',
-                margin:'auto'
+                // fontWeight:'700',
+                color:'white',
+                textDecorationColor:'white',
+                textDecoration:'underline',
+                textUnderlineOffset:'10px',
+                letterSpacing:'2px'
+                // margin:'auto'
               }}
             >Memberships:</p>
             <a href="https://www.the-efa.org/chapters/bipoc" className='logos'><img src={logo1} alt="" /></a>
@@ -47,16 +52,26 @@ const Footer: React.FC = () => {
         <nav className="footer-nav">
           <ul>
             <li>
-              <Link to="/contact">Contact Us</Link>
+              <Link to="/contact"
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Contact Us
+              </Link>
             </li>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/"
+                onClick={() => window.scrollTo(0, 0)}
+              >Home</Link>
             </li>
             <li>
-              <Link to="/portfolio">About</Link>
+              <Link to="/portfolio"
+                onClick={() => window.scrollTo(0, 0)}
+              >About</Link>
             </li>
             <li>
-              <Link to="/freedie">FrEdiBuddies</Link>
+              <Link to="/freedie"
+                onClick={() => window.scrollTo(0, 0)}
+              >FrEdiBuddies</Link>
             </li>
           </ul>
         </nav>

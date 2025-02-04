@@ -240,12 +240,15 @@ $font-xSmall: 12px;
     .img-container{
         width:250px;
     }
+    .right-content{
+        margin-right: auto;
+    }
 }
 
 @media screen and (max-width: 900px) {
-    .img-container, .right-img{
-        display: none;
-    }
+    // .img-container, .right-img{
+    //     display: none;
+    // }
 }
 
 .services-section{

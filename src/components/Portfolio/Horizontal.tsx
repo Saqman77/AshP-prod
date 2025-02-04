@@ -108,8 +108,8 @@ const Horizontal: React.FC = () => {
           stagger:0.1,
           ease:'power1.inOut',
           scrollTrigger:{
-            trigger: '.outro',
-            start: 'top center',
+            trigger: span,
+            start: 'top bottom',
             end: 'center',
             scrub: true,
             // markers: true
@@ -140,25 +140,37 @@ const Horizontal: React.FC = () => {
         <section className='h-wrapper'
             ref={wrapper}
         >
-            <h1 className='h-heading'>Who Are We?</h1>
+            <div className='reveal'> 
+              <svg width="48" height="98" viewBox="0 0 48 98" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_3_240)">
+                    <path d="M18.3411 74.1924C18.3411 72.0809 18.3411 69.7582 18.3411 67.6467C18.5525 49.0651 18.9754 30.2725 19.1869 11.6909C19.1869 9.57939 19.1869 7.679 19.3984 5.56747C19.6098 2.82247 20.2442 -0.555987 23.8389 0.0774737C25.3191 0.288627 27.0108 3.45593 27.2222 5.35632C28.0681 20.9817 28.7024 36.3959 29.3368 52.0213C29.5483 55.6109 29.3368 59.2005 31.2399 63.0013C33.7774 58.7782 35.892 54.344 38.6409 50.332C39.9096 48.4317 43.0815 46.3201 44.9846 46.7424C48.7908 47.5871 48.3679 51.8101 47.0992 54.344C41.6013 67.0132 36.1034 79.8936 29.5483 92.1405C25.3191 99.9532 18.9754 99.9532 14.7463 92.1405C9.03698 81.7939 4.80785 70.6028 0.155803 59.834C-0.478567 58.567 1.00163 56.4555 1.42454 54.7663C3.11619 55.3997 5.65367 55.3997 6.4995 56.6667C8.61407 59.2005 9.88281 62.579 11.5745 65.5351C13.2661 68.7024 14.9578 71.8697 16.6494 74.8259C17.0723 74.4036 17.7067 74.1924 18.3411 74.1924Z" fill="#7163DE"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_3_240">
+                      <rect width="48" height="98" fill="white"/>
+                    </clipPath>
+                  </defs>
+              </svg>
+            </div>
+            <h1 className='h-heading'>Who are we?</h1>
 
             <div className="h-card" id='h-card1'>
-                <img src="../Frame 21.svg" alt="card-img" />
+                <img src="../2manteam.png" alt="card-img" />
             </div>
             <div className="h-card" id='h-card2'>
-                <img src="../Frame 21.svg" alt="card-img" />
+                <img src="../5manteam.png" alt="card-img" />
             </div>
             <div className="h-card" id='h-card3'>
-                <img src="../Frame 21.svg" alt="card-img" />
+                <img src="../casualreading.png" alt="card-img" />
             </div>
             <div className="h-card" id='h-card4'>
-                <img src="../Frame 21.svg" alt="card-img" />
+                <img src="../3manteam.png" alt="card-img" />
             </div>
         </section>
         <section className='outro'>
             <h3>
             <span className='outro-span'>
-                Since 2003, Ash P Reads Editing Services has contributed their expertise to over 200 fiction and nonfiction manuscripts, along with extensive website and social media content. Founded by Ash P, this family-run editing service has collaborated with best-selling authors and an award-winning publisher. They have particular expertise in working with ESL authors, helping bring structure to their stories and developing their unique writing voices. Both editors bring valuable backgrounds in early childhood and special education, making them particularly well suited for manuscripts related to children and education.
+                Since 2003, Ash P Reads Editing Services has contributed their expertise to over 200 fiction and nonfiction manuscripts, along with extensive website and social media content. Founded by Ash P, this family-run editing service has collaborated with best-selling authors and an award-winning publisher. They have particular expertise in working with ESL authors, helping bring structure to their stories and developing their unique writing voices. Both editors bring valuable backgrounds in early childhood education and special education, making them particularly well suited for manuscripts related to children and education.
                 <span className=" outro-span bold">Cultivating stories, one edit at a time.</span>
               </span> 
 

@@ -43,7 +43,7 @@ const Wishs = () => {
                             Safe-for-work Fiction and Nonfiction manuscripts for all ages. Children’s Literature is on top of the list.
                         </p>
                         <p className='wish-desc'>
-                            Picture/Illustrated Books, Chapter Books, Novels, Novellas, Short stories, Anthologies, Comic Books, Graphic Novels, Graphic Memoirs, Biographies, Poetry.
+                        Picture/Illustrated Books, Chapter Books, Novels, Novellas, Short Stories, Anthologies, Comic Books, Graphic Novels, Graphic Memoirs, Biographies, Poetry.
                         </p>
                     </div>
                     <div className="flip-button" onClick={handleFlip}>
@@ -73,9 +73,11 @@ const Wishs = () => {
                             <li>Cozy Mystery</li>
                             <li>Paranormal</li>
                             <li>Science Fiction</li>
+                            <li>Fantasy</li>
                             <li>Urban Fantasy</li>
                             <li>Mystery</li>
                             <li>Thriller</li>
+                            <li>Family</li>
                             <li>Slice of Life</li>
                             <li>Inspirational</li>
                             <li>Women's Fiction</li>
@@ -106,7 +108,7 @@ const Wishs = () => {
                     </div>
                     <div className="wish-description">
                         <p className='wish-desc'>
-                            Manuscripts with Excessive Profanity, Racism, Religious Prejudice, or depiction of Toxic Relationships as healthy.
+                         Manuscripts with Excessive Profanity, Racism, Religious Prejudice, or depiction of Toxic Relationships as healthy.
                         </p>
                     </div>
                     <div className="flip-button" onClick={handleFlip}>
@@ -134,7 +136,7 @@ const Wishs = () => {
                             <li>Historical Fiction </li>
                             <li>Historical Romance</li>
                             <li>Bully Romance</li>
-                            <li>NSFW content</li>
+                            <li>NSFW Content</li>
                             <li>LGBTQIAP+</li>
                             <li>Violent Horror </li>
                             <li>Gore</li>

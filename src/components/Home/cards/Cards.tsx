@@ -1,3 +1,4 @@
+import ContactUs from '../../get-in-touch-button/ContactUs';
 import './cards.scss';
 import flip from '/src/assets/home/uis_flip-v.png';
 import { Suspense, useState } from 'react';
@@ -78,6 +79,7 @@ const Cards = ({ id, head, backGround, cardImg, desc, isDragging }: Props) => {
           <div className="card-desc">
             <p className="back-desc">{desc}</p>
           </div>
+          <ContactUs/>
         </div>
       </div>
     </div>

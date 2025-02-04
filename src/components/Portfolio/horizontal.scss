@@ -56,6 +56,36 @@
     }
 }
 
+@keyframes upDown {
+    0%{
+        transform: translateY(-50%);
+        // opacity: .5;
+        // text-decoration-color: #7163de00;
+        // text-underline-offset: -40px;
+        height: 50px;
+        
+    }
+    25%{
+
+        // text-underline-offset: -40px;
+        // text-decoration-color: #7163de00;
+    }
+    50%{
+
+        // text-underline-offset: 8px;
+        // text-decoration-color: #7163de00;
+        // scale:0.5;
+    }
+    100%{
+        transform: translateY(20%);
+        // opacity: 1;
+        // text-decoration-color: #7163DE;
+        // text-underline-offset: 10px;
+        // scale:1;
+        height: 100px;
+    }
+}
+
 .h-card{
     position: absolute;
     width: 300px;
@@ -100,6 +130,34 @@
     object-fit: cover;
 }
 
+.reveal{
+    position: absolute;
+    width: max-content;
+    width: 40px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    border-radius: 60px;
+    padding: .2em;
+    // font-size: var(--font-small);
+    font-family: "Euphorigenic";
+    top: 50%;
+    left: 5%;
+    // color: #7163DE;
+    animation: 1s ease-in-out .5s infinite alternate upDown ;
+    // text-decoration: underline;
+    box-shadow: 8px 4px 0px 0px rgba(0, 0, 0, 0.548);
+    // text-decoration-color: #7163DE;
+    border: 4px solid #7163DE ;
+    will-change: transform;
+}
+
+.reveal svg{
+    width: 25px;
+    height: 25px;
+}
+
 .h-heading{
     width: 100%;
     font-size: 35vw;
@@ -142,6 +200,11 @@
     }
     @media screen and (max-width:500px) {
         font-size: var(--font-xlarge);
+        
+    }
+    @media screen and (max-width:400px) {
+        font-size: var(--font-large);
+        padding: .5em;
     }
 }
 
@@ -159,11 +222,11 @@
 .outro-span.bold{
     font-family: 'Euphorigenic', sans-serif;
     font-size: var(--font-xlarge);
-    // background-image: linear-gradient(to right, #f5bbbb,#f5bbbb);
+    background-image: linear-gradient(to right, #f5bbbb,#f5bbbb);
     font-weight: 600;
-    // text-wrap: nowrap;
-    // background-clip: text;
-    // background-repeat: no-repeat;
+    text-wrap: nowrap;
+    background-clip: text;
+    background-repeat: no-repeat;
     // text-decoration: underline;
     // text-decoration-line: underline;
     // text-decoration-style: ;
@@ -171,13 +234,17 @@
     // color: #00000000;
     background-size: 0% 100%;
     background-clip: text;
-    
+    background-position: left;
     background-repeat: no-repeat;
     width: 100%;
     height: 200px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    // padding: 1em;
+    @media  screen and (max-width: 400px){
+        // height: 100px;
+    }
 }
 
 .space{

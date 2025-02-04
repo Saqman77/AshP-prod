@@ -189,7 +189,7 @@ const Home = () => {
           </div>
 
           <div className="left-desc">
-          We want your message to resonate clearly with your readers so our flexible rates and payment plans fit all budgets.
+          We want your message to resonate clearly with your readers, so our flexible rates and payment plans fit all budgets.
           </div>
 
         </div>
