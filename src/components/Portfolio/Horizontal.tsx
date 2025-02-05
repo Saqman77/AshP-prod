@@ -95,7 +95,7 @@ const Horizontal: React.FC = () => {
           start: 'top top',
           end: '+=400px',
           scrub: 1,
-          markers: true,
+          // markers: true,
           onUpdate: (self) => {
             gsap.to(card.id, {
               x: `${card.endTranslateX * self.progress}px`,
