@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import './Footer.scss';
-import logo from '/src/assets/header/ash p logo.svg';
+import logo from '/src/assets/header/toplogo (1).svg';
 import logo1 from '../../assets/footer/BIPOC-Chapter-300x300.png';
 import logo2 from '../../assets/footer/ETC+Member+Circle.png';
 import logo3 from '../../assets/footer/pro_reader.png';
@@ -28,15 +28,15 @@ const Footer: React.FC = () => {
             <img src={logo} alt="main-logo" className="main-logo" />
           </Link>
           <div className='members'>
-            <p
+            <p className='head-members'
               style={{
-                fontSize:'24px',
+                // fontSize:'24px',
                 // fontWeight:'700',
-                color:'white',
-                textDecorationColor:'white',
-                textDecoration:'underline',
-                textUnderlineOffset:'10px',
-                letterSpacing:'2px'
+                // color:'white',
+                // textDecorationColor:'white',
+                // textDecoration:'underline',
+                // textUnderlineOffset:'10px',
+                // letterSpacing:'2px'
                 // margin:'auto'
               }}
             >Memberships:</p>

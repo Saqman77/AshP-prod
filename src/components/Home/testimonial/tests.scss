@@ -40,8 +40,8 @@ $font-xSmall: 12px;
     flex: 1;
 
     width: 100%;
-    scroll-snap-align: none start;
-    scroll-snap-stop: normal;
+    scroll-snap-align:start;
+    scroll-snap-stop: always;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
     

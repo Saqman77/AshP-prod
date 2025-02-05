@@ -207,10 +207,10 @@ const Home = () => {
             Our <span className="color-text">Services</span>
           </p>
         </div>
-        <div className="cards-wrapper ">
-          <div className="left-btn" onClick={moveLeft}>
+        <div className="left-btn" onClick={moveLeft}>
             L
           </div>
+        <div className="cards-wrapper ">
           <div
             className={!isDragging ? 'carousel' : 'carousel dragging'}
             ref={carouselRef}
@@ -231,10 +231,11 @@ const Home = () => {
               );
             })}
           </div>
-          <div className="right-btn" onClick={moveRight}>
+
+        </div>
+        <div className="right-btn" onClick={moveRight}>
             R
           </div>
-        </div>
       </div>
 
       <div className="wish-section">

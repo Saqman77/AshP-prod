@@ -69,7 +69,7 @@ const ParallaxImage: React.FC<ParallaxImageProps> = ({ src, alt, className }) =>
   useLenis(({ scroll }) => {
     if (!bounds.current) return;
     const relativeScroll = scroll - bounds.current.top;
-    targetTranslateY.current = relativeScroll * 0.2;
+    targetTranslateY.current = relativeScroll * 0.1;
   });
 
   return (

@@ -35,199 +35,97 @@ const Scroll = ({ startIndex, isVisible, onClose, onItemClick }: ScrollProps) =>
         const tl2 = gsap.timeline();
         const tl = gsap.timeline();
           tl.fromTo(
-            '.ash .s-text ,.ash .s-heading',
+            '.ash .s-heading',
             {
-              x: '-100%',
-              stagger: 0.1,
-              scale: 0,
-              opacity: 0,
-              ease: 'Power2.easeIn',
-            },
-            {
-              x: '0',
-              stagger: 0.1,
-              scale: 1,
-              opacity: 1,
-              scrollTrigger: {
-                trigger: '.ash',
-                start: 'clamp(-50% top)',
-                end: 'clamp(top center)',
-                scrub: 1,
-                refreshPriority: 1,
-                preventOverlaps:true,
-                // onEnter: tl.revert ,
-                // once:true,
-                // markers: true,
-                // toggleActions: 'restart none restart none',
-                onLeave:()=>{
-                    tl.to('.ash .s-text ,.ash .s-heading',{
-                        x: '-100%',
-                        stagger: 0.1,
-                        scale: 0,
-                        opacity: 0,
-                        ease: 'Power2.easeIn',
-                        scrollTrigger: {
-                            trigger: '.ash',
-                            start: 'clamp(30% top)',
-                            end: 'clamp(+=400px)',
-                            scrub:true,
-                            preventOverlaps:true,
-                            // onScrubComplete:tl.revert,
-                            // once:true,
-                            // toggleActions: 'restart none restart none',
-                            // markers:true
-                        }
-                    })
-                }
+                x: '-100%',
+                scale: 0,
+                opacity: 0,
               },
-            }
+              {
+                x: '0',
+                scale: 1,
+                opacity: 1,
+                stagger: 0.1,
+                ease: 'power2.out',
+                scrollTrigger: {
+                  trigger: '.ash',
+                  start: 'top 80%', // Adjust based on when you want it to start
+                  end: 'top 20%',   // Adjust when it should fully appear
+                  scrub: 1,         // Smooth animation on scroll
+                  toggleActions: "play reverse play reverse", // This ensures reverse on leave
+                //   refreshPriority: 1,
+                },
+              }
           );
-            tl.fromTo('.ash .cert-text',{ x:'100%', scale: 0, opacity:0},
+
+          const certs = document.querySelectorAll('.ash .cert-text')
+
+          certs.forEach((cert) =>{       
+            gsap.fromTo(cert,{ x:'100%', scale: 0, opacity:0},
             {
               x: '0%',
               scale: 1,
               opacity:1,
               stagger: 0.1,
-            //   yoyo: true,
-            //   repeat:2,
               scrollTrigger: {
-                trigger: ".ash",
-                start: 'clamp(-30% top)',
-                end: 'clamp(+=100px )',
-                // markers: true,
+                trigger: cert,
+                start: '-70% bottom',
+                end: '+=200px',
                 scrub: true,
                 onLeave:()=>{
-                    tl.to(".ash .cert-text",{
+                    gsap.to(cert,{
                          x:'100%',
                          scale: 0,
                          opacity:0,
                         stagger:0.1,
                         scrollTrigger:{
-                            trigger:'.ash .cert-list',
-                            start:'-20% top',
-                            end:'+=600px',
-                            scrub: true
-                        }
-                        })
-                }
-
-    }})
-          tl2.fromTo(
-            '.hira .s-text ,.hira .s-heading',
-            {
-              x: '-100%',
-              stagger: 0.1,
-              scale: 0,
-              opacity: 0,
-              ease: 'Power2.easeIn',
-            },
-            {
-              x: '0',
-              stagger: 0.1,
-              scale: 1,
-              opacity: 1,
-              scrollTrigger: {
-                trigger: '.hira',
-                start: 'clamp(-50% top)',
-                end: 'clamp(center center)',
-                scrub: 1,
-                refreshPriority: 1,
-                preventOverlaps:true,
-                // onEnter: tl.revert ,
-                // once:true,
-                // markers: true,
-                // toggleActions: 'restart none restart none',
-                onLeave:()=>{
-                    tl2.to('.hira .s-text ,.hira .s-heading',{
-                        x: '-100%',
-                        stagger: 0.1,
-                        scale: 0,
-                        opacity: 0,
-                        ease: 'Power2.easeIn',
-                        scrollTrigger: {
-                            trigger: '.hira',
-                            start: 'clamp(-10% 20%)',
-                            end: 'clamp(+=400px)',
-                            scrub:true,
-                            preventOverlaps:true,
-                            // onScrubComplete:tl.revert,
-                            // once:true,
-                            // toggleActions: 'restart none restart none',
-                            // markers:true
+                            trigger: cert,
+                            start:'bottom 30%',
+                            end:'+=200px',
+                            scrub: true,
+                            // markers: true
                         }
                     })
                 }
-              },
-            }
-          );
-            tl2.fromTo('.hira .cert-text',{ x:'100%', scale: 0, opacity:0},
+                }
+            })
+        }) 
+            gsap.fromTo('.ash .q-text',{ x:'100%', scale: 0, opacity:0},
             {
               x: '0%',
               scale: 1,
               opacity:1,
               stagger: 0.1,
-            //   yoyo: true,
             //   repeat:2,
               scrollTrigger: {
-                trigger: ".hira",
-                start: 'clamp(-40% top)',
-                end: 'clamp(+=100px )',
-                // markers: true,
-                // onEnter: tl.revert,
+                trigger: '.ash .q-text',
+                start: '-70% bottom',
+                end: '+=200px',
                 scrub: true,
-                // onScrubComplete:tl.revert,
-                // refreshPriority: 1,
-                // toggleActions: 'play reverse play reverse',
                 onLeave:()=>{
-                    tl2.to(".hira .cert-text",{
+                    tl.to('.ash .q-text',{
                          x:'100%',
                          scale: 0,
                          opacity:0,
                         stagger:0.1,
                         scrollTrigger:{
-                            trigger:'.hira .cert-list',
-                            start:'-40% top',
-                            end:'+=600px',
-                            scrub: true
-                        }
+                            trigger:'.ash .q-text',
+                            start:'bottom 30%',
+                            end:'+=200px',
+                            scrub: true,
+                            // markers: true
+                        },
                         })
                 }
-                    // tl.revert()
-            //         gsap.fromTo('.cert-text',{ x: '0%', scale: 1, opacity:2 },{
-            //             x: '100%',
-            //             stagger: 0.1,
-            //             scale: 0,
-            //             opacity: 0,
-            //             ease: 'Power2.easeIn',
-            //             scrollTrigger: {
-            //                 trigger: panel,
-            //                 start: 'clamp(center center)',
-            //                 end: 'clamp(center)',
-            //                 scrub:true,
-            //                 markers:true,
-            //                 // onScrubComplete:tl.revert
-            //                 // toggleActions: 'restart play restart restart',
-            //             }
-            //         })
-            //    },
-            },
-            
-        
-
-          
-  
-
-        });
+            }
+            })
+    
         tl.fromTo(
             '.panel.ash .panel-front',
             {
-            //   backdropFilter: 'blur(50px) brightness(0.7)',
-            //   webkitBackdropFilter: 'blur(50px) brightness(0.7)',
                 backgroundColor:'#7163DE'
             },
             {
-            //   backdropFilter: 'blur(7px) brightness(0.8)',
-            //   webkitBackdropFilter: 'blur(7px) brightness(0.8)',
             backgroundColor:'#7163de7c',
               scrollTrigger: {
                 trigger: '.ash',
@@ -237,93 +135,143 @@ const Scroll = ({ startIndex, isVisible, onClose, onItemClick }: ScrollProps) =>
               },
             }
           );
-        tl2.fromTo(
-            '.panel.hira .panel-front',
-            {
-            //   backdropFilter: 'blur(50px) brightness(0.7)',
-            //   webkitBackdropFilter: 'blur(50px) brightness(0.7)',
-                backgroundColor:'#7163DE'
-            },
-            {
-            //   backdropFilter: 'blur(7px) brightness(0.8)',
-            //   webkitBackdropFilter: 'blur(7px) brightness(0.8)',
-            backgroundColor:'#7163de7c',
-              scrollTrigger: {
-                trigger: '.hira',
-                start: '-20% top',
-                end: '+=100px',
-                scrub: true,
-              },
-            }
-          );
-        // tl2.fromTo('.ash2-img',{
-        //     // height:'0%',
-        //     // transform:'translateY(100%)'
-        //     scale:0.5
-        // },
-        // {
-        //     // transform:'translateY(0%)',
-        //     // height:'100%',
-        //     scale:1,
-        //     ease:'power2.inOut',
-        //     duration:2,
-        //     scrollTrigger: {
-        //         trigger: '.panel',
-        //         start: '-20% top',
-        //         end: '+=100px',
-        //         scrub: true,
-        //       },
-        // })
+       
 
         gsap.fromTo('.projects .panel-front',{
             opacity:'0'
         },{
-            backdropFilter:'blur(10px) brightness(0.6)',
-            opacity:'1',
-            ease:'power1.inOut',
-            // backgroundColor: 'rgb(255 152 154 / 82%)',
+            opacity:'1',         
             scrollTrigger:{
                 trigger:'.projects .panel-front',
-                start:'-10% top',
-                end:'-2%',
+                start:'-30% center',
+                end:'10%',
                 scrub: true,
-                // onLeave:  ()=>{
                 //     gsap.to('.projects .panel-front',{
                 //         opacity:'0'
                 //     })
                 // },
-                // onEnterBack:  ()=>{
-                //     gsap.to('.projects .panel-front',{
-                //         opacity:'1'
-                //     })
-                // },
+                // markers: true
             },
         })
+        tl2.fromTo(
+            '.hira .s-heading',
+            {
+              x: '-100%',
+              scale: 0,
+              opacity: 0,
+            },
+            {
+              x: '0',
+              scale: 1,
+              opacity: 1,
+              stagger: 0.1,
+              ease: 'power2.out',
+              scrollTrigger: {
+                trigger: '.hira',
+                start: 'top 80%', // Adjust based on when you want it to start
+                end: 'top 20%',   // Adjust when it should fully appear
+                scrub: 1,         // Smooth animation on scroll // This ensures reverse on leave
+                // refreshPriority: 1,
+              },
+            }
+          );
+
+          const hCerts = document.querySelectorAll('.hira .cert-text')
+
+          hCerts.forEach((cert) =>{       
+            gsap.fromTo(cert,{ x:'100%', scale: 0, opacity:0},
+                {
+                  x: '0%',
+                  scale: 1,
+                  opacity:1,
+                  stagger: 0.1,
+                  scrollTrigger: {
+                    trigger: cert,
+                    start: '-70% bottom',
+                    end: '+=200px',
+                    scrub: true,
+                    onLeave:()=>{
+                        gsap.to(cert,{
+                             x:'100%',
+                             scale: 0,
+                             opacity:0,
+                            stagger:0.1,
+                            scrollTrigger:{
+                                trigger: cert,
+                                start:'bottom 30%',
+                                end:'+=200px',
+                                scrub: true,
+                                // markers: true
+                            }
+                        })
+                    }
+                    }
+                })
+        }) 
+            gsap.fromTo('.hira .q-text',{ x:'100%', scale: 0, opacity:0},
+            {
+              x: '0%',
+              scale: 1,
+              opacity:1,
+              stagger: 0.1,
+            //   repeat:2,
+              scrollTrigger: {
+                trigger: '.hira .q-text',
+                start: '-70% bottom',
+                end: '+=200px',
+                scrub: true,
+                onLeave:()=>{
+                    tl.to('.hira .q-text',{
+                         x:'100%',
+                         scale: 0,
+                         opacity:0,
+                        stagger:0.1,
+                        scrollTrigger:{
+                            trigger:'.hira .q-text',
+                            start:'bottom 30%',
+                            end:'+=200px',
+                            scrub: true,
+                            // markers: true
+                        },
+                        })
+                }
+            }
+            })
+    
+        tl2.fromTo(
+            '.panel.hira .panel-front',
+            {
+                backgroundColor:'#7163DE'
+            },
+            {
+            backgroundColor:'#7163de7c',
+              scrollTrigger: {
+                trigger: '.hira',
+                start: '-20% top',
+                end: '+=100px',
+                scrub: true,
+              },
+            }
+          );
+       
+
         gsap.fromTo('.projects-hira .panel-front',{
             opacity:'0'
         },{
-            backdropFilter:'blur(10px) brightness(0.6)',
-            opacity:'1',
-            ease:'power1.inOut',
-            // backgroundColor: 'rgb(255 152 154 / 82%)',
+            opacity:'1',         
             scrollTrigger:{
                 trigger:'.projects-hira .panel-front',
-                start:'-10% top',
-                end:'-2%',
+                start:'-30% center',
+                end:'10%',
                 scrub: true,
-                // onLeave:  ()=>{
                 //     gsap.to('.projects .panel-front',{
                 //         opacity:'0'
                 //     })
                 // },
-                // onEnterBack:  ()=>{
-                //     gsap.to('.projects .panel-front',{
-                //         opacity:'1'
-                //     })
-                // },
+                // markers: true
             },
         })
-      
+
   
     //   return () => ctx.revert(); // Clean up the ScrollTrigger and animations on unmount
     },{scope:scrollRef});
@@ -387,7 +335,7 @@ const Scroll = ({ startIndex, isVisible, onClose, onItemClick }: ScrollProps) =>
                                          Qualifications
                                     </h3>
                                     <ul className='cert-list2'>
-                                        <li id='list1'><p className='cert-text'>B.A. in Mass Communication, English Literature, and Education.</p></li>
+                                        <li id='list1'><p className='q-text'>B.A. in Mass Communication, English Literature, and Education.</p></li>
                                         
                                     </ul>
                             </div>
@@ -547,7 +495,7 @@ const Scroll = ({ startIndex, isVisible, onClose, onItemClick }: ScrollProps) =>
                                     Qualifications
                                 </h3>
                                 <ul className='cert-list2'>
-                                    <li id='list1'><p className='cert-text'>B.A. in Mass Communication, English Literature, and Education.</p></li>
+                                    <li id='list1'><p className='q-text'>B.A. in Mass Communication, English Literature, and Education.</p></li>
                                     
                                 </ul>
                         </div>

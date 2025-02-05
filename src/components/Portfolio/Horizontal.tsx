@@ -72,14 +72,16 @@ const Horizontal: React.FC = () => {
         ScrollTrigger.create({
           trigger: wrapper.current,
           start: 'top top',
-          end: '+=400vh',
+          end: '+=1000vh',
           scrub: 1,
-          pin: true,
+          pinType: "fixed",
+          pin:boxRef.current,
+          // pinSpacer: ,
           onUpdate: (self) => {
             gsap.to(wrapper.current, {
               x: `${-350 * self.progress}vw`,
               duration: 0.5,
-              ease: 'power1.out',
+              ease: 'power2.out',
             });
           },
         });
@@ -89,14 +91,14 @@ const Horizontal: React.FC = () => {
         ScrollTrigger.create({
           trigger: 'card.id',
           start: 'top top',
-          end: '+=500vh',
+          end: '+=600vh',
           scrub: 1,
           onUpdate: (self) => {
             gsap.to(card.id, {
               x: `${card.endTranslateX * self.progress}px`,
               rotate: `${card.rotate * self.progress * 2}`,
               duration: 0.5,
-              ease: 'power3.out',
+              ease: 'power2.out',
             });
           },
         });
@@ -109,8 +111,22 @@ const Horizontal: React.FC = () => {
           ease:'power1.inOut',
           scrollTrigger:{
             trigger: span,
-            start: 'top bottom',
-            end: 'center',
+            start: 'top center',
+            end: '+=200px',
+            scrub: 1,
+            // markers: true
+          }
+        })
+      
+      
+        gsap.to('.bold',{
+          backgroundSize: '100% 100%',
+          // stagger:0.1,
+          ease:'power1.inOut',
+          scrollTrigger:{
+            trigger: '.bold',
+            start: 'top center',
+            end: 'bottom center',
             scrub: true,
             // markers: true
           }
@@ -170,11 +186,15 @@ const Horizontal: React.FC = () => {
         <section className='outro'>
             <h3>
             <span className='outro-span'>
+
                 Since 2003, Ash P Reads Editing Services has contributed their expertise to over 200 fiction and nonfiction manuscripts, along with extensive website and social media content. Founded by Ash P, this family-run editing service has collaborated with best-selling authors and an award-winning publisher. They have particular expertise in working with ESL authors, helping bring structure to their stories and developing their unique writing voices. Both editors bring valuable backgrounds in early childhood education and special education, making them particularly well suited for manuscripts related to children and education.
-                <span className=" outro-span bold">Cultivating stories, one edit at a time.</span>
-              </span> 
+                
+            </span> 
+
+            <p className="bold">Cultivating stories, one edit at a time.</p>
 
             </h3>
+            
         </section>
     </div>
   )

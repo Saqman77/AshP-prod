@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Header.scss';
-import logo from '/src/assets/header/ash p logo.svg';
+import logo from '/src/assets/header/toplogo (1).svg';
 import ContactUs from '../get-in-touch-button/ContactUs';
 import { useThemeContext } from '../../utils/ThemeContextProvider';
 
@@ -10,7 +10,34 @@ const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const { isMenuOpen, toggleMenu, closeMenu } = useThemeContext();
+  const header = useRef<HTMLDivElement | null>(null);
 
+
+    useEffect(() => {
+    const adjustBodyPadding = () => {
+      if (header.current) {
+        const navbarHeight = header.current.getBoundingClientRect().height;
+        const mainer = document.querySelector('.main')
+        if (mainer) {
+          (mainer as HTMLElement).style.paddingTop = `${navbarHeight}px`;
+        }
+      }
+    };
+
+    // Adjust padding on load
+    adjustBodyPadding();
+
+    // Adjust padding on window resize
+    window.addEventListener("resize", adjustBodyPadding);
+
+    return () => {
+      window.removeEventListener("resize", adjustBodyPadding);
+      const mainer = document.querySelector('.main');
+      if (mainer) {
+        (mainer as HTMLElement).style.paddingTop = '';
+      } // Reset padding on cleanup
+    };
+  }, []);
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -46,6 +73,7 @@ const Header: React.FC = () => {
   return (
     <>
       <header
+      ref={header}
         className={`header ${isHidden ? 'header-hidden' : ''} ${
           isScrolled ? 'header-blur' : 'header-transparent'
         }`}

@@ -1,11 +1,12 @@
 
 .h-container{
     width: 100%;
-    height: 250vh;
+    min-height: 250vh;
     overflow-x: hidden;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 100%;
+    height: auto;
     // position: relative;
     // top: 0;
 }
@@ -219,7 +220,7 @@
     // font-family: 'Euphorigenic', sans-serif;
 }
 
-.outro-span.bold{
+.bold{
     font-family: 'Euphorigenic', sans-serif;
     font-size: var(--font-xlarge);
     background-image: linear-gradient(to right, #f5bbbb,#f5bbbb);
@@ -231,7 +232,7 @@
     // text-decoration-line: underline;
     // text-decoration-style: ;
     // background-clip:padding-box;
-    // color: #00000000;
+    color: #00000009;
     background-size: 0% 100%;
     background-clip: text;
     background-position: left;
@@ -241,6 +242,9 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    // position: absolute;
+    // bottom: 0;
+    // left: 0;
     // padding: 1em;
     @media  screen and (max-width: 400px){
         // height: 100px;
