@@ -1,6 +1,6 @@
 import './horizontal.scss'
 // import ace from '../../assets/freedi/Spark 82.svg'
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from '@gsap/react';
@@ -20,6 +20,7 @@ const Horizontal: React.FC = () => {
   ];
 
   useGSAP(()=>{
+    const ctx = gsap.context(() => {
     gsap.to('.main', {
       backgroundColor: '#7163DE',
   
@@ -63,19 +64,20 @@ const Horizontal: React.FC = () => {
         // pin: true
       }
     })
-  })
+  // })
 
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
+  // useLayoutEffect(() => {
+  //   
       const spans = document.querySelectorAll('.outro-span')
       if (wrapper.current) {
         ScrollTrigger.create({
           trigger: wrapper.current,
           start: 'top top',
-          end: '+=1000vh',
+          end: '+=500vh',
           scrub: 1,
           pinType: "fixed",
-          pin:boxRef.current,
+          pin: true,
+          // pinSpacing: false,
           // pinSpacer: ,
           onUpdate: (self) => {
             gsap.to(wrapper.current, {
@@ -91,14 +93,16 @@ const Horizontal: React.FC = () => {
         ScrollTrigger.create({
           trigger: 'card.id',
           start: 'top top',
-          end: '+=600vh',
+          end: '+=400px',
           scrub: 1,
+          markers: true,
           onUpdate: (self) => {
             gsap.to(card.id, {
               x: `${card.endTranslateX * self.progress}px`,
               rotate: `${card.rotate * self.progress * 2}`,
               duration: 0.5,
               ease: 'power2.out',
+              
             });
           },
         });
@@ -108,12 +112,12 @@ const Horizontal: React.FC = () => {
         gsap.to(span,{
           backgroundSize: '100% 100%',
           stagger:0.1,
-          ease:'power1.inOut',
+          ease:'power1.out',
           scrollTrigger:{
             trigger: span,
             start: 'top center',
-            end: '+=200px',
-            scrub: 1,
+            end: '+=500px',
+            scrub: true,
             // markers: true
           }
         })
@@ -134,12 +138,12 @@ const Horizontal: React.FC = () => {
       })
 
 
-    }, boxRef);
+    }, );
  
 
 
     return () => ctx.revert(); // Cleanup animations and ScrollTriggers
-  }, []);
+  } ,[]);
 
 
   return (
