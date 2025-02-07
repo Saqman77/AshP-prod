@@ -92,7 +92,7 @@ $font-xSmall: 12px;
     // padding-left: 24px;
     // padding-right: 24px;
     // padding-top: 24px;
-    height: 479px;
+    height: 579px;
     // padding-bottom: 48px;
     display: flex;
     flex-direction: column;
@@ -104,7 +104,7 @@ $font-xSmall: 12px;
 
 @media screen and (max-width: 900px){
     .card{
-        height: 300px;
+        height: 400px;
     }
 }
 
@@ -269,6 +269,11 @@ $font-xSmall: 12px;
     
     @media screen and (max-width: 1100px) {
         font-size: var(--font-small);
+        display: flex;
+        // justify-content: space-evenly;
+    }
+    @media screen and (max-width: 600px) {
+        font-size: var(--font-medium);
         display: flex;
         // justify-content: space-evenly;
     }

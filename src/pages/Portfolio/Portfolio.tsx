@@ -7,6 +7,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { useEffect, useState } from "react";
+import { useThemeContext } from "../../utils/ThemeContextProvider";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -21,7 +22,35 @@ const Portfolio = ({ key }: PortfolioProps) => {
   const [isServVisible, setServVisible] = useState(false);
   
  // Empty dependency array ensures this runs only on mount and unmount
+  const [scrollY, setScrollY] = useState(0);
 
+      const {isActive,removeClass} = useThemeContext();
+      
+      
+      useEffect(()=>{
+        if(isActive){
+          removeClass();
+          document.documentElement.classList.remove('active')
+          document.body.classList.remove('active')
+        }
+      },[])
+    
+
+  useEffect(() => {
+    if (isServVisible) {
+      // Lock body scroll
+      setScrollY(window.scrollY); // Save current scroll position
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${window.scrollY}px`;
+      document.body.style.width = '100%';
+    } else {
+      // Unlock body scroll
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      window.scrollTo(0, scrollY); // Restore scroll position
+    }
+  }, [isServVisible]);
  useEffect(()=>{
     const headerP = document.querySelector('.header-blur') as HTMLElement
     const nav = document.querySelector('.nav ul') as HTMLElement

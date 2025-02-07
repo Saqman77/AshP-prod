@@ -620,6 +620,16 @@ const Scroll = ({ startIndex, isVisible, onClose, onItemClick }: ScrollProps) =>
                 close={onClose}
                 isVisible={isVisible}
                 service={services[currentIndex]}
+                start={() => onItemClick(currentIndex < services.length - 1 ? currentIndex + 1 : 0)}
+                end={() => onItemClick(currentIndex > 0 ? currentIndex - 1 : services.length - 1)}
+                next={currentIndex < services.length - 1 ? services[currentIndex + 1].service : 'no'}
+                last={services.length > 0 && currentIndex > 0
+                                        ? services[currentIndex - 1].service
+                                        : services.length > 0
+                                        ? services[0].service
+                                        : "No name available"}
+                currentIndex={currentIndex}
+                length={services.length}
             />
         </section>
         

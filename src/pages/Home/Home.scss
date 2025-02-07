@@ -338,7 +338,7 @@ $font-xSmall: 12px;
 
 .cards-wrapper{
     width: 100%;
-    max-width: 1100px;
+    max-width: 1400px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -439,7 +439,7 @@ $font-xSmall: 12px;
     line-height: 70px;
     cursor: pointer;
     position: absolute;
-    left: clamp(5px, 3vw, 10px);
+    left: 0px;
     top: 60%;
     transform: translateY(-50%);
     box-shadow: 4px 4px 0px 0px black;
@@ -449,6 +449,12 @@ $font-xSmall: 12px;
     -webkit-tap-highlight-color: transparent;
     z-index: 999;
     font-size: var(--font-large);
+    @media screen and (max-width:1700px) {
+        left: -50px;
+    }
+    @media screen and (max-width:1350px) {
+        left: 50px;
+    }
 }
 .right-btn{
     width: 70px;
@@ -459,7 +465,7 @@ $font-xSmall: 12px;
     line-height: 70px;
     cursor: pointer;
     position: absolute;
-    right: clamp(5px, 3vw, 30px);
+    right: 0px;
     top: 60%;
     transform: translateY(-50%);
     box-shadow: 4px 4px 0px 0px black;
@@ -469,6 +475,12 @@ $font-xSmall: 12px;
     -webkit-tap-highlight-color: transparent;
     z-index: 999;
     font-size: var(--font-large);
+    @media screen and (max-width:1700px) {
+        right: -50px;
+    }
+    @media screen and (max-width:1350px) {
+        right: 50px;
+    }
 }
 
 .left-btn:hover,.right-btn:hover{
@@ -613,7 +625,7 @@ $font-xSmall: 12px;
 
 @media screen and (max-width: 1250px) {
     .cards-wrapper{
-        max-width: 900px;
+        max-width: 1100px;
     }
 
     
@@ -635,7 +647,7 @@ $font-xSmall: 12px;
 
     .cards-wrapper{
         width: 70vw;
-        max-width: 800px;
+        max-width: 1000px;
     }
 
 
@@ -702,7 +714,7 @@ $font-xSmall: 12px;
 
     .cards-wrapper{
         width: 60vw;
-        max-width: 400px;
+        max-width: 600px;
         padding-left: 30px;
     }
     .card-wrapper{

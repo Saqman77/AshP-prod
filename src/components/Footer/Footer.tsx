@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import './Footer.scss';
-import logo from '/src/assets/header/toplogo (1).svg';
+import logo from '/src/assets/header/toplogo (2).svg';
 import logo1 from '../../assets/footer/BIPOC-Chapter-300x300.png';
 import logo2 from '../../assets/footer/ETC+Member+Circle.png';
 import logo3 from '../../assets/footer/pro_reader.png';

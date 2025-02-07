@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 interface Project {
   name: string;
@@ -13,6 +13,7 @@ interface Client {
 
 interface Service {
   service: string;
+  id: string;
   genres: {
     Fiction: Client[];
     Nonfiction: Client[];
@@ -23,20 +24,26 @@ interface ServiceGridProps {
   isVisible: boolean;
   service: Service;
   close: () => void;
+  start: () => void;
+  end: () => void;
+  next: string|null;
+  last: string|null;
+  currentIndex: number;
+  length: number;
 }
 
-const ServiceGrid: React.FC<ServiceGridProps> = ({ isVisible, service, close }) => {
+const ServiceGrid: React.FC<ServiceGridProps> = ({ isVisible, service, start, end, close, next, last, currentIndex: mainIndex, length }) => {
   const [activeFilter, setActiveFilter] = useState<'All' | 'Fiction' | 'Nonfiction'>('All');
   const [activeScreen, setActiveScreen] = useState<'service' | 'client'>('service');
   const [selectedClient, setSelectedClient] = useState<Client | null>(null);
-
+  const [currentIndex, setCurrentIndex] = useState(mainIndex);
   const handleFilterClick = (filter: 'All' | 'Fiction' | 'Nonfiction') => {
     setActiveFilter(filter);
   };
 
-  // const handleBackClick = () => {
-  //   setActiveScreen('service');
-  // }
+  const handleBackClick = () => {
+    setActiveScreen('service');
+  }
 
   const handleClientClick = (client: Client) => {
     setSelectedClient(client);
@@ -48,6 +55,12 @@ const ServiceGrid: React.FC<ServiceGridProps> = ({ isVisible, service, close }) 
     setSelectedClient(null);
     close();
   }
+
+      useEffect(() => {
+          setCurrentIndex(mainIndex);
+        }, [mainIndex]);
+
+  
 
   if (!isVisible) return null;
 
@@ -61,48 +74,58 @@ const ServiceGrid: React.FC<ServiceGridProps> = ({ isVisible, service, close }) 
   return (
     <div className="past-wrapper">
       <div className="past-heading">
-        <h3 className="s-heading">{activeScreen == 'service' ? service.service : selectedClient?.name}</h3>
+       
+         {
+         
+          activeScreen !== 'service' ?
+          <div className="past-heading-wrapper"
+          onClick={handleBackClick}
+          >
+          <button
+
+            className="past-toggle"
+            // onClick={handleBackClick}
+          >
+            
+            <span
+              className="back-arrow"
+            >
+         
+            </span>
+              {/* {<p className="back-heading">{service.service}</p>} */}
+            </button>
+         </div>
+          :('')
+         
+          }
+          <h3 className="s-heading" >{activeScreen == 'service' ? service.service : selectedClient?.name}</h3>
+       
         <div className="past-close">
           <button
             onClick={() => {closeService()}}
-            style={{
-              position: "relative",
-              width: "40px",
-              height: "40px",
-              background: "transparent",
-              border: "none",
-              cursor: "pointer",
-              padding:"1.5rem"
-            }}
+            // style={{
+            //   position: "relative",
+            //   width: "40px",
+            //   height: "40px",
+            //   background: "transparent",
+            //   border: "none",
+            //   cursor: "pointer",
+            //   padding:"1.5rem"
+            // }}
           >
             <span
-              style={{
-                position: "absolute",
-                top: "50%",
-                left: "0",
-                width: "100%",
-                height: "4px",
-                backgroundColor: "black",
-                transform: "rotate(45deg) translateY(-50%)",
-              }}
+              className="close first"
             />
             <span
-              style={{
-                position: "absolute",
-                top: "50%",
-                left: "0",
-                width: "100%",
-                height: "4px",
-                backgroundColor: "black",
-                transform: "rotate(-45deg) translateY(-50%)",
-              }}
+              className="close second"
+
             />
           </button>
         </div>
       </div>
 
       {/* Filter Buttons */}
-      {activeScreen == 'service' && (
+      {activeScreen == 'service' && service.id != 'other-services' ?(
         <div className="filter-buttons">
           <button
             className={activeFilter === 'All' ? 'filter-button active' : 'filter-button'}
@@ -123,6 +146,9 @@ const ServiceGrid: React.FC<ServiceGridProps> = ({ isVisible, service, close }) 
             Nonfiction
           </button>
         </div>
+      ) : (<div className="filter-buttons">
+        {}
+        </div>
       )}
       
 
@@ -136,7 +162,7 @@ const ServiceGrid: React.FC<ServiceGridProps> = ({ isVisible, service, close }) 
               onClick={() => {handleClientClick(client)}}
             >
               <h4>{client.name}</h4>
-              <div>Projects: {client.projects.length}</div>
+              {/* <div>Projects: {client.projects.length}</div> */}
               {/* <ServProject genre={client} /> */}
             </button>
           ))}
@@ -150,15 +176,29 @@ const ServiceGrid: React.FC<ServiceGridProps> = ({ isVisible, service, close }) 
               <div>{project.name}</div>
               {project.link && (
                 <a href={project.link} target="_blank" rel="noopener noreferrer">
-                  go to link
+                  
                 </a>
               )}
             </div>
           ))}
         </div>
       )}
-
+                 {activeScreen !== 'client' && <div className="page-wrapper">
+                    <button
+                      className={`paging ${currentIndex === 0 ? "disabled" : ""}`}
+                      onClick={end}
+                    >
+                      {last}
+                    </button>
+                    <button
+                      className={`paging ${currentIndex === length - 1 ? "disabled" : ""}`}
+                      onClick={start}
+                    >
+                      {next}
+                    </button>
+                  </div>}
     </div>
+    
   );
 };
 

@@ -251,8 +251,9 @@
     // bottom: 0;
     // left: 0;
     // padding: 1em;
-    @media  screen and (max-width: 400px){
+    @media  screen and (max-width: 390px){
         // height: 100px;
+        font-size: var(--font-large);
     }
 }
 
