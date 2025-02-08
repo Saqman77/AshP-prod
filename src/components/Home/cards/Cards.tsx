@@ -69,17 +69,35 @@ const Cards = ({ id, head, backGround, cardImg, desc, isDragging }: Props) => {
         >
           <div className="card-heading-back">
             <p className="heading-back">{head}</p>
-            <div className="flip-back" onClick={handleFlip}>
-              <img src={flip} alt="flip-img" className='flip-icon' />
-            </div>
+
           </div>
           {/* <div className="card-img">
             <img src={cardImg} alt="" className="cardImg" />
           </div> */}
           <div className="card-desc">
-            <p className="back-desc">{desc}</p>
+            <p className="back-desc">
+
+            {
+            desc.split("\n").map((line, index) => (
+            <span key={index}>
+            {line}
+            <br />
+            </span>
+            ))}
+
+            </p>
           </div>
-          <ContactUs/>
+          <div className='card-bottoms'>
+            <ContactUs/>
+            <div className='back-flipper'>
+              <p className='back-text'>
+                Back
+              </p>
+              <div className="flip-back" onClick={handleFlip}>
+                  <img src={flip} alt="flip-img" className='flip-icon' />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

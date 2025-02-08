@@ -61,9 +61,7 @@ const Wishs = () => {
                                 Compatible Genres
                             </p>
 
-                            <div className="flip-back" onClick={handleFlip}>
-                                    <img src={flip} alt="flip-img" className='flip-icon' />
-                            </div>
+
 
 
                         </div>
@@ -84,12 +82,16 @@ const Wishs = () => {
                             <li>General Fiction</li>
                             <li>Horror (MG only)</li>
                         </ul>
+                        <div className="flip-back" onClick={handleFlip}>
+                                    <img src={flip} alt="flip-img" className='flip-icon' />
+                            </div>
                     </div>
                     {/* <div className="wish-bottom">
                         <p>
                             Ideally, manuscripts ranging between 50k-80k words.
                         </p>
                     </div> */}
+                    
                 </div>
             </div>
         </div>
@@ -126,9 +128,7 @@ const Wishs = () => {
                                 Incompatible Genres
                             </p>
 
-                            <div className="flip-back" onClick={handleFlip}>
-                                    <img src={flip} alt="flip-img" className='flip-icon' />
-                            </div>
+
 
 
                         </div>
@@ -147,7 +147,11 @@ const Wishs = () => {
                         Manuscripts of 100k words or more.
                         </p>
                     </div> */}
+                                                <div className="flip-back" onClick={handleFlip}>
+                                    <img src={flip} alt="flip-img" className='flip-icon' />
+                            </div>
                 </div>
+                
             </div>
         </div>
     </div>

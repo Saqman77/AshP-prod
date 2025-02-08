@@ -208,7 +208,11 @@ const Home = () => {
           </p>
         </div>
         <div className="left-btn" onClick={moveLeft}>
-            L
+            <span
+              className='left-btn-span'
+            >
+
+            </span>
           </div>
         <div className="cards-wrapper ">
           <div
@@ -234,7 +238,11 @@ const Home = () => {
 
         </div>
         <div className="right-btn" onClick={moveRight}>
-            R
+            <span
+              className='right-btn-span'
+            >
+              
+            </span>
           </div>
       </div>
 

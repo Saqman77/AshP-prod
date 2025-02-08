@@ -81,10 +81,10 @@ $font-xSmall: 12px;
 }
 
 @media screen and (max-width: 900px){
-    .card-wrapper{
+    // .card-wrapper{
         // scroll-snap-align: center;
-        max-width: 250px;
-    }    
+        // max-width: 250px;
+    // }    
 }
 
 .card{
@@ -104,7 +104,7 @@ $font-xSmall: 12px;
 
 @media screen and (max-width: 900px){
     .card{
-        height: 400px;
+        height: 500px;
     }
 }
 
@@ -243,9 +243,13 @@ $font-xSmall: 12px;
     margin-bottom: auto;
     font-size: var(--font-small);
     font-weight: 500;
-    text-align: center;
+    text-align: justify;
     @media screen and (max-width: 900px) {
-        font-size: 12px;
+        font-size: 18px;
+        // margin-top: 0;
+    }
+    @media screen and (max-width: 600px) {
+        font-size: 16px;
         // margin-top: 0;
     }
 }
@@ -268,7 +272,7 @@ $font-xSmall: 12px;
     text-align: center;
     
     @media screen and (max-width: 1100px) {
-        font-size: var(--font-small);
+        font-size: var(--font-medium);
         display: flex;
         // justify-content: space-evenly;
     }
@@ -376,4 +380,23 @@ $font-xSmall: 12px;
     box-shadow: 0px 0px 0px 0px black;
     border: 1px solid bisque;
     background-color: rgba(213, 73, 115, 0.8823529412);
+}
+
+.card-bottoms{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.back-flipper{
+    display: flex;
+    align-items: center;
+}
+
+.back-text{
+    font-size: var(--font-medium);
+    font-weight: 700;
+    @media screen and (min-width:1250px) {
+        display: none;
+    }
 }
