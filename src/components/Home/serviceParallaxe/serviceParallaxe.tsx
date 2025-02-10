@@ -89,7 +89,7 @@ const ServiceParallaxe = forwardRef<HTMLDivElement, ParallaxImageProps>(
             targetTranslateX.current,
             0.05
           );
-          imageRef.current.style.transform = `translateX(${currentTranslateX.current}px) scale(1.25)`; // Smooth translate
+          imageRef.current.style.transform = `translate(${currentTranslateX.current}px, 50%)  scale(1.5)`; // Smooth translate
         }
         rafId.current = requestAnimationFrame(animate);
       };

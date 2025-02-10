@@ -43,6 +43,10 @@
         max-width:400px;
         min-height: 400px;
     }
+    @media screen and (max-width:450px) {
+        max-width:350px;
+        min-height: 400px;
+    }
 }
 
 .wish-wrapper{

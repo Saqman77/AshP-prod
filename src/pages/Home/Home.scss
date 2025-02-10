@@ -140,6 +140,7 @@ $font-xSmall: 12px;
      
         @media screen and (max-width:900px) {
             margin-bottom: 2vh;
+            font-size: var(--font-medium);
         }
         // animation: none;
         // background-image: linear-gradient(90deg, #d5497300, #d5497300);
