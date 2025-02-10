@@ -4,6 +4,8 @@ html, body{
     min-height: -webkit-fill-available;
     min-height: 100vh;
     height: auto;
+    background-color: #FFF9E3;
+
     // min-height: max-content;
     // background-color: #FFF9E3;
     // overflow-y: auto;
@@ -11,6 +13,9 @@ html, body{
 // body{
     // background-color: #FFF9E3;
 // }
+body {
+    overscroll-behavior: contain;
+  }
 
 #root{
     width: 100%;

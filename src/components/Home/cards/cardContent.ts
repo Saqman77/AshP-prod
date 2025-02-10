@@ -4,7 +4,7 @@ export const cardContent = [
       imgSrc: "../Consultaion.jpg",
       heading: "Consultation",
       backgroundColor: "#7163DE80",
-      description: "You have a manuscript, but you aren’t sure what comes next?\n\nBook a complimentary 30-minute video consultation call to discuss your editing needs\n\nBook your free 30-minute video consultation."
+      description: "You have a manuscript, but you aren’t sure what comes next?\n\nBook a complimentary 30-minute video consultation call to discuss your editing needs"
       
     },
     {

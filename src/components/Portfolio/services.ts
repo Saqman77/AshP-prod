@@ -24,10 +24,7 @@ export const services = [
                             name:'Seasons of Change – Trish Nelson',
                             link: null,
                         },
-                        {
-                            name:'THE REAPing WOMAN: A Step-by-Step Guide to a Purposeful Life – Dr. Catherine Muyeba ',
-                            link: null,
-                        },
+
                     ]
                 }
             ]
@@ -50,6 +47,26 @@ export const services = [
                             name:'No Contact & Detox Support book',
                             link: null,
                         },
+                        
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        service:'Line and Copy Editing Combo',
+        id:'line-and-copy-editing-combo',
+        genres: {
+            Fiction: [],
+            Nonfiction: [
+                {           
+                    name:'TC Publishing',
+                    projects: [
+                        {
+                            name:'THE REAPing WOMAN: A Step-by-Step Guide to a Purposeful Life – Dr. Catherine Muyeba ',
+                            link: null,
+                        },
+
                         
                     ]
                 }
@@ -140,7 +157,7 @@ export const services = [
                     name:'TC Publishing',
                     projects: [
                         {
-                            name:'The simple way to get motivated –Tarnya Coley',
+                            name:'The Simple Way To Get Motivated –Tarnya Coley',
                             link:'https://a.co/d/c4daISa',
                         },
                         {
@@ -290,9 +307,13 @@ export const services = [
                     name:'Documentation Services',
                     projects:[
                         {
-                            name:'Style guides, Standard Operating Procedures (SOPs), Training Manuals for private educational institutes and publishing houses',
+                            name:'Standard operating procedures (SOPs) and  training manuals for private educational institutes.',
                             link: null,
-                        }
+                        },
+                        {
+                            name:'Style guides for a nonprofit organization  and a publishing house.',
+                            link: null,
+                        },
                     ]
                 },
             ]

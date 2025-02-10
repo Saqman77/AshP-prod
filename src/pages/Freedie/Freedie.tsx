@@ -1,60 +1,60 @@
-// import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import wheel from '../../assets/freedi/Brutalist 52.png';
 import gear from '../../assets/freedi/Brutalist Shape 181 (1).svg';
-// import FLists from '../../components/freedie/flist/FLists';
+import FLists from '../../components/freedie/flist/FLists';
 import './Freedie.scss';
-// import FCarousel from '../../components/freedie/fcarousel/FCarousel';
-// import { useThemeContext } from '../../utils/ThemeContextProvider';
+import FCarousel from '../../components/freedie/fcarousel/FCarousel';
+import { useThemeContext } from '../../utils/ThemeContextProvider';
 
 const Freedie: React.FC = () => {
-//   const [selectedIndex, setSelectedIndex] = useState(0);
-//   const [isCarouselVisible, setCarouselVisible] = useState(false);
-//   const [scrollY, setScrollY] = useState(0);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [isCarouselVisible, setCarouselVisible] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
 
-    //   const {isActive,removeClass} = useThemeContext();
+      const {isActive,removeClass} = useThemeContext();
       
       
-    //   useEffect(()=>{
-    //     if(isActive){
-    //       removeClass();
-    //       document.documentElement.classList.remove('active')
-    //       document.body.classList.remove('active')
-    //     }
-    //   },[])
+      useEffect(()=>{
+        if(isActive){
+          removeClass();
+          document.documentElement.classList.remove('active')
+          document.body.classList.remove('active')
+        }
+      },[])
     
 
-//   useEffect(() => {
-//     if (isCarouselVisible) {
-//       // Lock body scroll
-//       setScrollY(window.scrollY); // Save current scroll position
-//       document.body.style.position = 'fixed';
-//       document.body.style.top = `-${window.scrollY}px`;
-//       document.body.style.width = '100%';
-//     } else {
-//       // Unlock body scroll
-//       document.body.style.position = '';
-//       document.body.style.top = '';
-//       document.body.style.width = '';
-//       window.scrollTo(0, scrollY); // Restore scroll position
-//     }
-//   }, [isCarouselVisible]);
+  useEffect(() => {
+    if (isCarouselVisible) {
+      // Lock body scroll
+      setScrollY(window.scrollY); // Save current scroll position
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${window.scrollY}px`;
+      document.body.style.width = '100%';
+    } else {
+      // Unlock body scroll
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      window.scrollTo(0, scrollY); // Restore scroll position
+    }
+  }, [isCarouselVisible]);
 
-//   const handleItemClick = (index: number) => {
-//     setSelectedIndex(index);
-//     setCarouselVisible(true);
-//   };
+  const handleItemClick = (index: number) => {
+    setSelectedIndex(index);
+    setCarouselVisible(true);
+  };
 
-//   const handleCloseCarousel = () => {
-//     setCarouselVisible(false);
-//   };
+  const handleCloseCarousel = () => {
+    setCarouselVisible(false);
+  };
 
   return (
     <>
-      {/* <FCarousel
+      <FCarousel
         startIndex={selectedIndex}
         isVisible={isCarouselVisible}
         onClose={handleCloseCarousel}
-      /> */}
+      />
             <h1
         style={{
           position:'fixed',
@@ -93,7 +93,7 @@ const Freedie: React.FC = () => {
             <div className="f-headingb">
               <p className="f-hb">Meet Our FrEdiBuddies</p>
             </div>
-            {/* <FLists onItemClick={handleItemClick} /> */}
+            <FLists onItemClick={handleItemClick} />
           </div>
         </div> 
         <div className="back-gear">

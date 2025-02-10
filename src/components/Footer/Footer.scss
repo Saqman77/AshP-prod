@@ -100,7 +100,17 @@ svg, path{
     overflow: hidden;
     // height: 150px;
 }
-
+.copyright{
+    font-size: var(--font-medium);
+    font-weight: 700;
+    // color: #d54973;
+    @media screen and (min-width: 1250px) {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: max-content;
+    }
+}
 .members{
     display: grid;
     grid-auto-flow: row dense;
@@ -150,7 +160,10 @@ svg, path{
 // .reads{
 //     // width:60%
 // }
-
+.footer-nav ul li:hover{
+    color: #7163DE;
+    scale: 1.2
+}
 
 .footer-nav ul{
     display: grid;
@@ -208,6 +221,10 @@ svg, path{
     align-items: center;
     width: 70px;
     height: 70px;
+}
+
+.footer-social ul li:hover{
+    scale:1.2
 }
 
 .social{

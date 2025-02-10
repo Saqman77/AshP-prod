@@ -6,10 +6,10 @@ import logo2 from '../../assets/footer/ETC+Member+Circle.png';
 import logo3 from '../../assets/footer/pro_reader.png';
 import logo4 from '../../assets/footer/Simple_Logo_ALT.png';
 import logo5 from '../../assets/footer/R&R logo final-03 (1).png';
-import linkeding from '/src/assets/footer/linkedin.png'
-import instagram from '/src/assets/footer/instagram.png'
+import linkeding from '/src/assets/footer/newlinkedin.svg'
+import instagram from '/src/assets/footer/newInsta.svg'
 // import twitter from '/src/assets/footer/twitter.png'
-import FB from '/src/assets/footer/icons8-facebook-48.png'
+import FB from '/src/assets/footer/newFacebook.svg'
 import Blue from '/src/assets/footer/Bluesky_Logo.svg.png'
 // import favR from '/src/assets/footer/favorited_reviews.png'
 import threads from '/src/assets/footer/threads-app-icon.png'
@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
                 // letterSpacing:'2px'
                 // margin:'auto'
               }}
-            >Memberships:</p>
+            >Memberships</p>
             <a href="https://www.the-efa.org/chapters/bipoc" className='logos'><img src={logo1} alt="" /></a>
             <a href="https://www.editorsteaclub.org" className='logos'><img src={logo2} alt="" /></a>
             <a href="https://www.netgalley.com/member/profile" className='logos'><img src={logo3} alt="" /></a>
@@ -51,13 +51,6 @@ const Footer: React.FC = () => {
         {/* Navigation Links */}
         <nav className="footer-nav">
           <ul>
-            <li>
-              <Link to="/contact"
-                onClick={() => window.scrollTo(0, 0)}
-              >
-                Contact Us
-              </Link>
-            </li>
             <li>
               <Link to="/"
                 onClick={() => window.scrollTo(0, 0)}
@@ -72,6 +65,13 @@ const Footer: React.FC = () => {
               <Link to="/freedie"
                 onClick={() => window.scrollTo(0, 0)}
               >FrEdiBuddies</Link>
+            </li>
+            <li>
+              <Link to="/contact"
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Contact Us
+              </Link>
             </li>
           </ul>
         </nav>
@@ -106,7 +106,11 @@ const Footer: React.FC = () => {
             </li>
           </ul>
         </div>
+        <p className='copyright'>
+            © {new Date().getFullYear()} Ash P. All rights reserved. Designed & developed by <strong>Saqlain Haider</strong>. Illustrations by <strong>Amna Riaz</strong>.
+       </p>
       </div>
+
     </footer>
   );
 };

@@ -72,21 +72,21 @@ const Scroll = ({ startIndex, isVisible, onClose, onItemClick }: ScrollProps) =>
                 start: '-70% bottom',
                 end: '+=200px',
                 scrub: true,
-                onLeave:()=>{
-                    gsap.to(cert,{
-                         x:'100%',
-                         scale: 0,
-                         opacity:0,
-                        stagger:0.1,
-                        scrollTrigger:{
-                            trigger: cert,
-                            start:'bottom 30%',
-                            end:'+=200px',
-                            scrub: true,
-                            // markers: true
-                        }
-                    })
-                }
+                // onLeave:()=>{
+                //     gsap.to(cert,{
+                //          x:'100%',
+                //          scale: 0,
+                //          opacity:0,
+                //         stagger:0.1,
+                //         scrollTrigger:{
+                //             trigger: cert,
+                //             start:'bottom 30%',
+                //             end:'+=200px',
+                //             scrub: true,
+                //             // markers: true
+                //         }
+                //     })
+                // }
                 }
             })
         }) 
@@ -102,21 +102,21 @@ const Scroll = ({ startIndex, isVisible, onClose, onItemClick }: ScrollProps) =>
                 start: '-70% bottom',
                 end: '+=200px',
                 scrub: true,
-                onLeave:()=>{
-                    tl.to('.ash .q-text',{
-                         x:'100%',
-                         scale: 0,
-                         opacity:0,
-                        stagger:0.1,
-                        scrollTrigger:{
-                            trigger:'.ash .q-text',
-                            start:'bottom 30%',
-                            end:'+=200px',
-                            scrub: true,
-                            // markers: true
-                        },
-                        })
-                }
+                // onLeave:()=>{
+                //     tl.to('.ash .q-text',{
+                //          x:'100%',
+                //          scale: 0,
+                //          opacity:0,
+                //         stagger:0.1,
+                //         scrollTrigger:{
+                //             trigger:'.ash .q-text',
+                //             start:'bottom 30%',
+                //             end:'+=200px',
+                //             scrub: true,
+                //             // markers: true
+                //         },
+                //         })
+                // }
             }
             })
     
@@ -190,21 +190,21 @@ const Scroll = ({ startIndex, isVisible, onClose, onItemClick }: ScrollProps) =>
                     start: '-70% bottom',
                     end: '+=200px',
                     scrub: true,
-                    onLeave:()=>{
-                        gsap.to(cert,{
-                             x:'100%',
-                             scale: 0,
-                             opacity:0,
-                            stagger:0.1,
-                            scrollTrigger:{
-                                trigger: cert,
-                                start:'bottom 30%',
-                                end:'+=200px',
-                                scrub: true,
-                                // markers: true
-                            }
-                        })
-                    }
+                    // onLeave:()=>{
+                    //     gsap.to(cert,{
+                    //          x:'100%',
+                    //          scale: 0,
+                    //          opacity:0,
+                    //         stagger:0.1,
+                    //         scrollTrigger:{
+                    //             trigger: cert,
+                    //             start:'bottom 30%',
+                    //             end:'+=200px',
+                    //             scrub: true,
+                    //             // markers: true
+                    //         }
+                    //     })
+                    // }
                     }
                 })
         }) 
@@ -220,21 +220,21 @@ const Scroll = ({ startIndex, isVisible, onClose, onItemClick }: ScrollProps) =>
                 start: '-70% bottom',
                 end: '+=200px',
                 scrub: true,
-                onLeave:()=>{
-                    tl.to('.hira .q-text',{
-                         x:'100%',
-                         scale: 0,
-                         opacity:0,
-                        stagger:0.1,
-                        scrollTrigger:{
-                            trigger:'.hira .q-text',
-                            start:'bottom 30%',
-                            end:'+=200px',
-                            scrub: true,
-                            // markers: true
-                        },
-                        })
-                }
+                // onLeave:()=>{
+                //     tl.to('.hira .q-text',{
+                //          x:'100%',
+                //          scale: 0,
+                //          opacity:0,
+                //         stagger:0.1,
+                //         scrollTrigger:{
+                //             trigger:'.hira .q-text',
+                //             start:'bottom 30%',
+                //             end:'+=200px',
+                //             scrub: true,
+                //             // markers: true
+                //         },
+                //         })
+                // }
             }
             })
     

@@ -1,163 +1,263 @@
-import './Home.scss'
-// import arrow from '/src/assets/home/Frame 42.svg'
-import reading from '/src/assets/home/image 9.png'
-import Cards from '../../components/Home/cards/Cards'
-import { cardContent } from '../../components/Home/cards/cardContent'
-import { testContent } from '../../components/Home/testimonial/testContent'
-// import ContactUs from '../../components/get-in-touch-button/ContactUs'
-import { useEffect, useRef, useState } from 'react'
-// import Schedule from '../../components/schedule/Schedule'
-// import CardsContainer from '../../components/Home/wish/Wishs'
-import Wishs from '../../components/Home/wish/Wishs'
-import Tests from '../../components/Home/testimonial/Tests'
-// import { useThemeContext } from '../../utils/ThemeContextProvider'
-// import { useThemeContext } from '../../utils/ThemeContextProvider'
+import './Home.scss';
+import reading from '/src/assets/home/image 9.png';
+import Cards from '../../components/Home/cards/Cards';
+import { cardContent } from '../../components/Home/cards/cardContent';
+import { testContent } from '../../components/Home/testimonial/testContent';
+import { useEffect, useRef, useState } from 'react';
+import Wishs from '../../components/Home/wish/Wishs';
+// import Tests from '../../components/Home/testimonial/Tests';
 
-const Home = () => {
-  const carouselRef = useRef<HTMLDivElement>(null);
-  const testCarouselRef = useRef<HTMLDivElement>(null);
+import Tests from '../../components/Home/testimonial/Tests';
+
+const Home: React.FC = () => {
+  const carouselRef = useRef<HTMLDivElement | null>(null);
+  const testCarouselRef = useRef<HTMLDivElement | null>(null);
   const [isDragging, setIsDragging] = useState(false);
+  const [isTestDragging, setIsTestDragging] = useState(false);
   const [startX, setStartX] = useState(0);
+  const [startTestX, setStartTestX] = useState(0);
   const [scrollStart, setScrollStart] = useState(0);
-    // const {isActive, removeClass} = useThemeContext();
+  const [scrollTestStart, setScrollTestStart] = useState(0);
+  const [velocity, setVelocity] = useState(0);
+  const [velocityTest, setVelocityTest] = useState(0);
+  const isScrolling = useRef(false);
+  const isScrollingTest = useRef(false);
+  const lastX = useRef(0);
+  const lastTestX = useRef(0);
+  const lastTime = useRef(0);
+  const lastTestTime = useRef(0);
 
+
+
+  const smoothScroll = (targetScroll: number) => {
+    if (!carouselRef.current) return;
+
+    let start: number | null = null;
+    const startPos = carouselRef.current.scrollLeft;
+    const distance = targetScroll - startPos;
+    const duration = 600;
+
+    const step = (timestamp: number) => {
+      if (start === null) start = timestamp;
+      const progress = (timestamp - start) / duration;
+      const easedProgress = progress < 1 ? 1 - Math.pow(1 - progress, 3) : 1;
+      carouselRef.current!.scrollLeft = startPos + distance * easedProgress ;
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      }
+    };
+
+    requestAnimationFrame(step);
+  };
+  const testSmoothScroll = (targetScroll: number) => {
+    if (!testCarouselRef.current) return;
+
+    let start: number | null = null;
+    const startPos = testCarouselRef.current.scrollLeft;
+    const distance = targetScroll - startPos;
+    const duration = 600;
+
+    const step = (timestamp: number) => {
+      if (start === null) start = timestamp;
+      const progress = (timestamp - start) / duration;
+      const easedProgress = progress < 1 ? 1 - Math.pow(1 - progress, 3) : 1;
+      testCarouselRef.current!.scrollLeft = startPos + distance * easedProgress ;
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      }
+    };
+
+    requestAnimationFrame(step);
+  };
+
+  const moveCarousel = (direction: "left" | "right") => {
+    if (!carouselRef.current) return;
+
+   const card = carouselRef.current.querySelector<HTMLElement>(".card-wrapper");
+    if (!card) return;
+
+    const cardWidth = card.offsetWidth;
+    const newScrollLeft =
+      direction === "right"
+        ? carouselRef.current.scrollLeft + cardWidth
+        : carouselRef.current.scrollLeft - cardWidth;
+
+    smoothScroll(newScrollLeft);
+  };
+  const moveTestCarousel = (direction: "left" | "right") => {
+    if (!testCarouselRef.current) return;
+
+    const card = testCarouselRef.current.querySelector<HTMLElement>(".test-wrapper");
+    if (!card) return;
+
+    const cardWidth = card.offsetWidth;
+    const newScrollLeft =
+      direction === "right"
+        ? testCarouselRef.current.scrollLeft + cardWidth
+        : testCarouselRef.current.scrollLeft - cardWidth;
+
+    testSmoothScroll(newScrollLeft);
+  };
+
+  const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.preventDefault()
+    e.stopPropagation()
+    if (!carouselRef.current) return;
+
+    isScrolling.current = false;
+    lastX.current = e.clientX;
+    lastTime.current = performance.now();
+    setStartX(e.clientX);
+    setScrollStart(carouselRef.current.scrollLeft);
+    setIsDragging(true);
     
-  
-    // useEffect(()=>{
-      
-    //   if(isActive){
-    //     removeClass();
-    //     document.documentElement.classList.remove('active')
-    //     document.body.classList.remove('active')
-    //   }
-      // else{
-      //   document.documentElement.classList.remove('active')
-      //   document.body.classList.remove('active')
-      // }
-    // },[])
-  
-  // const { toggleMenu } = useThemeContext();
-
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null); // Ref to manage timeout
-
-  const handleMouseDown = (e: React.MouseEvent) => {
-    const carousel = carouselRef.current;
-    if (carousel) {
-      setIsDragging(true);
-      setStartX(e.clientX); // Record initial mouse position
-      setScrollStart(carousel.scrollLeft); // Record initial scroll position
-    }
+    
   };
+  const handleTestMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.preventDefault()
+    e.stopPropagation()
+    if (!testCarouselRef.current) return;
 
-  const handleMouseMove = (e: MouseEvent) => {
-    if (!isDragging) return;
-
-    const carousel = carouselRef.current;
-    if (carousel) {
-      const deltaX = e.clientX - startX; // Difference in mouse position
-      carousel.scrollLeft = scrollStart - deltaX; // Adjust scroll position
-    }
-  };
-
-  const handleMouseUp = () => {
-    timeoutRef.current = setTimeout(() => {
-      setIsDragging(false);
-    }, 400); // Delay of 100ms
-  };
-  const handleTestMouseDown = (e: React.MouseEvent) => {
-    const testCarousel = testCarouselRef.current;
-    if (testCarousel) {
-      setIsDragging(true);
-      setStartX(e.clientX); // Record initial mouse position
-      setScrollStart(testCarousel.scrollLeft); // Record initial scroll position
-    }
+    isScrollingTest.current = false;
+    lastTestX.current = e.clientX;
+    lastTestTime.current = performance.now();
+    setStartTestX(e.clientX);
+    setScrollTestStart(testCarouselRef.current.scrollLeft);
+    setIsTestDragging(true);
+    
+    
   };
 
   const handleTestMouseMove = (e: MouseEvent) => {
+    if (!isTestDragging || !testCarouselRef.current) return;
+      // setStartX(e.clientX);
+    // setScrollStart(carouselRef.current.scrollLeft);
+    const deltaX =  e.clientX - startTestX;
+    testCarouselRef.current.scrollLeft = scrollTestStart - deltaX;
+    
+    // Calculate velocity
+    const now = performance.now();
+    const elapsed = now - lastTestTime.current;
+    const deltaMove = e.clientX - lastTestX.current;
+    setVelocityTest(deltaMove / elapsed);
+    
+    lastTestX.current = e.clientX;
+    lastTestTime.current = now;
+  };
+  const handleMouseMove = (e: MouseEvent) => {
     if (!isDragging) return;
-
-    const testCarousel = testCarouselRef.current;
-    if (testCarousel) {
-      const deltaX = e.clientX - startX; // Difference in mouse position
-      testCarousel.scrollLeft = scrollStart - deltaX; // Adjust scroll position
+    if(carouselRef.current){
+      const deltaX =  e.clientX - startX;
+      carouselRef.current.scrollLeft = scrollStart - deltaX;
+    
+    // Calculate velocity
+    const now = performance.now();
+    const elapsed = now - lastTime.current;
+    const deltaMove = e.clientX - lastX.current;
+    setVelocity(deltaMove / elapsed);
+    
+    lastX.current = e.clientX;
+    lastTime.current = now;
     }
+    
   };
 
-  const handleTestMouseUp = () => {
-    timeoutRef.current = setTimeout(() => {
+  const handleMouseUp = () => {
+  
+    setTimeout(() => {
       setIsDragging(false);
-    }, 2000); // Delay of 100ms
+    }, 100);
+   
+    // Start inertia scrolling
+    let momentum = velocity * 20; // Scale velocity for more natural feel
+    const friction = 0.95;
+
+    const inertiaScroll = () => {
+      if (!carouselRef.current) return;
+      momentum *= friction;
+      carouselRef.current.scrollLeft += momentum;
+
+      if (momentum >= 0.5) {
+        requestAnimationFrame(inertiaScroll);
+      }
+    };
+
+    requestAnimationFrame(inertiaScroll);
+
+
   };
+  const handleTestMouseUp = () => {
+  
+     
+    setTimeout(() => {
+      setIsTestDragging(false);
+    }, 400);
+    // Start inertia scrolling
+    let momentum = velocityTest * 20; // Scale velocity for more natural feel
+    const friction = 0.95;
+
+    const inertiaScroll = () => {
+      if (!testCarouselRef.current) return;
+      momentum *= friction;
+      testCarouselRef.current.scrollLeft += momentum;
+
+      if (momentum >= 0.5) {
+        requestAnimationFrame(inertiaScroll);
+      }
+    };
+
+    requestAnimationFrame(inertiaScroll);
+    
+
+  };
+
+  // const snapToNearest = (ref: React.RefObject<HTMLDivElement>) => {
+  //   if (!ref.current) return;
+  //   const card = ref.current.querySelector<HTMLElement>(".card-wrapper");
+  //   if (!card) return;
+
+  //   const cardWidth = card.offsetWidth + 20; // Include gap
+  //   const scrollLeft = ref.current.scrollLeft;
+  //   const activeIndex = Math.round(scrollLeft / cardWidth);
+    
+  //   lenisRef.current?.scrollTo(`#card-${activeIndex}`, {
+  //     duration: 0.8,
+  //     lock: true,
+  //     offset: -50, // Adjust based on your layout
+  //   });
+  // };
+
 
   useEffect(() => {
-    if (isDragging) {
-      document.addEventListener('mousemove', handleMouseMove);
-      document.addEventListener('mousemove',  handleTestMouseMove);
-      document.addEventListener('mouseup', handleMouseUp);
-      document.addEventListener('mouseup', handleTestMouseUp);
+    if (isDragging || isTestDragging) {
+      document.addEventListener("mousemove", handleTestMouseMove);
+      document.addEventListener("mousemove", handleMouseMove);
+      document.addEventListener("mouseup", handleTestMouseUp);
+      document.addEventListener("mouseup", handleMouseUp);
     } else {
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mousemove', handleTestMouseMove);
-      document.removeEventListener('mouseup', handleMouseUp);
-      document.removeEventListener('mouseup', handleTestMouseUp);
+      document.removeEventListener("mousemove", handleTestMouseMove);
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseup", handleTestMouseUp);
+      document.removeEventListener("mouseup", handleMouseUp);
+      // handleMouseUp
     }
 
     return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mousemove',handleTestMouseMove);
-      document.removeEventListener('mouseup', handleMouseUp);
-      document.removeEventListener('mouseup', handleTestMouseUp);
+      document.removeEventListener("mousemove", handleTestMouseMove);
+      document.removeEventListener("mouseup", handleMouseUp);
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseup", handleTestMouseUp);
+      // if (timeoutRef.current) {
+      //   clearTimeout(timeoutRef.current); // Clear timeout on cleanup
+      // }
 
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current); // Clear timeout on cleanup
-      }
+      // if (carouselRef.current) {
+      //   snapToNearest({ current: carouselRef.current });
+      // }
     };
-  }, [isDragging]);
-
-  const moveRight = () => {
-    const carousel = carouselRef.current as HTMLElement | null;
-    if (carousel) {
-      const card = carousel.querySelector('.card'); // Assuming the class of each card is `.card`.
-      if (card) {
-        const cardWidth = (card as HTMLElement).offsetWidth;
-        carousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
-      }
-    }
-  };
-  const testRight = () => {
-    const testCarousel = testCarouselRef.current as HTMLElement | null;
-    if (testCarousel) {
-      const test = testCarousel.querySelector('.test-wrapper'); // Assuming the class of each card is `.card`.
-      if (test) {
-        const cardWidth = (test as HTMLElement).offsetWidth;
-        testCarousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
-      }
-    }
-  };
-  
-
-  const moveLeft = () => {
-    const carousel = carouselRef.current as HTMLElement | null;
-    if (carousel) {
-      const card = carousel.querySelector('.card'); // Assuming the class of each card is `.card`.
-      if (card) {
-        const cardWidth = (card as HTMLElement).offsetWidth;
-        carousel.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-      }
-    }
-  };
-
-  const testLeft = () => {
-    const testCarousel = testCarouselRef.current as HTMLElement | null;
-    if (testCarousel) {
-      const test = testCarousel.querySelector('.test-wrapper'); // Assuming the class of each card is `.card`.
-      if (test) {
-        const cardWidth = (test as HTMLElement).offsetWidth;
-        testCarousel.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-      }
-    }
-  };
-  
+  }, [isDragging, isTestDragging]);
 
   return (
     <div className="home-wrapper">
@@ -165,35 +265,17 @@ const Home = () => {
         <div className="left-content">
           <div className="main-heading">
             <p className="heading-text">
-
-              We are a sibling duo with more than<span> </span> 
-
-              <span className="strong">  
-
-                two decades 
-
-              </span>
-
+              We are a sibling duo with more than<span> </span>
+              <span className="strong">two decades</span>
               <span> </span>of freelance<span> </span>
-
-              <span className="color-text">
-
-                editing experience 
-
-              </span> 
-
+              <span className="color-text">editing experience</span>
               <span> </span>between us.
-
-              </p>
-
+            </p>
           </div>
-
           <div className="left-desc">
-          We want your message to resonate clearly with your readers, so our flexible rates and payment plans fit all budgets.
+            We want your message to resonate clearly with your readers, so our flexible rates and payment plans fit all budgets.
           </div>
-
         </div>
-
         <div className="right-content">
           <div className="img-container">
             <img src={reading} alt="woman-reading" className="right-img" />
@@ -207,86 +289,75 @@ const Home = () => {
             Our <span className="color-text">Services</span>
           </p>
         </div>
-        <div className="left-btn" onClick={moveLeft}>
-            <span
-              className='left-btn-span'
-            >
-
-            </span>
-          </div>
-        <div className="cards-wrapper ">
-          <div
-            className={!isDragging ? 'carousel' : 'carousel dragging'}
-            ref={carouselRef}
-            onMouseDown={handleMouseDown}
-            style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
-          >
-            {cardContent.map((card) => {
-              return (
-                <Cards
-                  key={card.id}
-                  head={card.heading}
-                  backGround={card.backgroundColor}
-                  cardImg={card.imgSrc}
-                  desc={card.description}
-                  isDragging={isDragging}
-                  {...card}
-                />
-              );
-            })}
-          </div>
-
+        <div className="left-btn" onClick={() => moveCarousel("left")}>
+          <span className='left-btn-span'></span>
         </div>
-        <div className="right-btn" onClick={moveRight}>
-            <span
-              className='right-btn-span'
-            >
-              
-            </span>
+        <div
+          className="cards-wrapper"
+
+        >
+          <div className={!isDragging ? 'carousel' : 'carousel dragging'}
+                      onMouseDown={handleMouseDown}
+                      ref={carouselRef}
+                      style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
+          >
+            {cardContent.map((card) => (
+              <Cards
+              key={card.id}
+              head={card.heading}
+              backGround={card.backgroundColor}
+              cardImg={card.imgSrc}
+              desc={card.description}
+              isDragging={isDragging}
+              ref={carouselRef}
+              {...card}
+              />
+            ))}
           </div>
+        </div>
+        <div className="right-btn" onClick={() => moveCarousel("right")}>
+          <span className='right-btn-span'></span>
+        </div>
       </div>
 
       <div className="wish-section">
         <div className="wish-header">
           <p>
-          Ash P Reads Editing Services <span className="color-text">Manuscript&nbsp;Wish&nbsp;List</span>
+            Ash P Reads Editing Services <span className="color-text">Manuscript&nbsp;Wish&nbsp;List</span>
           </p>
         </div>
-        <div className="wish-container ">
-            <Wishs/>
+        <div className="wish-container">
+          <Wishs />
         </div>
       </div>
 
       <div className="test-section">
         <div className="tests-heading">
           <p>
-          Client <span className="color-text">Testimonials</span>
+            Client <span className="color-text">Testimonials</span>
           </p>
         </div>
         <div className="tests-wrapper">
           <div
-            className={!isDragging ? 'test-carousel' : 'test-carousel dragging'}
+            className={!isTestDragging ? 'test-carousel' : 'test-carousel dragging'}
             ref={testCarouselRef}
             onMouseDown={handleTestMouseDown}
-            style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
+            style={{ cursor: isTestDragging ? 'grabbing' : 'grab' }}
           >
-            {testContent.map((card) => {
-              return (
-                <Tests
-                  key={card.id}
-                  head={card.heading}
-                  desc={card.description}
-                  // isDragging={isDragging}
-                  {...card}
-                />
-              );
-            })}
+            {testContent.map((card) => (
+              <Tests
+                key={card.id}
+                head={card.heading}
+                desc={card.description}
+                {...card}
+              />
+            ))}
           </div>
           <div className='lft-rgt'>
-            <div className="test-left-btn" onClick={testLeft}>
+            <div className="test-left-btn" onClick={() => moveTestCarousel("left")}>
               <span className='test-indicator'></span>
             </div>
-            <div className="test-right-btn" onClick={testRight}>
+            <div className="test-right-btn" onClick={() => moveTestCarousel("right")}>
               <span className='test-indicator'></span>
             </div>
           </div>

@@ -40,7 +40,11 @@ const Header: React.FC = () => {
   }, []);
   useEffect(() => {
     const handleScroll = () => {
+
       const currentScrollY = window.scrollY;
+
+        // Prevent header from hiding on iOS bounce effect
+        if (currentScrollY < 0) return; 
 
       // Check if the user is scrolling up or down
       if (currentScrollY > lastScrollY) {
@@ -56,7 +60,7 @@ const Header: React.FC = () => {
       setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
     return () => {
       window.removeEventListener('scroll', handleScroll);

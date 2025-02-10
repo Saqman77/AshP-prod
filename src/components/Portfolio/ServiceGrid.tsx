@@ -98,7 +98,7 @@ const ServiceGrid: React.FC<ServiceGridProps> = ({ isVisible, service, start, en
           :('')
          
           }
-          <h3 className="s-heading" >{activeScreen == 'service' ? service.service : selectedClient?.name}</h3>
+          <h3 className="s-heading" >{activeScreen == 'service' ? (service.service == 'Full Editing Services' ? <>{service.service} <span>aka. Book Surgery</span></> : service.service) : selectedClient?.name}</h3>
        
         <div className="past-close">
           <button
@@ -172,14 +172,19 @@ const ServiceGrid: React.FC<ServiceGridProps> = ({ isVisible, service, start, en
       {activeScreen == 'client' && selectedClient && (
         <div className="past-work">
           {selectedClient.projects.map((project) => (
-            <div className="past-card">
-              <div>{project.name}</div>
-              {project.link && (
-                <a href={project.link} target="_blank" rel="noopener noreferrer">
-                  
+            project.link != null ? (
+              <a className="past-card" href={project.link} target="_blank" rel="noopener noreferrer" key={project.name}>
+                <div>{project.name}</div>
+                <a className="yes linker" >
+                  <span className="yesarrow"></span>
                 </a>
-              )}
-            </div>
+              </a>
+            ) : (
+              <div className="past-card" key={project.name}>
+                <div>{project.name}</div>
+               { service.id != 'other-services' ? <i className="unreleased linker">Unreleased</i> : <></>}
+              </div>
+            )
           ))}
         </div>
       )}
