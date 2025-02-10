@@ -15,19 +15,21 @@ export const cardContent = [
       description: "Is your manuscript feeling incomplete?\n\nOur manuscript evaluation provides a roadmap to transform your draft from promising to powerful.\n\nContact for rates and details of service. Our Manuscript Evaluation Service includes Annotations in the manuscript, a basic Editorial Letter.\n\nRates are determined by the health of the manuscript, your budget, and the word count."
     },
     {
-      id: "Line and Copyediting combo", // Same as the heading
-      imgSrc: "../LineCopyeditngCombo.webp",
-      heading: "Line and Copy Editing Combo",
-      backgroundColor: "#F0195B33",
-      description: "50-word sentences? Sticky phrasing? Manuscript mysteries got you stuck?\n\nOur line and copyediting combo cuts through the clutter of wordy drafts, transforming it into polished prose.\n\nContact us for rates and details of service. Our Line and Copy Editing Combo Service includes Annotations, edits with Tracked Changes. One (1) post-revision review may be included at half-price only if new material is introduced to the edited manuscript.\n\nRates are determined by the health of the manuscript, your budget, and the word count."
-    },
-    {
       id: "Developmental Edit",
       imgSrc: "../Developmental Editing.webp",
       heading: "Developmental Edit",
-      backgroundColor: "#7163DE80",
+      backgroundColor: "#F0195B33",
+      
       description: "Plot inconsistencies? Flawed character development? Weak story arcs?\n\nOur developmental editing will dig deep, offering targeted feedback and strategic improvements to elevate your story’s structure, character development, and narrative impact.\n\nContact us for rates and details of service. Our Developmental Editing Service includes Annotations in the manuscript, a detailed Editorial Letter and one (1) post-revision review.\n\nRates are determined by the health of the manuscript, your budget, and the word count. "
     },
+    {
+      id: "Line and Copyediting combo", // Same as the heading
+      imgSrc: "../LineCopyeditngCombo.webp",
+      heading: "Line and Copy Editing Combo",
+      backgroundColor: "#7163DE80",
+      description: "50-word sentences? Sticky phrasing? Manuscript mysteries got you stuck?\n\nOur line and copyediting combo cuts through the clutter of wordy drafts, transforming it into polished prose.\n\nContact us for rates and details of service. Our Line and Copy Editing Combo Service includes Annotations, edits with Tracked Changes. One (1) post-revision review may be included at half-price only if new material is introduced to the edited manuscript.\n\nRates are determined by the health of the manuscript, your budget, and the word count."
+    },
+
 
     {
       id: "Proofreading",
