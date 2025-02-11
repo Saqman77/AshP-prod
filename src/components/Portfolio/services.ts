@@ -259,7 +259,7 @@ export const services = [
             ],
             Nonfiction: [
                 {           
-                    name:'Ellis Prybylsk',
+                    name:'Ellis Prybylski',
                     projects:[
                         {
                             name:'How To Publish The Damn Book',

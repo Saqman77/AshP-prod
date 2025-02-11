@@ -23,12 +23,12 @@ const ServiceParallaxe = forwardRef<HTMLDivElement, ParallaxImageProps>(
 
     // Store the initial scroll position
     const initialScrollLeft = useRef(0);
-
+    initialScrollLeft.current = 0 ;// Store initial scroll position
     useEffect(() => {
       const scrollableDiv = ref as React.RefObject<HTMLDivElement>;
       if (!scrollableDiv.current) return;
 
-      initialScrollLeft.current = 0 ;// Store initial scroll position
+      
 
 
     //   const mouseMove = (e: MouseEvent) => {
@@ -41,11 +41,12 @@ const ServiceParallaxe = forwardRef<HTMLDivElement, ParallaxImageProps>(
         if (isResetting.current) return; // Ignore scroll while resetting
 
         let off =   scrollableDiv.current!.scrollLeft - initialScrollLeft.current 
+        // let go = off + off
         
-        targetTranslateX.current =  -off * 2  ; // Update the target translation based on mouse position
-
+        targetTranslateX.current =  - off * 2 ; // Update the target translation based on mouse position
+        // targetTranslateX.current = scrollableDiv.current!.scrollLeft
         initialScrollLeft.current = scrollableDiv.current!.scrollLeft
-
+        // off += off
         if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
 
         // Detect when scrolling stops
@@ -54,21 +55,21 @@ const ServiceParallaxe = forwardRef<HTMLDivElement, ParallaxImageProps>(
 
         //   // Apply smooth reset animation
           if (imageRef.current) {
-            // imageRef.current.style.transition = "transform 1s ease-out";
+            imageRef.current.style.transition = "transform 2s ease-out ";
           }
 
         //   // Reset after animation completes
           setTimeout(() => {
-            
-            targetTranslateX.current = 0; // Reset translation
-            // currentTranslateX.current = initialScrollLeft.current * 0.5;
             isResetting.current = false;
+            targetTranslateX.current = 0; // Reset translation
+            // currentTranslateX.current = 0;
+            
 
             if (imageRef.current) {
               imageRef.current.style.transition = "none"; // Remove transition for smooth resume
             }
-          }, 10); // Match transition time
-        }, 50);
+          }, 1); // Match transition time
+        }, 20);
       };
 
       scrollableDiv.current.addEventListener("scroll", onScroll);

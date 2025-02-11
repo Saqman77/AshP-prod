@@ -43,8 +43,7 @@ const Wishs = () => {
                             Safe-for-work Fiction and Nonfiction manuscripts for all ages. Children’s Literature is on top of the list.
                         </p>
                         <p className='wish-desc'>
-                        Picture/Illustrated Books, Chapter Books, Novels, Novellas, Short Stories, Anthologies, Comic Books, Graphic Novels, Graphic Memoirs, Biographies, Poetry.
-                        </p>
+                        Picture and Illustrated Books, Chapter Books, Novels, Novellas, Short Stories, Anthologies, Memoirs, Poetry, Comic Books, Graphic Novels, Graphic Memoirs.                        </p>
                     </div>
                     <div className="flip-button" onClick={handleFlip}>
                         <p className="flip-text"> Flip to learn more</p>
@@ -66,7 +65,7 @@ const Wishs = () => {
 
                         </div>
                         <ul>
-                            <li>Action/Adventure</li>
+                            <li>Adventure</li>
                             <li>Comedy</li>
                             <li>Cozy Mystery</li>
                             <li>Paranormal</li>
@@ -110,7 +109,7 @@ const Wishs = () => {
                     </div>
                     <div className="wish-description">
                         <p className='wish-desc'>
-                         Manuscripts with Excessive Profanity, Racism, Religious Prejudice, or depiction of Toxic Relationships as healthy.
+                         Manuscripts with Excessive Profanity, NSFW Content, Racism, Religious Prejudice, or depiction of Toxic Relationships as healthy.
                         </p>
                     </div>
                     <div className="flip-button" onClick={handleFlip}>
@@ -136,7 +135,6 @@ const Wishs = () => {
                             <li>Historical Fiction </li>
                             <li>Historical Romance</li>
                             <li>Bully Romance</li>
-                            <li>NSFW Content</li>
                             <li>LGBTQIAP+</li>
                             <li>Violent Horror </li>
                             <li>Gore</li>

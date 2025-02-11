@@ -40,8 +40,8 @@ const Home: React.FC = () => {
     const step = (timestamp: number) => {
       if (start === null) start = timestamp;
       const progress = (timestamp - start) / duration;
-      const easedProgress = progress < 1 ? 1 - Math.pow(1 - progress, 3) : 1;
-      carouselRef.current!.scrollLeft = startPos + distance * easedProgress ;
+      // const easedProgress = progress < 1 ? 1 - Math.pow(1 - progress, 3) : 1;
+      carouselRef.current!.scrollLeft = startPos + distance  ;
 
       if (progress < 1) {
         requestAnimationFrame(step);
@@ -61,8 +61,8 @@ const Home: React.FC = () => {
     const step = (timestamp: number) => {
       if (start === null) start = timestamp;
       const progress = (timestamp - start) / duration;
-      const easedProgress = progress < 1 ? 1 - Math.pow(1 - progress, 3) : 1;
-      testCarouselRef.current!.scrollLeft = startPos + distance * easedProgress ;
+      // const easedProgress = progress < 1 ? 1 - Math.pow(1 - progress, 3) : 1;
+      testCarouselRef.current!.scrollLeft = startPos + distance  ;
 
       if (progress < 1) {
         requestAnimationFrame(step);
@@ -193,7 +193,7 @@ const Home: React.FC = () => {
      
     setTimeout(() => {
       setIsTestDragging(false);
-    }, 400);
+    }, 100);
     // Start inertia scrolling
     let momentum = velocityTest * 20; // Scale velocity for more natural feel
     const friction = 0.95;
@@ -264,16 +264,16 @@ const Home: React.FC = () => {
       <div className="home-content-top">
         <div className="left-content">
           <div className="main-heading">
-            <p className="heading-text">
-              We are a sibling duo with more than<span> </span>
+            <p className="heading-text"> 
+            We are Ash P and Hira P, a sibling duo with more than <span> </span>
               <span className="strong">two decades</span>
-              <span> </span>of freelance<span> </span>
-              <span className="color-text">editing experience</span>
-              <span> </span>between us.
+              <span> </span> of editing <span> </span>
+              <span className="color-text">experience</span>
+              <span> </span> between us.
             </p>
           </div>
           <div className="left-desc">
-            We want your message to resonate clearly with your readers, so our flexible rates and payment plans fit all budgets.
+          We want your message to resonate clearly with your readers, so our flexible rates and payment plans fit all budgets.
           </div>
         </div>
         <div className="right-content">

@@ -1,8 +1,8 @@
 
 .h-container{
     width: 100%;
-    min-height: 250vh;
-    min-height: 250svh;
+    min-height: 350vh;
+    min-height: 350svh;
     overflow-x: hidden;
     display: grid;
     grid-template-columns: 100%;
@@ -187,16 +187,16 @@
     height: 150vh;
     z-index: 3;
     @media screen and (max-width:1250px) {
-        top:125vh
+        top:150vh
     }
     @media screen and (max-width:900px) {
-        top:130vh
+        top:150vh
     }
 }
 
 .outro h3{
     position: absolute;
-    top: 30%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
@@ -208,11 +208,11 @@
     // letter-spacing: 2px;
     @media screen and (max-width:1250px) {
         font-size: var(--font-large);
-        top: 30%;
+        top: 50%;
     }
     @media screen and (max-width:500px) {
         font-size: var(--font-xlarge);
-        top: 40%;
+        top: 50%;
     }
     @media screen and (max-width:400px) {
         font-size: var(--font-xlarge);

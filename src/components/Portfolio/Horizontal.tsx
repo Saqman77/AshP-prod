@@ -93,7 +93,7 @@ const Horizontal: React.FC = () => {
         ScrollTrigger.create({
           trigger: 'card.id',
           start: 'top top',
-          end: '+=800vh',
+          end: '+=700vh',
           scrub: 1,
           // markers: true,
           onUpdate: (self) => {
@@ -191,11 +191,19 @@ const Horizontal: React.FC = () => {
             <h3>
             <span className='outro-span'>
 
-                Since 2003, Ash P Reads Editing Services has contributed their expertise to over 200 fiction and nonfiction manuscripts, along with extensive website and social media content. Founded by Ash P, this family-run editing service has collaborated with best-selling authors and an award-winning publisher. They have particular expertise in working with ESL authors, helping bring structure to their stories and developing their unique writing voices. Both editors bring valuable backgrounds in early childhood education and special education, making them particularly well suited for manuscripts related to children and education.
+                Since 2003, Ash P Reads Editing Services has contributed their expertise to over 200 fiction and nonfiction manuscripts
+                , along with extensive website and social media content. Founded by Ash P
+                , this family-run editing service has collaborated with best-selling authors and an award-winning publisher
+                . Ash has a particular expertise in working with ESL authors
+                , helping bring structure to their stories and developing their individual writing voices
+                . Hira has extensive knowledge of neurodivergence and this gives her a unique insight when&nbsp;
+                  working with manuscripts on related subjects
+                . Both editors bring valuable backgrounds in early childhood education and special education
+                , making them well suited for manuscripts related to children and education.
                 
             </span> 
 
-            <p className="bold">Cultivating stories, one edit at a time.</p>
+            <p className="bold">Cultivating stories, one edit at a time</p>
 
             </h3>
             

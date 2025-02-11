@@ -187,6 +187,7 @@
     // letter-spacing: 3px;
     @media screen and (max-width:1250px) {
         font-size: clamp(24px,2vw,30px);
+        margin: 0em 0 1.5em;
     }
     @media screen and (max-width:900px) {
         font-size: var(--font-large);

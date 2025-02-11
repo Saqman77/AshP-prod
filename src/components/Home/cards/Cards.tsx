@@ -31,7 +31,7 @@ const Cards = forwardRef<HTMLDivElement, Props>(({ id, head, backGround, cardImg
   };
 
   return (
-    <div className={`card-wrapper ${animationClass} ${isDragging ? 'no-hover' : ''}`} id={id} ref={ref}>
+    <div className={`card-wrapper ${animationClass} ${isDragging ? 'no-hover' : ''}`} id={id} >
       <div
         className="card"
         style={window.innerWidth < 1100 
