@@ -5,8 +5,8 @@
   --font-xsmall: 12px;
   --font-small: 20px;
   --font-medium: clamp(20px, 1.6vw, 30px);
-  --font-large: clamp(30px, 3vw, 60px);
-  --font-xlarge: clamp(40px, 4.1vw, 80px);
+  --font-large: clamp(30px, 3vw, 40px);
+  --font-xlarge: clamp(40px, 4.1vw, 60px);
   --font-xxlarge: clamp(50px, 5.1vw, 120px);
 }
 
@@ -15,7 +15,7 @@
     --font-xsmall: 12px;
     --font-small: 20px;
     --font-medium: 24px;
-    --font-large: 48px;
+    --font-large: 40px;
     --font-xlarge: 52px;
     --font-xxlarge: clamp(30px, 8.1vw, 80px);
   }

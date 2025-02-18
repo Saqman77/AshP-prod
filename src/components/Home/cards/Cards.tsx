@@ -80,13 +80,41 @@ const Cards = forwardRef<HTMLDivElement, Props>(({ id, head, backGround, cardImg
             </p>
           </div>
           <div className='card-bottoms'>
-            {id == "Consultation" ? (<div className='tapper'><Schedule/> <ContactUs /></div>):(<ContactUs />)}
+            {id == "Consultation" ? (
+              <div className='tapper'>
+
+                <Schedule/>
+
+                <ContactUs /> 
+
+                <div className='back-flipper'
+                  style={{
+                    marginTop:'5px'
+                  }}
+                >
+
+                  <p className='back-text'>Back</p>
+
+                  <div className="flip-back" onClick={handleFlip}>
+
+                    <img src={flip} alt="flip-img" className='flip-icon' />
+
+                  </div>
+
+               </div>
+
+              </div>
+              ):(
+              <ContactUs />
+              )}
+          {id !== "Consultation" && (
             <div className='back-flipper'>
               <p className='back-text'>Back</p>
               <div className="flip-back" onClick={handleFlip}>
                 <img src={flip} alt="flip-img" className='flip-icon' />
               </div>
-            </div>
+            </div>)}
+
           </div>
         </div>
       </div>

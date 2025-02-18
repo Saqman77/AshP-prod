@@ -34,29 +34,26 @@ const Scroll = ({ startIndex, isVisible, onClose, onItemClick }: ScrollProps) =>
         
         const tl2 = gsap.timeline();
         const tl = gsap.timeline();
-          tl.fromTo(
-            '.ash .s-heading',
-            {
-                x: '-100%',
-                scale: 0,
-                opacity: 0,
-              },
-              {
-                x: '0',
-                scale: 1,
-                opacity: 1,
-                stagger: 0.1,
-                ease: 'power2.out',
-                scrollTrigger: {
-                  trigger: '.ash',
-                  start: 'top 80%', // Adjust based on when you want it to start
-                  end: 'top 20%',   // Adjust when it should fully appear
-                  scrub: 1,         // Smooth animation on scroll
-                  toggleActions: "play reverse play reverse", // This ensures reverse on leave
-                //   refreshPriority: 1,
-                },
-              }
-          );
+        tl.fromTo('.ash .s-heading', {
+            x: '-100%',
+            scale: 0,
+            opacity: 0,
+        },{
+        x: '0%',
+        scale: 1,
+        opacity: 1,
+        duration: 1.5, 
+        ease: 'power2.out',
+        immediateRender: false, // Prevents GSAP from jumping to the final position
+        scrollTrigger: {
+            trigger: '.ash',
+            start: 'top 80%', // Trigger animation when '.ash' enters viewport
+            end: '+=200px',
+            scrub: 1,
+            toggleActions: "play pause resume reverse", // Fix animation flow
+            // markers: true, // Debugging, remove when done
+        }
+        });
 
           const certs = document.querySelectorAll('.ash .cert-text')
 
@@ -66,12 +63,12 @@ const Scroll = ({ startIndex, isVisible, onClose, onItemClick }: ScrollProps) =>
               x: '0%',
               scale: 1,
               opacity:1,
-              stagger: 0.1,
+              stagger: 1,
               scrollTrigger: {
-                trigger: cert,
-                start: '-70% bottom',
+                trigger: '.ash',
+                start: 'top 50%',
                 end: '+=200px',
-                scrub: true,
+                scrub: 1,
                 // onLeave:()=>{
                 //     gsap.to(cert,{
                 //          x:'100%',
@@ -92,30 +89,15 @@ const Scroll = ({ startIndex, isVisible, onClose, onItemClick }: ScrollProps) =>
         }) 
             gsap.fromTo('.ash .q-text',{ x:'100%', scale: 0, opacity:0},
             {
-              x: '0%',
-              scale: 1,
-              opacity:1,
-              stagger: 0.1,
-            //   repeat:2,
-              scrollTrigger: {
-                trigger: '.ash .q-text',
-                start: '-70% bottom',
-                end: '+=200px',
-                scrub: true,
-                // onLeave:()=>{
-                //     tl.to('.ash .q-text',{
-                //          x:'100%',
-                //          scale: 0,
-                //          opacity:0,
-                //         stagger:0.1,
-                //         scrollTrigger:{
-                //             trigger:'.ash .q-text',
-                //             start:'bottom 30%',
-                //             end:'+=200px',
-                //             scrub: true,
-                //             // markers: true
-                //         },
-                //         })
+                x: '0%',
+                scale: 1,
+                opacity:1,
+                stagger: 1,
+                scrollTrigger: {
+                  trigger: '.ash',
+                  start: 'top 80%',
+                  end: '+=200px',
+                  scrub: 1,   
                 // }
             }
             })
@@ -131,7 +113,7 @@ const Scroll = ({ startIndex, isVisible, onClose, onItemClick }: ScrollProps) =>
                 trigger: '.ash',
                 start: '-20% top',
                 end: '+=100px',
-                scrub: true,
+                scrub: 1,
               },
             }
           );
@@ -145,7 +127,7 @@ const Scroll = ({ startIndex, isVisible, onClose, onItemClick }: ScrollProps) =>
                 trigger:'.projects .panel-front',
                 start:'-30% center',
                 end:'10%',
-                scrub: true,
+                scrub: 1,
                 //     gsap.to('.projects .panel-front',{
                 //         opacity:'0'
                 //     })
@@ -155,24 +137,19 @@ const Scroll = ({ startIndex, isVisible, onClose, onItemClick }: ScrollProps) =>
         })
         tl2.fromTo(
             '.hira .s-heading',
+            { x:'100%', scale: 0, opacity:0},
             {
-              x: '-100%',
-              scale: 0,
-              opacity: 0,
-            },
-            {
-              x: '0',
-              scale: 1,
-              opacity: 1,
-              stagger: 0.1,
-              ease: 'power2.out',
-              scrollTrigger: {
-                trigger: '.hira',
-                start: 'top 80%', // Adjust based on when you want it to start
-                end: 'top 20%',   // Adjust when it should fully appear
-                scrub: 1,         // Smooth animation on scroll // This ensures reverse on leave
-                // refreshPriority: 1,
-              },
+                x: '0%',
+                scale: 1,
+                opacity:1,
+                stagger: 1,
+                scrollTrigger: {
+                  trigger: '.hira',
+                  start: 'top 80%',
+                  end: '+=200px',
+                  scrub: 1,   
+                // }
+            }
             }
           );
 
@@ -181,62 +158,33 @@ const Scroll = ({ startIndex, isVisible, onClose, onItemClick }: ScrollProps) =>
           hCerts.forEach((cert) =>{       
             gsap.fromTo(cert,{ x:'100%', scale: 0, opacity:0},
                 {
-                  x: '0%',
-                  scale: 1,
-                  opacity:1,
-                  stagger: 0.1,
-                  scrollTrigger: {
-                    trigger: cert,
-                    start: '-70% bottom',
-                    end: '+=200px',
-                    scrub: true,
-                    // onLeave:()=>{
-                    //     gsap.to(cert,{
-                    //          x:'100%',
-                    //          scale: 0,
-                    //          opacity:0,
-                    //         stagger:0.1,
-                    //         scrollTrigger:{
-                    //             trigger: cert,
-                    //             start:'bottom 30%',
-                    //             end:'+=200px',
-                    //             scrub: true,
-                    //             // markers: true
-                    //         }
-                    //     })
+                    x: '0%',
+                    scale: 1,
+                    opacity:1,
+                    stagger: 1,
+                    scrollTrigger: {
+                      trigger: '.hira',
+                      start: 'top 80%',
+                      end: '+=200px',
+                      scrub: 1,   
                     // }
-                    }
+                }
                 })
         }) 
             gsap.fromTo('.hira .q-text',{ x:'100%', scale: 0, opacity:0},
-            {
-              x: '0%',
-              scale: 1,
-              opacity:1,
-              stagger: 0.1,
-            //   repeat:2,
-              scrollTrigger: {
-                trigger: '.hira .q-text',
-                start: '-70% bottom',
-                end: '+=200px',
-                scrub: true,
-                // onLeave:()=>{
-                //     tl.to('.hira .q-text',{
-                //          x:'100%',
-                //          scale: 0,
-                //          opacity:0,
-                //         stagger:0.1,
-                //         scrollTrigger:{
-                //             trigger:'.hira .q-text',
-                //             start:'bottom 30%',
-                //             end:'+=200px',
-                //             scrub: true,
-                //             // markers: true
-                //         },
-                //         })
-                // }
-            }
-            })
+                {
+                    x: '0%',
+                    scale: 1,
+                    opacity:1,
+                    stagger: 1,
+                    scrollTrigger: {
+                      trigger: '.hira',
+                      start: 'top 80%',
+                      end: '+=200px',
+                      scrub: 1,   
+                    // }
+                }
+                })
     
         tl2.fromTo(
             '.panel.hira .panel-front',
@@ -249,28 +197,25 @@ const Scroll = ({ startIndex, isVisible, onClose, onItemClick }: ScrollProps) =>
                 trigger: '.hira',
                 start: '-20% top',
                 end: '+=100px',
-                scrub: true,
+                scrub: 1,
               },
             }
           );
        
 
-        gsap.fromTo('.projects-hira .panel-front',{
-            opacity:'0'
-        },{
-            opacity:'1',         
-            scrollTrigger:{
-                trigger:'.projects-hira .panel-front',
-                start:'-30% center',
-                end:'10%',
-                scrub: true,
-                //     gsap.to('.projects .panel-front',{
-                //         opacity:'0'
-                //     })
-                // },
-                // markers: true
-            },
-        })
+        gsap.fromTo('.projects-hira .panel-front',{  opacity:0},
+            {
+
+                opacity:1,
+
+                scrollTrigger: {
+                  trigger: '.projects-hira',
+                  start:'-30% center',
+                  end:'10%',
+                  scrub: 1,   
+                // }
+            }
+            })
 
   
     //   return () => ctx.revert(); // Clean up the ScrollTrigger and animations on unmount
@@ -409,7 +354,7 @@ const Scroll = ({ startIndex, isVisible, onClose, onItemClick }: ScrollProps) =>
                             <span>
 
                                 Ash is a volunteer editor for #RevPit, a verified editor on IAX, and as a member of the Comic Book Editors Alliance, she is being mentored in comic book editing.
-                                She is an active participant in several supportive social spaces and networks for editors like the Neurodivergent Publishing Lounge and the Editors' Lair on Discord,
+                                She is an active participant in several supportive social spaces and networks for&nbsp;editors&nbsp;like the Neurodivergent Publishing Lounge and the Editors' Lair on Discord,
                                 and the Editors Tea Club and EFA BIPOC Chapter on Slack.
 
 

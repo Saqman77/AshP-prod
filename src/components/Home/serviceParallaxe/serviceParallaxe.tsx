@@ -23,9 +23,10 @@ const ServiceParallaxe = forwardRef<HTMLDivElement, ParallaxImageProps>(
 
     // Store the initial scroll position
     const initialScrollLeft = useRef(0);
-    initialScrollLeft.current = 0 ;// Store initial scroll position
+    
     useEffect(() => {
       const scrollableDiv = ref as React.RefObject<HTMLDivElement>;
+      initialScrollLeft.current = scrollableDiv.current!.scrollLeft ;// Store initial scroll position
       if (!scrollableDiv.current) return;
 
       
@@ -40,20 +41,18 @@ const ServiceParallaxe = forwardRef<HTMLDivElement, ParallaxImageProps>(
       const onScroll = () => {
         if (isResetting.current) return; // Ignore scroll while resetting
 
-        let off =   scrollableDiv.current!.scrollLeft - initialScrollLeft.current 
-        // let go = off + off
-        
-        targetTranslateX.current =  - off * 2 ; // Update the target translation based on mouse position
-        // targetTranslateX.current = scrollableDiv.current!.scrollLeft
+        let off =  scrollableDiv.current!.scrollLeft - initialScrollLeft.current 
+        // console.log(off)
+        targetTranslateX.current =  off * 2  ; // Update the target translation based on mouse position
+        off = 0
         initialScrollLeft.current = scrollableDiv.current!.scrollLeft
-        // off += off
         if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
 
         // Detect when scrolling stops
         scrollTimeout.current = setTimeout(() => {
           isResetting.current = true;
-
-        //   // Apply smooth reset animation
+          
+           // Apply smooth reset animation
           if (imageRef.current) {
             imageRef.current.style.transition = "transform 2s ease-out ";
           }
@@ -68,8 +67,8 @@ const ServiceParallaxe = forwardRef<HTMLDivElement, ParallaxImageProps>(
             if (imageRef.current) {
               imageRef.current.style.transition = "none"; // Remove transition for smooth resume
             }
-          }, 1); // Match transition time
-        }, 20);
+          }, 10); // Match transition time
+        }, 100);
       };
 
       scrollableDiv.current.addEventListener("scroll", onScroll);

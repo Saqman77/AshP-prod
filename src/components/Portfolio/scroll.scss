@@ -233,6 +233,7 @@ h3.s-heading{
     font-family: 'Euphorigenic', sans-serif;
     letter-spacing: 8px;
     font-weight: 600;
+    // opacity: 0;
     @media screen and (max-width:400px) {
         font-size: var(--font-xxlarge);
     }
@@ -289,7 +290,8 @@ h3.cert-heading{
     height: 100%;
     border-top: 1px solid rgba(255, 255, 255, 0) ;
     border-bottom: 1px solid rgba(255, 255, 255, 0) ;
-    
+    padding-top: 1em;
+    padding-bottom: 1em;
     @media screen and (max-width: 1250px) {
         border-bottom: 1px solid white ;
     }
@@ -897,7 +899,7 @@ section.our-work .work-wrapper{
     // scale: 0;
     // transform: translateX(-100%);
     font-weight: 400;
-    font-size: 2vw;
+    font-size: 1.5vw;
     margin-bottom: 0.5em;
     @media screen and (max-width:1250px) {
         font-size: var(--font-large);
@@ -953,6 +955,7 @@ section.our-work .work-wrapper{
 
 .qual-section2{
     height: fit-content;
+    padding-right: 4em;
 }
 
 
@@ -1063,6 +1066,9 @@ section.our-work .work-wrapper{
     text-align: center;
     line-height: 1em;
     letter-spacing: 2px;
+    @media screen and ((min-width:1260px) and (max-width:1500px)) {
+        font-size: var(--font-medium);
+    }
     @media screen and (max-width:1250px) {
         font-size: var(--font-large);
     }

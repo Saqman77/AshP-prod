@@ -107,7 +107,7 @@ const Footer: React.FC = () => {
           </ul>
         </div>
         <p className='copyright'>
-            © {new Date().getFullYear()} Ash P. All rights reserved. Designed & developed by <strong>Saqlain Haider</strong>. Illustrations by <strong>Amna Ali</strong>.
+            © {new Date().getFullYear()}  Ash P Reads Editing Services. All Rights Reserved <br/> Designed & Developed by <strong>Saqlain Haider</strong><br/> Illustrations by <strong>Amna Ali</strong>.
        </p>
       </div>
 

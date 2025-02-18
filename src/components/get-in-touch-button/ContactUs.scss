@@ -21,6 +21,10 @@ $font-xSmall: 12px;
     $font-xlarge: 24px;
   }
 
+  .navigate-button{
+    width: fit-content;
+  }
+
 .navigate-button button{
     background: none; /* Removes default background */
     border: none; /* Removes default border */

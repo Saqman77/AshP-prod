@@ -265,7 +265,7 @@ const Home: React.FC = () => {
         <div className="left-content">
           <div className="main-heading">
             <p className="heading-text"> 
-            We are Ash P and Hira P, a sibling duo with more than <span> </span>
+               We are Ash P and Hira P, a sibling duo with more than <span> </span>
               <span className="strong">two decades</span>
               <span> </span> of editing <span> </span>
               <span className="color-text">experience</span>
@@ -273,7 +273,7 @@ const Home: React.FC = () => {
             </p>
           </div>
           <div className="left-desc">
-          We want your message to resonate clearly with your readers, so our flexible rates and payment plans fit all budgets.
+               We want your message to resonate clearly with your readers, so all our editing services are available at flexible rates and payment plans fit all budgets
           </div>
         </div>
         <div className="right-content">

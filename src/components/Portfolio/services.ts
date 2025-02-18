@@ -41,7 +41,7 @@ export const services = [
                     projects: [
                         {
                             name:'How to Pick Partners for Love Addicts: A Comprehensive Relationship Guide to Breaking Free from Toxic Patterns and Choosing Those Who Are Ready for Love',
-                            link:'https://www.amazon.com/Pick-Partners-Love-Addicts-Comprehensive',
+                            link:'https://www.amazon.com/Pick-Partners-Love-Addicts-Comprehensive/dp/B0DPDJC5D8/ref=sr_1_1?dib=eyJ2IjoiMSJ9.NVuPfCCIalUeB4pb6NhQqVEWPGyxZ7aBrsZxrT5po1R9EDDdkIJx6HWPnLJgkBNyRpGGPRsKtqv6HZeW1qyC0w.mGs7tXIVyXFqsY7nXU7ogLCypgSsjQd-ZrRdgeFlYe0&dib_tag=se&keywords=shena+lashey&qid=1739826055&sr=8-1',
                         },
                         {
                             name:'No Contact & Detox Support book',
@@ -113,7 +113,7 @@ export const services = [
                     projects: [
                         {
                             name:'All series by author',
-                            link:'https://greaalexander.seamonkeyink.com/grea_alexander_009.html',
+                            link:'https://www.amazon.com/stores/Grea-Alexander/author/B00HV0M83Y/allbooks?&_encoding=UTF8&tag=seamonkeyink-20&linkCode=ur2&linkId=7ed1b9161e91bbebfaf47890a5e830a5&camp=1789&creative=9325&ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true',
                         },
                     ]
                 },

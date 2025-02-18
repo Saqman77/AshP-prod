@@ -20,7 +20,7 @@ export const cardContent = [
       heading: "Developmental Edit",
       backgroundColor: "#F0195B33",
       
-      description: "Plot inconsistencies? Flawed character development? Weak story arcs?\n\nOur developmental editing will dig deep, offering targeted feedback and strategic improvements to elevate your story’s structure, character development, and narrative impact.\n\nOur Developmental Editing Service includes Annotations in the manuscript, a detailed Editorial Letter and one (1) post-revision review.\n\nRates are determined by the health of the manuscript, your budget, and the word count. "
+      description: "Plot inconsistencies? Flawed character development? Weak story arcs?\n\nOur developmental editing will dig deep, offering targeted feedback and strategic improvements to elevate your story’s structure, character development, and narrative impact.\n\nOur Developmental Editing Service includes annotations in the manuscript, a detailed editorial Letter and one (1) post-revision review.\n\nRates are determined by the health of the manuscript, your budget, and the word count. "
     },
     {
       id: "Line and Copyediting combo", // Same as the heading
