@@ -446,6 +446,8 @@ $font-xSmall: 12px;
     font-weight: 700;
     margin-left: auto;
     margin-right: .5em;
+    margin-top: auto;
+    margin-bottom: auto;
     @media screen and (min-width:1250px) {
         display: none;
     }
