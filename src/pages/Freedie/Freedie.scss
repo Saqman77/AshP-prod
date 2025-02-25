@@ -77,6 +77,9 @@
     font-size: var(--font-xlarge);
     font-weight: 700;
     text-wrap: nowrap;
+    @media screen and (max-width:1250px) {
+        text-wrap: wrap;
+    }
 }
 .fredi-desc{
     font-size: var(--font-medium);
@@ -108,9 +111,9 @@
     animation: Right 1s ease forwards ;
     @media screen and (max-width:900px) {
         width: 100%;
-        position: absolute;
-        right: -63px;
-        top: 132px;
+        // position: absolute;
+        // right: -63px;
+        // top: 132px;
         z-index: -1;
     }
 
@@ -120,18 +123,22 @@
     width: 100%;
     padding: 0 2vw 2vw 2vw;
     // transform: translate(-49px, -10px);
-    animation: wheelGear 40s linear infinite; /* Add animation */
+    
     @media screen and (max-width:900px) {
         max-width: 200px;
         
     }
-    @media screen and (max-width:400px) {
-        max-width: 150px;
-    }
+    // @media screen and (max-width:400px) {
+    //     max-width: 150px;
+    // }
 }
 
 .wheel-img{
-    width: 100%;
+    animation: wheelGear 40s linear infinite; /* Add animation */
+    width: 500px;
+    @media screen and (max-width:1250px) {
+        width: 200px;
+    }
 }
 
 @keyframes wheelGear {

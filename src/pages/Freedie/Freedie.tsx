@@ -52,11 +52,13 @@ const Freedie: React.FC = () => {
         <div className="f-modal">
           <div className="f-modal-content">
             <p>
-              When Ash P started out as an independent service provider, 20 or so years ago, the market was fairly new in Pakistan. The learning curve was steep and much was learned through trial and error. Now that independent services and working remotely is recognized as a “real” job, it is an option that many prefer to a regular 9-5 career. 
+            While Ash P Reads Editing Services carefully vets all FrEdiBuddies also known as Independent Service Providers for reliability, professionalism, and quality standards, our role is strictly limited to providing referrals between Independent Service Providers and clients seeking their services.
               <span className="spacer"></span>
-              Keeping that in mind, Ash P Reads FrEdiBuddies was created to give budding independent service providers a platform to hone their skills and a safe space where projects and clients are vetted, to prevent them from falling victim to fakes and scam 
+              Ash P Reads Editing Services makes no guarantee that our FrEdiBuddies will accept recommended projects, nor do we guarantee that our FrEdiBuddies will be awarded any projects for which they are referred. We do not provide or manage service contracts; all contractual arrangements must be established directly between the Independent Service Providers and clients.
               <span className="spacer"></span>
-              artists. Ash P Reads FrEdiBuddies are a collective of independent service providers that have been verified and authenticated by us. 
+              As a referral service, Ash P Reads Editing Services does not mediate transactions, oversee service delivery, or collect any fees, commissions, or royalties from any transaction. FrEdiBuddies maintain full control over their pricing and service offerings. If you experience any issues with a Service Provider, please contact us at ashpreads@gmail.com so we may evaluate their continued inclusion in our referral network.
+              <span className="spacer"></span>
+              This disclaimer outlines the complete scope of our service and limitations of our responsibility. All parties agree to these terms when using our referral service.
             </p>
             <div className="f-modal-buttons">
               <button onClick={() => setShowDisclaimer(false)}>Agree</button>
@@ -82,25 +84,15 @@ const Freedie: React.FC = () => {
               </h2>
               <div className="fredi-desc">
                 <span>
-                  Ash P Reads FrEdiBuddies is a collective of verified and
-                  authenticated Independent Service Providers.
+                Ash P Reads FrEdiBuddies is a collective of verified and authenticated Independent Service Providers
                 </span>
                 <span className="spacer"></span>
                 <span>
-                  When Ash P started out as an independent service provider 20
-                  or so years ago, the market was fairly new in Pakistan. The
-                  learning curve was steep, and much was learned through trial
-                  and error. Now that independent services and working remotely
-                  is recognized as a “real” job, it is an option that many
-                  prefer to a regular 9-5 career.
+                When Ash P started out as an independent service provider, 20 or so years ago, the market was fairly new in Pakistan. The learning curve was steep and much was learned through trial and error. Now that independent services and working remotely is recognized as a “real” job, it is an option that many prefer to a regular 9-5 career.
                 </span>
                 <span className="spacer"></span>
                 <span>
-                  Keeping that in mind, Ash P Reads FrEdiBuddies was created to
-                  give budding independent service providers a platform to hone
-                  their skills and a safe space where projects and clients are
-                  vetted, to prevent them from falling victim to fakes and
-                  scams.
+                Keeping that in mind, Ash P Reads FrEdiBuddies was created to give budding independent service providers a platform to hone their skills and a safe space where projects and clients are vetted, to prevent them from falling victim to fakes and scam artists. Ash P Reads FrEdiBuddies are a collective of independent service providers that have been verified and authenticated by us. 
                 </span>
               </div>
             </div>

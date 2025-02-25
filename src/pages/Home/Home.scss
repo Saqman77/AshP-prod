@@ -892,6 +892,9 @@ $font-xSmall: 12px;
     transform: translate(-50%, -50%);
     transition: transform 0.1s ease-out;
     z-index: 10000;
+    @media screen and (max-width:1250px) {
+        display: none;
+    }
   }
   
   .services-section:hover ~ .custom-cursor,
