@@ -116,7 +116,7 @@ svg, path{
     padding-top: .5em;
     text-align: center;
 
-    color: rgb(0, 0, 0);
+    color: #555;
     // font-family: "Candara";
     @media screen and (min-width: 1250px) {
         position: absolute;
@@ -168,6 +168,7 @@ svg, path{
     padding: 2em;
     display: flex;
     justify-content: center;
+
 }
 
 // .reads{
@@ -175,7 +176,15 @@ svg, path{
 // }
 .footer-nav ul li:hover{
     color: #7163DE;
-    scale: 1.2
+    scale: 1.2;
+    @media screen and (max-width:1250px) {
+        color: #f5bbbb;
+    }
+}
+.footer-nav ul li{
+    @media screen and (max-width:1250px) {
+        color: #ffffff;
+    }
 }
 
 .footer-nav ul{
@@ -184,6 +193,7 @@ svg, path{
     list-style-type: none;
     align-items: start;
     justify-content: space-between;
+    color: #ffffff;
     // height: 100%;
     font-size: var(--font-medium);
     font-weight: 700;
@@ -298,7 +308,7 @@ svg, path{
     font-size: var(--font-medium);
     margin: 0 auto 0 0;
     margin-bottom: 1em;
-    color: #000000;
+    color: #555;
     @media screen and (max-width:1250px) {
         font-size: var(--font-large);
     }
@@ -445,6 +455,7 @@ svg, path{
         // grid-template-rows: max-content max-content ;
         // grid-template-columns: max-content max-content max-content ;
         // grid-auto-columns: min-content;
+        column-gap: .5em;
         width: 100%;
     }
 

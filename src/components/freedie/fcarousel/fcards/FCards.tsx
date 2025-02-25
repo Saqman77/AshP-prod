@@ -10,6 +10,7 @@ import SC from '../../../../assets/freedi/soundcloud.svg'
 import BANDC from '../../../../assets/freedi/bandcamp.png'
 import GIT from '../../../../assets/freedi/github.png'
 import INT from '../../../../assets/freedi/internet-svgrepo-com.svg'
+import DN from '../../../../assets/freedi/download.svg'
 import { useEffect, useRef } from 'react'
 
 
@@ -41,6 +42,8 @@ interface FCardsProps {
 
   yt: string;
 
+  cv: string;
+
   sc: string;
   git: string;
   bandC: string;
@@ -67,7 +70,8 @@ const FCards: React.FC<FCardsProps> = (
     sc,
     bandC,
     name,
-    git
+    git,
+    cv
   }) => {
 
     const carouselRef = useRef<HTMLDivElement | null>(null);
@@ -123,7 +127,24 @@ const FCards: React.FC<FCardsProps> = (
        <div className="card-bottom">
         <div className="f-contact">
           <div className="mail-wrapper"><p className='mail'><span className='mail-span'>E-mail:&nbsp; </span><a href={`mailto:${mail}?subject=AshP%20Referral%`}  className='freed-a'>{mail}</a></p></div>
-          <div className="phone-wrapper"><p className='phone'><span className='phone-span'>Portfolio:&nbsp; </span><a href={portfolio}><img src={INT} alt="social-icon" className='port-icon' /></a></p></div>
+          <div className="phone-wrapper">
+
+            <p className="phone">
+              <span className="phone-span">Portfolio:&nbsp; </span>
+              <a href={portfolio}>
+                <img src={INT} alt="social-icon" className="port-icon" />
+              </a>
+            </p>
+
+            {cv && (
+              <p className="phone">
+                <span className="phone-span">Download CV:&nbsp; </span>
+                <a href={cv}>
+                  <img src={DN} alt="social-icon" className="port-icon" />
+                </a>
+              </p>
+            )}
+          </div>
         </div>
        </div>
     </div>

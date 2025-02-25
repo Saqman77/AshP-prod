@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import wheel from '../../assets/freedi/Brutalist 52.png';
-import gear from '../../assets/freedi/Brutalist Shape 181 (1).svg';
+import gear from '../../assets/freedi/Vector2.svg';
 import FLists from '../../components/freedie/flist/FLists';
 import './Freedie.scss';
 import FCarousel from '../../components/freedie/fcarousel/FCarousel';
@@ -79,10 +79,14 @@ const Freedie: React.FC = () => {
           <div className="f-top">
             <div className="f-left">
               <h2 className="f-heading">
-                A supportive platform for all Independent <br />
-                <span className="f-colour">Service Providers.</span>
+                Ash P Reads &nbsp;
+                <span className="f-colour">FrEdiBuddies</span>
               </h2>
               <div className="fredi-desc">
+                <span className='bottom-tag'>
+                  A supportive platform for all Independent Service Providers.
+                </span>
+                <span className="spacer"></span>
                 <span>
                 Ash P Reads FrEdiBuddies is a collective of verified and authenticated Independent Service Providers
                 </span>
@@ -92,7 +96,7 @@ const Freedie: React.FC = () => {
                 </span>
                 <span className="spacer"></span>
                 <span>
-                Keeping that in mind, Ash P Reads FrEdiBuddies was created to give budding independent service providers a platform to hone their skills and a safe space where projects and clients are vetted, to prevent them from falling victim to fakes and scam artists. Ash P Reads FrEdiBuddies are a collective of independent service providers that have been verified and authenticated by us. 
+                Keeping that in mind, Ash P Reads FrEdiBuddies was created to give budding independent service providers a platform to hone their skills and a safe space where projects and clients are vetted, to prevent them from falling victim to fakes and scam artists.  
                 </span>
               </div>
             </div>

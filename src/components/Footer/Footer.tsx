@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
               >About</Link>
             </li>
             <li>
-              <Link to="/freedie"
+              <Link to="/fredibuddies"
                 onClick={() => window.scrollTo(0, 0)}
               >FrEdiBuddies</Link>
             </li>
@@ -114,7 +114,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <p className='copyright'>
-            © {new Date().getFullYear()}  Ash P Reads Editing Services. All Rights Reserved Designed & Developed by <strong>Saqlain Haider</strong> Illustrations by <strong>Amna Ali</strong>.
+            © {new Date().getFullYear()}  Ash P Reads Editing Services. All Rights Reserved Designed & Developed by <strong>Saqlain&nbsp;Haider</strong> Illustrations by <strong>Amna&nbsp;Ali</strong>.
        </p>
       </div>
 

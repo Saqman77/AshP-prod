@@ -287,6 +287,7 @@ h3.cert-heading{
 }
 
 .services-list li{
+    color: #F4F9E9;
     height: 100%;
     border-top: 1px solid rgba(255, 255, 255, 0) ;
     border-bottom: 1px solid rgba(255, 255, 255, 0) ;
@@ -321,6 +322,7 @@ h3.cert-heading{
     font-size: var(--font-large);
     font-family: "Euphorigenic";
     font-weight: 600;
+    color: #F4F9E9;
     // color: #F4F9E9;
     cursor: pointer;
     display: flex;
@@ -363,6 +365,7 @@ h3.cert-heading{
 .services-list li{
     display: flex;
     align-items: center;
+    color: #F4F9E9;
     width: 100%;
     padding-left: 4rem;
     @media screen and (max-width: 1250px) {
@@ -419,6 +422,7 @@ h3.cert-heading{
     // justify-content: space-between;
     scroll-snap-align: start;
     // flex-direction: column;
+    color: #F4F9E9;
     align-items: center;
     background-color: #C1BBF5;
     // overflow: hidden;
@@ -898,6 +902,7 @@ section.our-work .work-wrapper{
 .cert-text{
     // scale: 0;
     // transform: translateX(-100%);
+    color: #F4F9E9;
     font-weight: 400;
     font-size: 1.5vw;
     margin-bottom: 0.5em;
@@ -1055,7 +1060,7 @@ section.our-work .work-wrapper{
 
 .bio{
     font-size: var(--font-large);
-    color: #FEFFFE;
+    color: #F4F9E9;
     font-weight: 600;
     width: 100%;
     height: 100%;
@@ -1076,7 +1081,9 @@ section.our-work .work-wrapper{
         font-size: var(--font-xlarge);
     }
 }
-
+.bio span{
+    color: #F4F9E9;
+}
 .panel.projects .panel-bottom{
     grid-area: bottom;
     padding: 0 1em 1em 1em;

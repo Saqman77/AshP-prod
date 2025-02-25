@@ -77,6 +77,8 @@
     font-size: var(--font-xlarge);
     font-weight: 700;
     text-wrap: nowrap;
+    color: #555;
+    font-family: "Euphorigenic";
     @media screen and (max-width:1250px) {
         text-wrap: wrap;
     }
@@ -84,8 +86,11 @@
 .fredi-desc{
     font-size: var(--font-medium);
     font-weight: 700;
-    color: rgb(0, 0, 0);
+    color: #555;
     margin-top: 24px;
+    @media screen and (max-width:1250px) {
+        font-size: var(--font-medium);
+    }
 }
 
 .fredi-desc span {
@@ -99,6 +104,7 @@
 
 .f-colour{
     font-weight: 700;
+    color: #555;
     background: linear-gradient(to top, #9C98BD 40%, #e74d3c00 40%);
     font-family: "Euphorigenic";
 }
@@ -199,6 +205,12 @@
     width: min-content;
     text-wrap: nowrap;
     text-align: center;
+}
+
+.bottom-tag{
+    color:#D54974;
+    font-size: var(--font-large);
+    font-weight: 600;
 }
 
 .f-modal {

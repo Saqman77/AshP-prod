@@ -108,7 +108,7 @@ const Header: React.FC = () => {
               </li>
               <li>
                 <NavLink
-                  to="/freedie"
+                  to="/fredibuddies"
                   className={({ isActive }) => (isActive ? 'header-active' : '')}
                 >
                   FrEdiBuddies
@@ -152,7 +152,7 @@ const Header: React.FC = () => {
             </li>
             <li>
               <NavLink
-                to="/freedie"
+                to="/fredibuddies"
                 className={({ isActive }) => (isActive ? 'header-active link' : 'link')}
               >
                 FrEdiBuddies

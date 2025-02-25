@@ -16,7 +16,8 @@ export const freedie = [
         soundcloud:'https://soundcloud.com/alienpandajury',
         bandcamp:'https://alienpandajury.bandcamp.com/',
         github:'',
-        portfolio:'https://linktr.ee/alienpandajury'
+        portfolio:'https://linktr.ee/alienpandajury',
+        cv:'https://drive.google.com/file/d/1ayIulWLwX40-B4yvE05D572kW17nMxWH/view?usp=sharing'
     },
     {
         id:'Saqlain-Haider',
@@ -35,7 +36,8 @@ export const freedie = [
         soundcloud:'',
         bandcamp:'',
         github:'https://github.com/Saqman77',
-        portfolio:'https://www.linkedin.com/in/saqlainhaider77?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+        portfolio:'https://www.linkedin.com/in/saqlainhaider77?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+        cv:''
     },
     {
         id:'Amna-Ali',
@@ -54,14 +56,15 @@ export const freedie = [
         soundcloud:'',
         bandcamp:'',
         github:'',
-        portfolio:'https://www.behance.net/amnaali51'
+        portfolio:'https://www.behance.net/amnaali51',
+        cv:''
     },
     {
         id:'Beenish-Sarfaraz',
         name:'Beenish Sarfaraz',
         imgSrc:'./been.jpg',
         desc:"Beenish Sarfaraz is a visual artist and educator based in Karachi, Pakistan. Her interest lies in cultural and heritage stories, environment and social-engaged art making. Currently, she is a faculty member at Beaconhouse National University. Previously, she has worked on projects with Coke Studio (2018), Geo TV Network, Centre of Arts-based Methodologies and Wellbeing, British Council, State Bank Museum-Pakistan, Manchester Museum, ShirkatGah and DAWN. She uses inquiry and play as her method of research.",
-        role:'Graphic Designer/Creative Non-fiction Writer ',
+        role:'Graphic Designer/Creative Nonfiction Writer ',
         eMail:'beenish.s.ali@gmail.com',
         // phone:'+92-0900-78601',
         fb:'',
@@ -74,7 +77,8 @@ export const freedie = [
         soundcloud:'',
         bandcamp:'',
         github:'',
-        portfolio:'https://beenishsarfaraz.cargo.site/'
+        portfolio:'https://beenishsarfaraz.cargo.site/',
+        cv:'https://drive.google.com/file/d/1V6sgDHtljOCnWJl8vu-JxBuQFahNtzk1/view'
     },
     {
         id:'Tashna-Salim',
@@ -94,7 +98,29 @@ export const freedie = [
         soundcloud:'',
         bandcamp:'',
         github:'',
-        portfolio:'https://tashnasalim.com/'
+        portfolio:'https://tashnasalim.com/',
+        cv:'https://www.dropbox.com/scl/fi/11agrhwrotkbumzphoatn/resume-blue.pdf?rlkey=uss8kc9ilm9ciqnl7ghqnphx5&e=1&dl=0'
+    },
+    {
+        id:'rija-quadri',
+        name:'Rija I. Quadri',
+        imgSrc:'./rija.jpg',
+        desc:"Rija is a published children's book illustrator and designer from Pakistan. She loves to connect with her clients and make their words come to life. Initially, she worked as a traditional artist but transitioned to digital art after her twins were born.  She feels it gives her a better sense of what kids would prefer to read. Moreover, it is what she would like her children to read and experience.\n\nRija claims her journey in art and motherhood has been phenomenal, even with its ups and downs. It teaches her something new, every day. She plans to make her own author- illustrator debut in the near future, with a focus on picture and coloring books.",
+        role:'Illustrator',
+        eMail:'riquadri@hotmail.com',
+        // phone:'+92-0900-78601',
+        fb:'',
+        insta:'',
+        x:'',
+        linkedIn:'',
+        spotify:'',
+        linktree:'',
+        youtube:'',
+        soundcloud:'',
+        bandcamp:'',
+        github:'',
+        portfolio:'https://linkr.bio/rquadri06',
+        cv:'https://drive.google.com/file/d/1ClrT2tQsfdhQZTsOlEhbIlCaFlFBupp1/view'
     },
     
 ]
