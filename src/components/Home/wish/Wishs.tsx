@@ -64,23 +64,46 @@ const Wishs = () => {
 
 
                         </div>
-                        <ul>
-                            <li>Adventure</li>
-                            <li>Comedy</li>
-                            <li>Cozy Mystery</li>
-                            <li>Paranormal</li>
-                            <li>Science Fiction</li>
-                            <li>Fantasy</li>
-                            <li>Urban Fantasy</li>
-                            <li>Mystery</li>
-                            <li>Thriller</li>
-                            <li>Family</li>
-                            <li>Slice of Life</li>
-                            <li>Inspirational</li>
-                            <li>Women's Fiction</li>
-                            <li>General Fiction</li>
-                            <li>Horror (MG only)</li>
-                        </ul>
+                        <div className='fiction-list-wrapper'>
+                            <div className='nonfiction-list'>
+                                <div className="nonfiction-heading">
+                                    <p>
+                                        Nonfiction
+                                    </p>
+                                </div>
+                                <ul>
+                                    <li>Memoir</li>
+                                    <li>Self-Help</li>
+                                    <li>General Health</li>
+                                    <li>Poetry</li>
+                                    <li>Creative/Narrative nonfiction</li>
+                                </ul>
+                            </div>
+                            <div className='fiction-list'>
+                                <div className="fiction-heading">
+                                    <p>
+                                        Fiction
+                                    </p>
+                                </div>
+                                <ul>
+                                    <li>Adventure</li>
+                                    <li>Comedy</li>
+                                    <li>Cozy Mystery</li>
+                                    <li>Paranormal</li>
+                                    <li>Science Fiction</li>
+                                    <li>Fantasy</li>
+                                    <li>Urban Fantasy</li>
+                                    <li>Mystery</li>
+                                    <li>Thriller</li>
+                                    <li>Family</li>
+                                    <li>Slice of Life</li>
+                                    <li>Inspirational</li>
+                                    <li>Women's Fiction</li>
+                                    <li>General Fiction</li>
+                                    <li>Horror (MG only)</li>
+                                </ul>
+                            </div>
+                        </div>
                         <div className="flip-back" onClick={handleFlip}>
                                     <img src={flip} alt="flip-img" className='flip-icon' />
                             </div>
@@ -126,19 +149,21 @@ const Wishs = () => {
                             <p>
                                 Incompatible Genres
                             </p>
-
-
-
-
                         </div>
-                        <ul>
-                            <li>Historical Fiction </li>
-                            <li>Historical Romance</li>
-                            <li>Bully Romance</li>
-                            <li>LGBTQIAP+</li>
-                            <li>Violent Horror </li>
-                            <li>Gore</li>
-                        </ul>
+                        <div className='fiction-list-wrapper'>
+
+                            <div className='fiction-list'>
+
+                                <ul>
+                                    <li>Historical Fiction </li>
+                                    <li>Historical Romance</li>
+                                    <li>Bully Romance</li>
+                                    <li>LGBTQIAP+</li>
+                                    <li>Violent Horror </li>
+                                    <li>Gore</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     {/* <div className="wish-bottom">
                         <p>

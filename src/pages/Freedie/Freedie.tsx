@@ -10,32 +10,29 @@ const Freedie: React.FC = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [isCarouselVisible, setCarouselVisible] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+  const [showDisclaimer, setShowDisclaimer] = useState(true); // Show disclaimer initially
 
-      const {isActive,removeClass} = useThemeContext();
-      
-      
-      useEffect(()=>{
-        if(isActive){
-          removeClass();
-          document.documentElement.classList.remove('active')
-          document.body.classList.remove('active')
-        }
-      },[])
-    
+  const { isActive, removeClass } = useThemeContext();
+
+  useEffect(() => {
+    if (isActive) {
+      removeClass();
+      document.documentElement.classList.remove('active');
+      document.body.classList.remove('active');
+    }
+  }, []);
 
   useEffect(() => {
     if (isCarouselVisible) {
-      // Lock body scroll
-      setScrollY(window.scrollY); // Save current scroll position
+      setScrollY(window.scrollY);
       document.body.style.position = 'fixed';
       document.body.style.top = `-${window.scrollY}px`;
       document.body.style.width = '100%';
     } else {
-      // Unlock body scroll
       document.body.style.position = '';
       document.body.style.top = '';
       document.body.style.width = '';
-      window.scrollTo(0, scrollY); // Restore scroll position
+      window.scrollTo(0, scrollY);
     }
   }, [isCarouselVisible]);
 
@@ -50,38 +47,62 @@ const Freedie: React.FC = () => {
 
   return (
     <>
+      {/* Disclaimer Modal */}
+      {showDisclaimer && (
+        <div className="f-modal">
+          <div className="f-modal-content">
+            <p>
+              When Ash P started out as an independent service provider, 20 or so years ago, the market was fairly new in Pakistan. The learning curve was steep and much was learned through trial and error. Now that independent services and working remotely is recognized as a “real” job, it is an option that many prefer to a regular 9-5 career. 
+              <span className="spacer"></span>
+              Keeping that in mind, Ash P Reads FrEdiBuddies was created to give budding independent service providers a platform to hone their skills and a safe space where projects and clients are vetted, to prevent them from falling victim to fakes and scam 
+              <span className="spacer"></span>
+              artists. Ash P Reads FrEdiBuddies are a collective of independent service providers that have been verified and authenticated by us. 
+            </p>
+            <div className="f-modal-buttons">
+              <button onClick={() => setShowDisclaimer(false)}>Agree</button>
+              <button onClick={() => setShowDisclaimer(false)}>Disagree</button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <FCarousel
         startIndex={selectedIndex}
         isVisible={isCarouselVisible}
         onClose={handleCloseCarousel}
       />
-            <h1
-        style={{
-          position:'fixed',
-          color: 'red',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          zIndex: '99999',
-          boxShadow: 'inset 0px 0px 4px 8px rgba(255, 0, 0, 0.17)',
-          fontSize: '5vw',
-          opacity: '0.7'
-        }}
 
-      >
-        Under construction
-      </h1>
       <div className="f-container">
         <div className="f-wrapper">
           <div className="f-top">
             <div className="f-left">
               <h2 className="f-heading">
-                A supportive platform for all <br />
-                <span className="f-colour">freelancers</span>
+                A supportive platform for all Independent <br />
+                <span className="f-colour">Service Providers.</span>
               </h2>
-              <p className="fredi-desc">
-                Ash P Reads FrEdiBuddies is a collective of verified and authenticated freelancers.
-              </p>
+              <div className="fredi-desc">
+                <span>
+                  Ash P Reads FrEdiBuddies is a collective of verified and
+                  authenticated Independent Service Providers.
+                </span>
+                <span className="spacer"></span>
+                <span>
+                  When Ash P started out as an independent service provider 20
+                  or so years ago, the market was fairly new in Pakistan. The
+                  learning curve was steep, and much was learned through trial
+                  and error. Now that independent services and working remotely
+                  is recognized as a “real” job, it is an option that many
+                  prefer to a regular 9-5 career.
+                </span>
+                <span className="spacer"></span>
+                <span>
+                  Keeping that in mind, Ash P Reads FrEdiBuddies was created to
+                  give budding independent service providers a platform to hone
+                  their skills and a safe space where projects and clients are
+                  vetted, to prevent them from falling victim to fakes and
+                  scams.
+                </span>
+              </div>
             </div>
             <div className="f-right">
               <div className="wheel">
@@ -95,7 +116,7 @@ const Freedie: React.FC = () => {
             </div>
             <FLists onItemClick={handleItemClick} />
           </div>
-        </div> 
+        </div>
         <div className="back-gear">
           <div className="f-gear">
             <img src={gear} alt="gear-image" className="gear-img" />

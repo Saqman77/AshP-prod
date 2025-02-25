@@ -316,8 +316,10 @@
 .c-info li, .c-location li{
     margin-top: 10px;
     font-size: var(--font-medium);
+    font-weight: 700;
     border-bottom: 2px solid;
     @media screen and (max-width:900px){
+        font-size: var(--font-large);
         width: 100%;
         border-bottom: 2px solid;
     }

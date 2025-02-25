@@ -122,7 +122,7 @@ const FCarousel: React.FC<CarouselProps> = ({ startIndex, isVisible, onClose }) 
                 desc={freedie[currentIndex].desc}
                 role={freedie[currentIndex].role}
                 mail={freedie[currentIndex].eMail}
-                // phone={freedie[currentIndex].phone}
+                portfolio={freedie[currentIndex].portfolio}
                 fb={freedie[currentIndex].fb}
                 insta={freedie[currentIndex].insta}
                 x={freedie[currentIndex].x}
@@ -161,15 +161,26 @@ const FCarousel: React.FC<CarouselProps> = ({ startIndex, isVisible, onClose }) 
                       : "No img available"} alt="prev-prof" />
                 </div>
               </div>
-              <div className={`p-right ${currentIndex === freedie.length - 2 ? "disabled" : ""}`}>             
-                <div className="right-name"
-                  onClick={() =>
-                    setCurrentIndex((prev) => (prev < freedie.length - 1 ? prev + 1 : 0))
-                  }
-                >
-                  <img src={freedie[currentIndex + 1].imgSrc} alt="next-prof" /><p className="p-name">{freedie[currentIndex + 1].name}</p>
-                </div>
+              <div className={`p-right ${currentIndex === freedie.length - 1 ? "disabled" : ""}`}>
+              <div className="right-name"
+                onClick={() =>
+                  setCurrentIndex((prev) => (prev < freedie.length - 1 ? prev + 1 : 0))
+                }
+              >
+                <img 
+                  src={freedie.length > 0 && currentIndex < freedie.length - 1
+                    ? freedie[currentIndex + 1].imgSrc
+                    : freedie[0].imgSrc} 
+                  alt="next-prof" 
+                />
+                <p className="p-name">
+                  {freedie.length > 0 && currentIndex < freedie.length - 1
+                    ? freedie[currentIndex + 1].name
+                    : freedie[0].name}
+                </p>
               </div>
+            </div>
+
             </div>
         </div>
       </div>

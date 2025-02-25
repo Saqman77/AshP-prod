@@ -11,8 +11,10 @@ import instagram from '/src/assets/footer/newInsta.svg'
 // import twitter from '/src/assets/footer/twitter.png'
 import FB from '/src/assets/footer/newFacebook.svg'
 import Blue from '/src/assets/footer/Bluesky_Logo.svg.png'
+import AI from '/src/assets/footer/Graduate Website Badge_AI for Editors.png'
 // import favR from '/src/assets/footer/favorited_reviews.png'
 import threads from '/src/assets/footer/threads-app-icon.png'
+import ContactUs from '../get-in-touch-button/ContactUs';
 const Footer: React.FC = () => {
   return (
     <footer className="footer">
@@ -28,23 +30,17 @@ const Footer: React.FC = () => {
             <img src={logo} alt="main-logo" className="main-logo" />
           </Link>
           <div className='members'>
-            <p className='head-members'
-              style={{
-                // fontSize:'24px',
-                // fontWeight:'700',
-                // color:'white',
-                // textDecorationColor:'white',
-                // textDecoration:'underline',
-                // textUnderlineOffset:'10px',
-                // letterSpacing:'2px'
-                // margin:'auto'
-              }}
-            >Memberships</p>
-            <a href="https://www.the-efa.org/chapters/bipoc" className='logos'><img src={logo1} alt="" /></a>
-            <a href="https://www.editorsteaclub.org" className='logos'><img src={logo2} alt="" /></a>
-            <a href="https://www.netgalley.com/member/profile" className='logos'><img src={logo3} alt="" /></a>
-            <a href="https://www.indieauthorconnect.com" className='logos'><img src={logo4} alt="" /></a>
-            <a href="https://reviseresub.com/" className='logos'><img src={logo5} alt="" /></a>
+            <p className='head-members'>
+              Memberships
+            </p>
+            <div className='member'>
+              <a href="https://www.the-efa.org/chapters/bipoc" className='logos'><img src={logo1} alt="" /></a>
+              <a href="https://www.editorsteaclub.org" className='logos'><img src={logo2} alt="" /></a>
+              <a href="https://www.netgalley.com/member/profile" className='logos'><img src={logo3} alt="" /></a>
+              <a href="https://www.indieauthorconnect.com" className='logos'><img src={logo4} alt="" /></a>
+              <a href="https://reviseresub.com/" className='logos'><img src={logo5} alt="" /></a>
+              <a href="https://www.aiforeditors.com/" className='logos'><img src={AI} alt="" /></a>
+            </div>
           </div>
         </div>
 
@@ -78,36 +74,47 @@ const Footer: React.FC = () => {
 
         {/* Social Links */}
         <div className="footer-social">
-          <ul>
-            <li>
-              <a href="https://www.facebook.com/AshPReads" target="_blank" rel="noopener noreferrer" className='social'>
-                <img src={FB} alt="facebook-logo" className='social-img' />
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/ashpreads" target="_blank" rel="noopener noreferrer" className='social'>
-                <img src={instagram} alt="instagram-logo" className='social-img' />
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/ashpreads/" target="_blank" rel="noopener noreferrer" className='social'>
-                <img src={linkeding} alt="linkedin-logo" className='social-img' />
-              </a>
-            </li>
-            <li>
-              <a href="https://www.threads.net/@ashpreads" target="_blank" rel="noopener noreferrer" className='social'>
-                <img src={threads} alt="threads-logo" className='social-img' />
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/ashpreads.bsky.social" target="_blank" rel="noopener noreferrer" className='social'>
-                <img src={Blue} alt="Blue-logo" className='social-img' />
-              </a>
-            </li>
-          </ul>
+          <div className="footer-contact">
+          <p className='head-Contact'>
+            {/* Contact Us */}
+          </p>
+          <ContactUs/>
+          </div>
+          <div className='social-container'>
+            <p className='head-socials'>
+              Follow Us
+            </p>
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/AshPReads" target="_blank" rel="noopener noreferrer" className='social'>
+                  <img src={FB} alt="facebook-logo" className='social-img' />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/ashpreads" target="_blank" rel="noopener noreferrer" className='social'>
+                  <img src={instagram} alt="instagram-logo" className='social-img' />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/ashpreads/" target="_blank" rel="noopener noreferrer" className='social'>
+                  <img src={linkeding} alt="linkedin-logo" className='social-img' />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.threads.net/@ashpreads" target="_blank" rel="noopener noreferrer" className='social'>
+                  <img src={threads} alt="threads-logo" className='social-img' />
+                </a>
+              </li>
+              <li>
+                <a href="https://bsky.app/profile/ashpreads.bsky.social" target="_blank" rel="noopener noreferrer" className='social'>
+                  <img src={Blue} alt="Blue-logo" className='social-img' />
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         <p className='copyright'>
-            © {new Date().getFullYear()}  Ash P Reads Editing Services. All Rights Reserved <br/> Designed & Developed by <strong>Saqlain Haider</strong><br/> Illustrations by <strong>Amna Ali</strong>.
+            © {new Date().getFullYear()}  Ash P Reads Editing Services. All Rights Reserved Designed & Developed by <strong>Saqlain Haider</strong> Illustrations by <strong>Amna Ali</strong>.
        </p>
       </div>
 

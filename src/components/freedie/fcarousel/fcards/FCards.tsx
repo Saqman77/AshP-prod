@@ -9,7 +9,9 @@ import YT from '../../../../assets/freedi/youtube.png'
 import SC from '../../../../assets/freedi/soundcloud.svg'
 import BANDC from '../../../../assets/freedi/bandcamp.png'
 import GIT from '../../../../assets/freedi/github.png'
+import INT from '../../../../assets/freedi/internet-svgrepo-com.svg'
 import { useEffect, useRef } from 'react'
+
 
 interface FCardsProps {
 
@@ -23,7 +25,7 @@ interface FCardsProps {
 
   mail: string;
 
-  // phone: string;
+  portfolio: string;
 
   fb: string;
 
@@ -54,7 +56,7 @@ const FCards: React.FC<FCardsProps> = (
     desc,
     role,
     mail,
-    // phone,
+    portfolio,
     fb,
     insta,
     x,
@@ -96,7 +98,12 @@ const FCards: React.FC<FCardsProps> = (
             </div>
             <div className="right-desc">
               <p className='r-desc'>
-                {desc}
+              {desc.split("\n").map((line, index) => (
+                <span key={index}>
+                  {line}
+                  <br />
+                </span>
+              ))}
               </p>
             </div>
             <div className="socials">
@@ -115,8 +122,8 @@ const FCards: React.FC<FCardsProps> = (
        </div>
        <div className="card-bottom">
         <div className="f-contact">
-          <div className="mail-wrapper"><p className='mail'><span className='mail-span'>E-mail:&nbsp; </span><a href="mailto:example@gmail.com?subject=Hello&body=This is an example"  className='freed-a'>{mail}</a></p></div>
-          {/* <div className="phone-wrapper"><p className='phone'><span className='phone-span'>phone:&nbsp; </span>{phone}</p></div> */}
+          <div className="mail-wrapper"><p className='mail'><span className='mail-span'>E-mail:&nbsp; </span><a href={`mailto:${mail}?subject=AshP%20Referral%`}  className='freed-a'>{mail}</a></p></div>
+          <div className="phone-wrapper"><p className='phone'><span className='phone-span'>Portfolio:&nbsp; </span><a href={portfolio}><img src={INT} alt="social-icon" className='port-icon' /></a></p></div>
         </div>
        </div>
     </div>

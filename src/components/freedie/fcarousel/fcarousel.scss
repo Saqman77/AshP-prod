@@ -50,6 +50,9 @@
     @media screen and (max-width:1100px) {
         padding: 0px 15px;
     }
+    @media screen and (max-width:400px) {
+        padding: 0px 0.5em;
+    }
 }
 
 .pop-wrapper{
@@ -76,6 +79,10 @@
     }
     @media screen and (max-width:1500px) {
         padding: 15px;
+        font-size: var(--font-medium);
+    }
+    @media screen and (max-width:400px) {
+        padding: .5em;
         font-size: var(--font-medium);
     }
 }
@@ -135,6 +142,11 @@
         border-top: 1px solid white;
         
     }
+    @media screen and (max-width:400px) {
+        padding:1em;
+        border-top: 1px solid white;
+        
+    }
 }
 
 .p-right{
@@ -187,7 +199,7 @@
     opacity: 0.7;
     border-radius: 50%;
     object-fit: contain;
-    border: 2px solid white;
+    border: 3px solid white;
     @media screen and (max-width:900px) {
         display: none;
     }
