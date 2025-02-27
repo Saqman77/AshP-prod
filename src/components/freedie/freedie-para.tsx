@@ -13,7 +13,7 @@ interface ParallaxImageProps {
   className?: string;
 }
 
-const ParallaxImage: React.FC<ParallaxImageProps> = ({ src, alt, className }) => {
+const FreediePara: React.FC<ParallaxImageProps> = ({ src, alt, className }) => {
   const imageRef = useRef<HTMLImageElement | null>(null);
   const bounds = useRef<{ top: number; bottom: number } | null>(null);
   const currentTranslateY = useRef(0);
@@ -39,7 +39,7 @@ const ParallaxImage: React.FC<ParallaxImageProps> = ({ src, alt, className }) =>
           0.1
         );
         if (Math.abs(currentTranslateY.current - targetTranslateY.current) > 0.01) {
-          imageRef.current.style.transform = `translateY(${currentTranslateY.current}px) scale(1.5)`;
+          imageRef.current.style.transform = `translateY(${currentTranslateY.current}px) scale(1.1)`;
         }
       }
       rafId.current = requestAnimationFrame(animate);
@@ -90,4 +90,4 @@ const ParallaxImage: React.FC<ParallaxImageProps> = ({ src, alt, className }) =>
   );
 };
 
-export default ParallaxImage;
+export default FreediePara;

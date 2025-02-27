@@ -58,6 +58,7 @@ const ServiceGrid: React.FC<ServiceGridProps> = ({ isVisible, service, start, en
 
       useEffect(() => {
           setCurrentIndex(mainIndex);
+          setActiveFilter('All')
         }, [mainIndex]);
 
   
