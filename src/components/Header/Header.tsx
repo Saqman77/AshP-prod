@@ -93,13 +93,14 @@ const Header: React.FC = () => {
                   to="/"
                   end
                   className={({ isActive }) => (isActive ? 'header-active' : '')}
+                  
                 >
                   Home
                 </NavLink>
               </li>
               <li>
                 <NavLink
-                  to="/portfolio"
+                  to="/about"
                   className={({ isActive }) => (isActive ? 'header-active' : '')}
                   
                 >
@@ -110,6 +111,7 @@ const Header: React.FC = () => {
                 <NavLink
                   to="/fredibuddies"
                   className={({ isActive }) => (isActive ? 'header-active' : '')}
+                  
                 >
                   FrEdiBuddies
                 </NavLink>
@@ -138,14 +140,16 @@ const Header: React.FC = () => {
                 to="/"
                 end
                 className={({ isActive }) => (isActive ? 'header-active link' : 'link')}
+                
               >
                 Home
               </NavLink>
             </li>
             <li>
               <NavLink
-                to="/portfolio"
+                to="/about"
                 className={({ isActive }) => (isActive ? 'header-active link' : 'link')}
+                
               >
                 About
               </NavLink>
@@ -154,6 +158,7 @@ const Header: React.FC = () => {
               <NavLink
                 to="/fredibuddies"
                 className={({ isActive }) => (isActive ? 'header-active link' : 'link')}
+                
               >
                 FrEdiBuddies
               </NavLink>

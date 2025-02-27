@@ -49,22 +49,22 @@ const Footer: React.FC = () => {
           <ul>
             <li>
               <Link to="/"
-                onClick={() => window.scrollTo(0, 0)}
+                
               >Home</Link>
             </li>
             <li>
-              <Link to="/portfolio"
-                onClick={() => window.scrollTo(0, 0)}
+              <Link to="/about"
+                
               >About</Link>
             </li>
             <li>
               <Link to="/fredibuddies"
-                onClick={() => window.scrollTo(0, 0)}
+                
               >FrEdiBuddies</Link>
             </li>
             <li>
               <Link to="/contact"
-                onClick={() => window.scrollTo(0, 0)}
+                
               >
                 Contact Us
               </Link>
@@ -114,7 +114,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <p className='copyright'>
-            © {new Date().getFullYear()}  Ash P Reads Editing Services. All Rights Reserved Designed & Developed by <strong>Saqlain&nbsp;Haider</strong> Illustrations by <strong>Amna&nbsp;Ali</strong>.
+            © {new Date().getFullYear()}  Ash P Reads Editing Services. All Rights Reserved. Designed & Developed by <strong>Saqlain&nbsp;Haider.</strong> Illustrations by <strong>Amna&nbsp;Ali</strong>.
        </p>
       </div>
 

@@ -11,6 +11,7 @@ import { HashRouter, Routes, Route, } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useState } from 'react';
+import ScrollToTop from './utils/ScrollToTop';
 // // import { useThemeContext } from './utils/ThemeContextProvider';
 // import { useEffect} from 'react';
 // import { useEffect, useRef } from 'react';
@@ -44,13 +45,13 @@ const App = () => {
   return (
     <HashRouter>
       {/* <ReactLenis root> */}
+      <ScrollToTop />
         <div className="main" >
-        
           <Header />
           <Routes >
             <Route path="/" element={<Home />} />
             <Route path="/fredibuddies" element={<Freedie />} />
-            <Route path="/portfolio" element={<Portfolio key={key.toString()} />} />
+            <Route path="/about" element={<Portfolio key={key.toString()} />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
           <Footer />

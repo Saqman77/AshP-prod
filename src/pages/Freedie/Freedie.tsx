@@ -67,7 +67,7 @@ const Freedie: React.FC = () => {
           start: window.innerWidth < 700 ? 'top 50%' : window.innerWidth > 1250 ? 'top 50%' : 'top 30%', // Starts when .fredie-bg enters the viewport
           end: window.innerWidth < 700 ? 'top 45%' : window.innerWidth > 1250 ? 'top 45%' : 'top 20%', // Completes near the top
           scrub: 1, // Smoothly linked to scrolling
-          markers: true
+          // markers: true
         }
       });
 
