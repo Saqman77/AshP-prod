@@ -12,10 +12,15 @@
     top:0;
     left:0;
     max-height: 100svh;
-    max-height: 100vh;
+    max-height: 100dvh;
     animation: open 0.5s linear forwards;
+    flex-direction: column;
     @media screen and (max-width:1200px) {
         background: linear-gradient(to top, rgb(0 0 0 / 96%), rgb(0, 0, 0));
+    }
+
+    @media screen and (max-height:430px){
+        overflow-y: auto;
     }
 }
 
@@ -64,6 +69,7 @@
     flex-direction: column;
     align-items: center;
     // justify-content: space-between;
+    height: 100%;
 }
 
 .p-heading{

@@ -12,6 +12,7 @@ import instagram from '/src/assets/footer/newInsta.svg'
 import FB from '/src/assets/footer/newFacebook.svg'
 import Blue from '/src/assets/footer/Bluesky_Logo.svg.png'
 import AI from '/src/assets/footer/Graduate Website Badge_AI for Editors.png'
+import SUB from '/src/assets/footer/substack-icon.svg'
 // import favR from '/src/assets/footer/favorited_reviews.png'
 import threads from '/src/assets/footer/threads-app-icon.png'
 import ContactUs from '../get-in-touch-button/ContactUs';
@@ -43,7 +44,6 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Navigation Links */}
         <nav className="footer-nav">
           <ul>
@@ -108,6 +108,11 @@ const Footer: React.FC = () => {
               <li>
                 <a href="https://bsky.app/profile/ashpreads.bsky.social" target="_blank" rel="noopener noreferrer" className='social'>
                   <img src={Blue} alt="Blue-logo" className='social-img' />
+                </a>
+              </li>
+              <li>
+                <a href="https://ashpreads.substack.com?r=3z9e8q&utm_medium=ios" target="_blank" rel="noopener noreferrer" className='social'>
+                  <img src={SUB} alt="Blue-logo" className='social-img' />
                 </a>
               </li>
             </ul>

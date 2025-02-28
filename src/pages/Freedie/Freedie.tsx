@@ -77,7 +77,7 @@ const Freedie: React.FC = () => {
         webkitBackdropFilter:'blur(5px)',
         scrollTrigger: {
           trigger: '.fredie-bg',
-          start: window.innerWidth < 700 ? 'top 35%' : window.innerWidth > 1250 ? 'top 20%' : 'top 20%', // Starts when .fredie-bg enters the viewport
+          start: window.innerWidth < 700 ? 'top 25%' : window.innerWidth > 1250 ? 'top 20%' : 'top 20%', // Starts when .fredie-bg enters the viewport
           end: window.innerWidth < 700 ? '30% 30%' : window.innerWidth > 1250 ? 'top 20%' : '20% 20%', // Completes near the top
           scrub: 1, // Smoothly linked to scrolling
         //   onLeaveBack:()=>{
@@ -109,7 +109,7 @@ const Freedie: React.FC = () => {
         ease:'power2.inOut',
         scrollTrigger: {
           trigger: '.fredie-content',
-          start: window.innerWidth < 700 ? 'top 35%' : window.innerWidth > 1250 ? 'top 20%' : 'top 20%', // Starts when .fredie-bg enters the viewport
+          start: window.innerWidth < 700 ? 'top 25%' : window.innerWidth > 1250 ? 'top 20%' : 'top 20%', // Starts when .fredie-bg enters the viewport
           // onLeaveBack:()=>{
           //   gsap.to('.fredie-text span',{
           //     color:'',

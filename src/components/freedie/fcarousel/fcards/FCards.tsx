@@ -95,7 +95,7 @@ const FCards: React.FC<FCardsProps> = (
         </div>
         <div className="right-main">
             <div className="right-head">
-            <p className='main-name'>{name}</p>
+              {/* <p className='main-name'>{name}</p> */}
             </div>
             <div className="right-role">
               <p className='main-role'>{role}</p>
