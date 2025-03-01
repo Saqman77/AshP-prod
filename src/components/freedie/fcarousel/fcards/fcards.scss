@@ -65,6 +65,7 @@
     @media screen and (max-width: 1500px) {
         // align-items: center;
         grid-template-columns: minmax(300px, 44%) minmax(800px, 55%);
+        max-height: 400px;
     }
     @media screen and (max-width: 1250px) {
         // align-items: center;
