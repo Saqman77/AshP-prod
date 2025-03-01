@@ -1,17 +1,17 @@
 import { Link } from 'react-router-dom';
 import './Footer.scss';
 import logo from '/src/assets/header/toplogo (2).svg';
-import logo1 from '../../assets/footer/BIPOC-Chapter-300x300.png';
-import logo2 from '../../assets/footer/ETC+Member+Circle.png';
-import logo3 from '../../assets/footer/pro_reader.png';
-import logo4 from '../../assets/footer/Simple_Logo_ALT.png';
-import logo5 from '../../assets/footer/R&R logo final-03 (1).png';
+// import logo1 from '../../assets/footer/BIPOC-Chapter-300x300.png';
+// import logo2 from '../../assets/footer/ETC+Member+Circle.png';
+// import logo3 from '../../assets/footer/pro_reader.png';
+// import logo4 from '../../assets/footer/Simple_Logo_ALT.png';
+// import logo5 from '../../assets/footer/R&R logo final-03 (1).png';
 import linkeding from '/src/assets/footer/newlinkedin.svg'
 import instagram from '/src/assets/footer/newInsta.svg'
 // import twitter from '/src/assets/footer/twitter.png'
 import FB from '/src/assets/footer/newFacebook.svg'
 import Blue from '/src/assets/footer/Bluesky_Logo.svg.png'
-import AI from '/src/assets/footer/Graduate Website Badge_AI for Editors.png'
+// import AI from '/src/assets/footer/Graduate Website Badge_AI for Editors.png'
 import SUB from '/src/assets/footer/substack-icon.svg'
 // import favR from '/src/assets/footer/favorited_reviews.png'
 import threads from '/src/assets/footer/threads-app-icon.png'
@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
           <Link to="/" className='reads'>
             <img src={logo} alt="main-logo" className="main-logo" />
           </Link>
-          <div className='members'>
+          {/* <div className='members'>
             <p className='head-members'>
               Memberships
             </p>
@@ -41,8 +41,9 @@ const Footer: React.FC = () => {
               <a href="https://www.indieauthorconnect.com" className='logos'><img src={logo4} alt="" /></a>
               <a href="https://reviseresub.com/" className='logos'><img src={logo5} alt="" /></a>
               <a href="https://www.aiforeditors.com/" className='logos'><img src={AI} alt="" /></a>
+              <a href="https://www.aiforeditors.com/" className='logos'><img src={AI} alt="" /></a>
             </div>
-          </div>
+          </div> */}
         </div>
         {/* Navigation Links */}
         <nav className="footer-nav">

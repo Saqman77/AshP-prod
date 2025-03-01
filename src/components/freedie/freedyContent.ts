@@ -37,7 +37,7 @@ export const freedie = [
         bandcamp:'',
         github:'https://github.com/Saqman77',
         portfolio:'https://www.linkedin.com/in/saqlainhaider77?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-        cv:''
+        cv:'https://drive.google.com/file/d/1PEJlhATx1gHOIHq6gIPmhLCGCnKqGDax/view?usp=sharing'
     },
     {
         id:'Amna-Ali',

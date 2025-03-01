@@ -47,7 +47,7 @@ interface FCardsProps {
   sc: string;
   git: string;
   bandC: string;
-  name: string;
+  // name: string;
 
 }
 
@@ -69,7 +69,7 @@ const FCards: React.FC<FCardsProps> = (
     yt,
     sc,
     bandC,
-    name,
+    // name,
     git,
     cv
   }) => {
