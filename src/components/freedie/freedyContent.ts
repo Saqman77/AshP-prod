@@ -155,7 +155,7 @@ export const freedie = [
         behance:'',
         dribble:'',
         portfolio:'https://www.behance.net/batoolyazdani',
-        cv:'https://drive.google.com/file/d/1ClrT2tQsfdhQZTsOlEhbIlCaFlFBupp1/view'
+        cv:''
     },
     
 ]
