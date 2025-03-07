@@ -16,6 +16,8 @@ export const freedie = [
         soundcloud:'https://soundcloud.com/alienpandajury',
         bandcamp:'https://alienpandajury.bandcamp.com/',
         github:'',
+        behance:'',
+        dribble:'',
         portfolio:'https://linktr.ee/alienpandajury',
         cv:'https://drive.google.com/file/d/1ayIulWLwX40-B4yvE05D572kW17nMxWH/view?usp=sharing'
     },
@@ -36,8 +38,10 @@ export const freedie = [
         soundcloud:'',
         bandcamp:'',
         github:'https://github.com/Saqman77',
+        behance:'https://www.behance.net/saqlainhaider77',
+        dribble:'https://dribbble.com/saqlain_haider?onboarding=true&designer=true ',
         portfolio:'https://www.linkedin.com/in/saqlainhaider77?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-        cv:'https://drive.google.com/file/d/1PEJlhATx1gHOIHq6gIPmhLCGCnKqGDax/view?usp=sharing'
+        cv:'https://docs.google.com/document/d/1Z15r6VH9_M_oTBcu0B6lj_p9_iRMT1BQkuUpAe_JGnM/edit?usp=sharing'
     },
     {
         id:'Amna-Ali',
@@ -56,6 +60,8 @@ export const freedie = [
         soundcloud:'',
         bandcamp:'',
         github:'',
+        behance:'',
+        dribble:'',
         portfolio:'https://www.behance.net/amnaali51',
         cv:''
     },
@@ -77,6 +83,8 @@ export const freedie = [
         soundcloud:'',
         bandcamp:'',
         github:'',
+        behance:'',
+        dribble:'',
         portfolio:'https://beenishsarfaraz.cargo.site/',
         cv:'https://drive.google.com/file/d/1V6sgDHtljOCnWJl8vu-JxBuQFahNtzk1/view'
     },
@@ -98,6 +106,8 @@ export const freedie = [
         soundcloud:'',
         bandcamp:'',
         github:'',
+        behance:'',
+        dribble:'',
         portfolio:'https://tashnasalim.com/',
         cv:'https://www.dropbox.com/scl/fi/11agrhwrotkbumzphoatn/resume-blue.pdf?rlkey=uss8kc9ilm9ciqnl7ghqnphx5&e=1&dl=0'
     },
@@ -119,7 +129,32 @@ export const freedie = [
         soundcloud:'',
         bandcamp:'',
         github:'',
+        behance:'',
+        dribble:'',
         portfolio:'https://linkr.bio/rquadri06',
+        cv:'https://drive.google.com/file/d/1ClrT2tQsfdhQZTsOlEhbIlCaFlFBupp1/view'
+    },
+    {
+        id:'batool-yazdani',
+        name:'Batool Yazdani',
+        imgSrc:'./Batool.jpg',
+        desc:"Batool is an independent filmmaker and editor from Karachi, Pakistan. She completed her graduate degree in filmmaking from the National College of Arts, in Lahore, Pakistan.\n\nShe has worked with multiple filmmakers, as an assistant director and has directed and edited two documentaries and two fiction films.\n\nAs an editor, she believes every project requires a different style, based on its themes and vision. An editor is like a second director to any project or film. Her effort is always to give shape and structure to the intended vision, while utilising what has already been captured on film. A good edit is when the editing is the least noticeable aspect of filmmaking. \n\nHer experience in direction allows her to understand someone else’s vision better as an editor  and how to best translate that through the edit.",
+        role:'Independent Filmmaker and Editor',
+        eMail:' yazdanibatool@gmail.com',
+        // phone:'+92-0900-78601',
+        fb:'',
+        insta:'',
+        x:'',
+        linkedIn:'',
+        spotify:'',
+        linktree:'',
+        youtube:'',
+        soundcloud:'',
+        bandcamp:'',
+        github:'',
+        behance:'',
+        dribble:'',
+        portfolio:'https://www.behance.net/batoolyazdani',
         cv:'https://drive.google.com/file/d/1ClrT2tQsfdhQZTsOlEhbIlCaFlFBupp1/view'
     },
     

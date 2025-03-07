@@ -11,6 +11,8 @@ import BANDC from '../../../../assets/freedi/bandcamp.png'
 import GIT from '../../../../assets/freedi/github.png'
 import INT from '../../../../assets/freedi/internet-svgrepo-com.svg'
 import DN from '../../../../assets/freedi/download.svg'
+import DRIB from '../../../../assets/freedi/dribbble-svgrepo-com.svg'
+import BEHANCE from '../../../../assets/freedi/behance-svgrepo-com.svg'
 import { useEffect, useRef } from 'react'
 
 
@@ -47,6 +49,8 @@ interface FCardsProps {
   sc: string;
   git: string;
   bandC: string;
+  behance: string;
+  dribble: string;
   // name: string;
 
 }
@@ -71,6 +75,8 @@ const FCards: React.FC<FCardsProps> = (
     bandC,
     // name,
     git,
+    behance,
+    dribble,
     cv
   }) => {
 
@@ -121,6 +127,8 @@ const FCards: React.FC<FCardsProps> = (
                 {sc === ''? (<></>) : (<a href={sc} className='f-social'><img src={SC} alt="social-icon" /></a>) }
                 {bandC === ''? (<></>) : (<a href={bandC} className='f-social'><img src={BANDC} alt="social-icon" /></a>) }
                 {git === ''? (<></>) : (<a href={git} className='f-social'><img src={GIT} alt="social-icon" /></a>) }
+                {behance === ''? (<></>) : (<a href={behance} className='f-social'><img src={BEHANCE} alt="social-icon" /></a>) }
+                {dribble === ''? (<></>) : (<a href={dribble} className='f-social'><img src={DRIB} alt="social-icon" /></a>) }
               </div>
         </div>
        </div>

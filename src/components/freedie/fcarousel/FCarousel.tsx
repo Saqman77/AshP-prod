@@ -133,6 +133,8 @@ const FCarousel: React.FC<CarouselProps> = ({ startIndex, isVisible, onClose }) 
                 sc={freedie[currentIndex].soundcloud}
                 bandC={freedie[currentIndex].bandcamp}
                 git={freedie[currentIndex].github}
+                behance={freedie[currentIndex].behance}
+                dribble={freedie[currentIndex].dribble}
                 // name={freedie[currentIndex].name}
                 cv={freedie[currentIndex].cv}
               />
