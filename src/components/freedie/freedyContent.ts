@@ -19,7 +19,8 @@ export const freedie = [
         behance:'',
         dribble:'',
         portfolio:'https://linktr.ee/alienpandajury',
-        cv:'https://drive.google.com/file/d/1ayIulWLwX40-B4yvE05D572kW17nMxWH/view?usp=sharing'
+        cv:'https://drive.google.com/file/d/1ayIulWLwX40-B4yvE05D572kW17nMxWH/view?usp=sharing',
+        shout:''
     },
     {
         id:'Saqlain-Haider',
@@ -41,7 +42,8 @@ export const freedie = [
         behance:'https://www.behance.net/saqlainhaider77',
         dribble:'https://dribbble.com/saqlain_haider?onboarding=true&designer=true ',
         portfolio:'https://www.linkedin.com/in/saqlainhaider77?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-        cv:'https://docs.google.com/document/d/1Z15r6VH9_M_oTBcu0B6lj_p9_iRMT1BQkuUpAe_JGnM/edit?usp=sharing'
+        cv:'https://docs.google.com/document/d/1Z15r6VH9_M_oTBcu0B6lj_p9_iRMT1BQkuUpAe_JGnM/edit?usp=sharing',
+        shout:'A shout out to Saqlain. Thank you for developing this whimsically fun-tastic website for us. Your coding skills are genius-level.'
     },
     {
         id:'Amna-Ali',
@@ -63,7 +65,8 @@ export const freedie = [
         behance:'',
         dribble:'',
         portfolio:'https://www.behance.net/amnaali51',
-        cv:''
+        cv:'',
+        shout:'A shout out to Amna. Thank you for making the amazing graphics used on our website. If we created a comic book, this is how we’d draw our characters.'
     },
     {
         id:'Beenish-Sarfaraz',
@@ -86,7 +89,8 @@ export const freedie = [
         behance:'',
         dribble:'',
         portfolio:'https://beenishsarfaraz.cargo.site/',
-        cv:'https://drive.google.com/file/d/1V6sgDHtljOCnWJl8vu-JxBuQFahNtzk1/view'
+        cv:'https://drive.google.com/file/d/1V6sgDHtljOCnWJl8vu-JxBuQFahNtzk1/view',
+        shout:''
     },
     {
         id:'Tashna-Salim',
@@ -109,7 +113,8 @@ export const freedie = [
         behance:'',
         dribble:'',
         portfolio:'https://tashnasalim.com/',
-        cv:'https://www.dropbox.com/scl/fi/11agrhwrotkbumzphoatn/resume-blue.pdf?rlkey=uss8kc9ilm9ciqnl7ghqnphx5&e=1&dl=0'
+        cv:'https://www.dropbox.com/scl/fi/11agrhwrotkbumzphoatn/resume-blue.pdf?rlkey=uss8kc9ilm9ciqnl7ghqnphx5&e=1&dl=0',
+        shout:''
     },
     {
         id:'rija-quadri',
@@ -132,7 +137,8 @@ export const freedie = [
         behance:'',
         dribble:'',
         portfolio:'https://linkr.bio/rquadri06',
-        cv:'https://drive.google.com/file/d/1ClrT2tQsfdhQZTsOlEhbIlCaFlFBupp1/view'
+        cv:'https://drive.google.com/file/d/1ClrT2tQsfdhQZTsOlEhbIlCaFlFBupp1/view',
+        shout:''
     },
     {
         id:'batool-yazdani',
@@ -155,7 +161,8 @@ export const freedie = [
         behance:'',
         dribble:'',
         portfolio:'https://www.behance.net/batoolyazdani',
-        cv:''
+        cv:'https://drive.google.com/file/d/1ClrT2tQsfdhQZTsOlEhbIlCaFlFBupp1/view',
+        shout:''
     },
     
 ]
