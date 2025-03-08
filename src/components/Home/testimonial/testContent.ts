@@ -10,6 +10,11 @@ export const testContent = [
       description: "Ash P Reads - Exceptional Editing Services! I was impressed with Ash’s prompt communication and her commitment to understanding my specific editing needs."
     },
     {
+      id: "charlene-hartnady",
+      heading: "- Charlene Hartnady",
+      description: "I have used Ash P Reads copy editing and proofreading services for many years now—I have over seventy published works and they have been there at my side for most of them."
+    },
+    {
       id: "TC-Publishing",
       heading: "- TC Publishing",
       description: "Their versatility in handling different types of content was remarkable. Their attention to detail and keen eye for grammar and punctuation ensured that my client’s work was polished to perfection. One of the books edited by Ash P Reads Editing Services became a bestseller on Amazon. "
