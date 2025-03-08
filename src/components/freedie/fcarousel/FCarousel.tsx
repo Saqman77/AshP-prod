@@ -11,6 +11,7 @@ interface CarouselProps {
 const FCarousel: React.FC<CarouselProps> = ({ startIndex, isVisible, onClose }) => {
   const [currentIndex, setCurrentIndex] = useState(startIndex);
   const carouselRef = useRef<HTMLDivElement | null>(null);
+ 
 
   useEffect(() => {
     setCurrentIndex(startIndex);
