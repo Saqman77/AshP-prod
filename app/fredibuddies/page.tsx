@@ -37,7 +37,7 @@ const FREEDIEPAGE_QUERY = `*[_type == "freediePage"]{
     desc,
     imgSrc { "url": asset->url },
     links { ... },
-  }
+  },
   disclaimerText[],
 }`
 
