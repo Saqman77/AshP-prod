@@ -6,7 +6,7 @@ export const footerContent = {
     navigationLinks: [
         { text: "Home", href: "/" },
         { text: "About Us", href: "/about" },
-        { text: "FrEdiebuddies", href: "/fredibuddies" },
+        { text: "FrEdibuddies", href: "/fredibuddies" },
         { text: "Contact Us", href: "/contact" },
     ],
     copyright: "© 2025 Ash P Reads Editing Services. All Rights Reserved. Designed & Developed by Saqlain Haider. Illustrations by Amna Ali.",
