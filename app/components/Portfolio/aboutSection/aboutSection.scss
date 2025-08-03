@@ -1,0 +1,229 @@
+@keyframes sparkleScale {
+  from,
+  to {
+    transform: translateY(0%) scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes sparkleRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+.aboutSection {
+  padding: 6.45vw 15.625vw;
+
+  @media screen and (max-width: 1250px) {
+    padding: 100px 40px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 80px 20px;
+  }
+
+  .sparkle {
+    position: absolute;
+    transform-origin: center;
+    animation: sparkleRotate 0.7s linear infinite;
+    display: flex;
+
+    &.small {
+      width: 10px;
+      height: 10px;
+    }
+
+    &.medium {
+      width: 16px;
+      height: 16px;
+    }
+
+    &.big {
+      width: 20px;
+      height: 20px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .smallHeading {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Quicksand", sans-serif;
+    color: #4b3b74;
+    margin-bottom: 20px;
+    position: relative;
+
+    .sparkle.big {
+      top: -13px;
+      left: 85px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .mainHeading {
+    font-size: clamp(40px, 2.9vw, 64px);
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    position: relative;
+
+    .sparkle.small {
+      width: 10px;
+      height: 10px;
+      bottom: 3.2vw;
+      left: 0;
+      @media screen and (max-width: 1250px) {
+        display: none;
+      }
+    }
+
+    .since {
+      color: #4b3b74;
+    }
+
+    .year {
+      color: #7b6ddb;
+    }
+  }
+
+  .firstParagraph {
+    font-size: clamp(24px, 1.8vw, 40px);
+    font-weight: 700;
+    font-family: "Quicksand", sans-serif;
+    margin-bottom: 50px;
+
+    @media screen and (max-width: 1250px) {
+      margin-bottom: 40px;
+    }
+
+    .highlight1 {
+      color: #c9549d;
+      font-family: "Quicksand", sans-serif;
+      position: relative;
+
+      .sparkle{
+        display: none;
+      }
+    }
+
+    .highlight2 {
+      color: #7b6ddb;
+      font-family: "Quicksand", sans-serif;
+    }
+
+    .companyName {
+      color: #c9549d;
+      font-family: "Quicksand", sans-serif;
+    }
+
+    .serviceName {
+      color: #7b6ddb;
+      font-family: "Quicksand", sans-serif;
+    }
+
+    .description {
+      color: #4d4d4d;
+      font-family: "Quicksand", sans-serif;
+    }
+  }
+
+  .secondParagraph {
+    font-size: clamp(16px, 1.25vw, 32px);
+    font-weight: 700;
+    font-family: "Quicksand", sans-serif;
+    color: #4d4d4d;
+    margin-bottom: 124px;
+    @media screen and (max-width: 1250px) {
+      margin-bottom: 80px;
+    }
+
+    .highlight1 {
+      color: #c9549d;
+      font-family: "Quicksand", sans-serif;
+      position: relative;
+
+      .sparkle.small {
+        left: -5px;
+        top: -5px;
+        @media screen and (max-width: 1250px) {
+          display: none;
+        }
+      }
+      .sparkle.medium {
+        right: -5px;
+        top: -18px;
+        @media screen and (max-width: 1250px) {
+          display: none;
+        }
+      }
+      .sparkle.big {
+        right: -5px;
+        top: -18px;
+        @media screen and (max-width: 1250px) {
+          display: none;
+        }
+      }
+    }
+
+    .highlight2 {
+      color: #7b6ddb;
+      font-family: "Quicksand", sans-serif;
+    }
+
+    .familyRun,
+    .bestSelling,
+    .awardWinning {
+      color: #c9549d;
+      font-family: "Quicksand", sans-serif;
+      position: relative;
+    }
+
+    .publisher {
+      color: #7b6ddb;
+      font-family: "Quicksand", sans-serif;
+    }
+
+    .familyRun {
+      .sparkle.medium {
+        right: -5px;
+        top: -18px;
+        @media screen and (max-width: 1250px) {
+          display: none;
+        }
+      }
+    }
+
+    .bestSelling {
+      .sparkle.medium {
+        left: -5px;
+        top: -18px;
+        @media screen and (max-width: 1250px) {
+          display: none;
+        }
+      }
+    }
+    .awardWinning {
+      .sparkle.small {
+        left: -5px;
+        top: -5px;
+        @media screen and (max-width: 1250px) {
+          display: none;
+        }
+      }
+    }
+  }
+}
