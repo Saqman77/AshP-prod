@@ -191,8 +191,8 @@
                 box-shadow: 4px 4px 0px 1px rgba(26, 26, 26, 0.699);
 
                 .icon {
-                    width: 24px;
-                    height: 24px;
+                    min-width: 24px;
+                    min-height: 24px;
                     margin-right: 24px;
 
                     img {
