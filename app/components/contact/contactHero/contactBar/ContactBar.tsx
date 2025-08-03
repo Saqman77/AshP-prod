@@ -31,10 +31,10 @@ const ContactBar = ({companyEmail, companyPhone}: IContactBarProps) => {
         <span><Image width={100} height={100} src={"/contact/copy.svg"} alt="" /></span>
       </button>
       {/* Phone Section */}
-      {/* <div className={styles.phoneSection}>
+      <div className={styles.phoneSection}>
         <span className={styles.phoneIcon}><Image width={100} height={100} src={"/contact/cbPhone.svg"} alt="" /></span>
         <span>{companyPhone}</span>
-      </div> */}
+      </div>
     </div>
   );
 };
