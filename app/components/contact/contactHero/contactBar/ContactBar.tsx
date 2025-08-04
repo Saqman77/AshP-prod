@@ -7,8 +7,7 @@ interface IContactBarProps {
   companyPhone: string;
 }
 
-const ContactBar = ({companyEmail, companyPhone}: IContactBarProps) => {
-
+const ContactBar = ({ companyEmail, companyPhone }: IContactBarProps) => {
   // Copy email to clipboard handler
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(companyEmail);
@@ -18,7 +17,14 @@ const ContactBar = ({companyEmail, companyPhone}: IContactBarProps) => {
     <div className={styles.contactBar}>
       {/* Email Section */}
       <div className={styles.emailSection}>
-        <span className={styles.emailIcon}><Image width={100} height={100} src={"/contact/EnvelopeSimple.svg"} alt="" /></span>
+        <span className={styles.emailIcon}>
+          <Image
+            width={100}
+            height={100}
+            src={"/contact/EnvelopeSimple.svg"}
+            alt=""
+          />
+        </span>
         <span>{companyEmail}</span>
       </div>
       {/* Copy Button */}
@@ -28,13 +34,24 @@ const ContactBar = ({companyEmail, companyPhone}: IContactBarProps) => {
         aria-label="Copy email address"
       >
         {/* TODO: Add copy icon here */}
-        <span><Image width={100} height={100} src={"/contact/copy.svg"} alt="" /></span>
+        <span>
+          <Image width={100} height={100} src={"/contact/copy.svg"} alt="" />
+        </span>
       </button>
       {/* Phone Section */}
-      <div className={styles.phoneSection}>
-        <span className={styles.phoneIcon}><Image width={100} height={100} src={"/contact/cbPhone.svg"} alt="" /></span>
-        <span>{companyPhone}</span>
-      </div>
+      {companyPhone && (
+        <div className={styles.phoneSection}>
+          <span className={styles.phoneIcon}>
+            <Image
+              width={100}
+              height={100}
+              src={"/contact/cbPhone.svg"}
+              alt=""
+            />
+          </span>
+          <span>{companyPhone}</span>
+        </div>
+      )}
     </div>
   );
 };
