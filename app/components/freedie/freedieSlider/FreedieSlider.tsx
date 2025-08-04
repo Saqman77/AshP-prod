@@ -3,8 +3,6 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import './FreedieSlider.scss'
-// import { freedie } from '../freedyContent'
-import { freedieSliderHeading } from './FreedieSliderContent'
 import Image from 'next/image'
 
 
@@ -16,6 +14,7 @@ interface FreedieSliderProps {
     viewMode: 'slider' | 'list';
     setViewMode: (mode: 'slider' | 'list') => void;
     onScrollPositionChange?: (position: number) => void; // New prop for scroll position tracking
+    heading: string;
     freedie: {
     id: string;
     name: string;
@@ -44,7 +43,7 @@ interface FreedieSliderProps {
 }
 
 // Update component signature to accept the prop
-const FreedieSlider: React.FC<FreedieSliderProps> = ({ onItemClick, viewMode, setViewMode, onScrollPositionChange, freedie }) => {
+const FreedieSlider: React.FC<FreedieSliderProps> = ({ onItemClick, viewMode, setViewMode, onScrollPositionChange, freedie, heading }) => {
     // Create refs for the container elements
     const containerRef = useRef<HTMLDivElement>(null);
     const [, setActiveIndex] = useState(0);
@@ -203,7 +202,7 @@ const FreedieSlider: React.FC<FreedieSliderProps> = ({ onItemClick, viewMode, se
         <div className="slider-container" ref={containerRef}>
             <div className="f-toggle-header">
                 <h3 className='f-toggle-heading'>
-                    {freedieSliderHeading}
+                    {heading}
                     
                 </h3>
                 <div className='toggle-box'>

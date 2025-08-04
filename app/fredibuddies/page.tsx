@@ -17,6 +17,7 @@ const FREEDIEPAGE_QUERY = `*[_type == "freediePage"]{
       "url": asset->url
     }
   },
+  freedieBuddiesTitle,
   freedieBuddies[]->{
     "id": slug.current,
     name,

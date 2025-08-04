@@ -1,5 +1,4 @@
 'use client';
-
 import { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -138,6 +137,7 @@ const Freedie = ({ data }: { data: SanityDocument }) => {
               <div className="f-toggle-content">
                 {viewMode === 'slider' ? (
                   <FreedieSlider
+                    heading={data.freedieBuddiesTitle}
                     freedie={data.freedieBuddies}
                     onItemClick={handleItemClick}
                     viewMode={viewMode}
