@@ -5,7 +5,20 @@ const nextConfig: NextConfig = {
   /* config options here */
   images: {
     qualities: [75, 80, 85, 90, 100, ],
-    domains: ["cdn.sanity.io"],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.sanity.io',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'ashpreads.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [320, 420, 768, 1024, 1200],
     minimumCacheTTL: 60,

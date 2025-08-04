@@ -150,7 +150,7 @@ const nunitoSans = NextFont({
   src: [
     {
       path: '../../public/fonts/NunitoSans-VariableFont.woff2',
-      weight: '400', // Variable font weight range
+      weight: '400 900', // Variable font weight range
       style: 'normal',
     },
   ],

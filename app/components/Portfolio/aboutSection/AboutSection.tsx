@@ -1,3 +1,4 @@
+'use client';
 import React, { useRef } from "react";
 // import { aboutSectionContent } from './aboutSectionContent';
 import AboutSectionCards from "./aboutSectionCards/AboutSectionCards";

@@ -1,3 +1,4 @@
+'use client';
 import './horizontal.scss'
 // import ace from '/freedi/Spark 82.svg'
 import React, { useRef } from "react";
