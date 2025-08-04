@@ -1,11 +1,12 @@
-"use client";
+// "use client";
 import { type SanityDocument } from "next-sanity";
 import { client } from "../sanity/client";
 import "./Contact.scss";
 import ContactHero from "../components/contact/contactHero/ContactHero";
 import Communities from "../components/contact/communities/Communities";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { Metadata } from "next";
+// import { useEffect, useState } from "react";
 
 const CONTACTPAGE_QUERY = `*[_type == "contactPage"]{
   contactFormSection {
@@ -47,80 +48,45 @@ const CONTACTPAGE_QUERY = `*[_type == "contactPage"]{
   }
 }`;
 
-// export async function generateMetadata() {
-//   const data = await client.fetch<SanityDocument[]>(CONTACTPAGE_QUERY, {}, options);
-//   const { contactFormSection } = data[0];
-
-//   return {
-//     title: "Contact | Ash P Reads Editing Services",
-//     description:
-//       contactFormSection?.headingLeft + contactFormSection?.headingRight ||
-//       "Let's Talk! We are always ready to help you and answer your",
-//     generator: 'Next.js',
-//     metadataBase: new URL('https://ashpreads.com/contact'),
-//     openGraph: {
-//       title: "Contact | Ash P Reads Editing Services",
-//       description:
-//         contactFormSection?.headingLeft + contactFormSection?.headingRight  ||
-//         "Let's Talk! We are always ready to help you and answer your",
-//       url: "https://ashpreads.com/contact",
-//       siteName: "Ash P Reads Editing Services",
-//       images: [
-//         {
-//           url: contactFormSection?.headingLeft + contactFormSection?.headingRight  || "https://ashpreads.com/muslim woman.svg",
-//           width: 1200,
-//           height: 630,
-//           alt: "Ash P Reads Editing Services",
-//         },
-//       ],
-//       locale: "en_US",
-//       type: "website",
-//     },
-//     twitter: {
-//       card: "summary_large_image",
-//       title: "Contact | Ash P Reads Editing Services",
-//       description:
-//         contactFormSection?.headingLeft + contactFormSection?.headingRight ||
-//         "Let's Talk! We are always ready to help you and answer your",
-//       images: [ "https://ashpreads.com/muslim woman.svg"],
-//     },
-//     icons: {
-//     icon: [
-//       { url: '/favicon.ico' },
-//       { url: '/favicon.svg', type: 'image/svg+xml' },
-//       { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
-//       { url: '/web-app-manifest-192x192.png', sizes: '192x192', type: 'image/png' },
-//       { url: '/web-app-manifest-512x512.png', sizes: '512x512', type: 'image/png' }
-//     ],
-//     apple: [
-//       { url: '/apple-touch-icon.png' }
-//     ],
-//   },
-//   };
-// }
-
 const options = { next: { revalidate: 120 } };
 
-const data = await client.fetch<SanityDocument[]>(
-  CONTACTPAGE_QUERY,
-  {},
-  options
-);
+export async function generateMetadata(): Promise<Metadata> {
+  const data = await client.fetch(CONTACTPAGE_QUERY);
 
-const Contact = () => {
-  const [contactFormSectionData, setContactFormSection] = useState(
-    data[0].contactFormSection
-  );
-  const [communitiesSectionData, setCommunitiesSection] = useState(
-    data[0].communitiesSection
-  )
+  const contactFormSectionData = data[0]?.contactFormSection;
 
-  useEffect(() => {
-    if (data) {
-      setContactFormSection(data[0].contactFormSection);
-      setCommunitiesSection(data[0].communitiesSection);
-    }
-  }, [data]);
+  const description =
+    contactFormSectionData?.headingLeft +
+      contactFormSectionData?.headingRight ||
+    "We are Ash P and Hira P, a sibling duo with more than two decades of experience between us";
+
+  return {
+    title: "Contact | Ash P Reads Editing Services",
+    description,
+    openGraph: {
+      title: "Contact | Ash P Reads Editing Services",
+      description,
+      url: "https://ashpreads.com/contact",
+      images: [
+        {
+          url: "https://ashpreads.com/muslim woman.svg",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Contact | Ash P Reads Editing Services",
+      description,
+      images: ["https://ashpreads.com/muslim woman.svg"],
+    },
+  };
+}
+
+const Contact = async () => {
+  const data = await client.fetch<SanityDocument[]>(CONTACTPAGE_QUERY,{}, options); 
+
+  const contactFormSectionData = data[0]?.contactFormSection;
+  const communitiesSectionData = data[0]?.communitiesSection;
 
   return (
     <div className="c-wrapper">

@@ -15,9 +15,6 @@ interface ICommunitiesProps {
 }
 
 const Communities = ({heading, communities}: ICommunitiesProps) => {
-  const handleCommunityClick = (link: string) => {
-    window.open(link, '_blank');
-  };
 
   return (
     <div className="communities">
@@ -36,13 +33,15 @@ const Communities = ({heading, communities}: ICommunitiesProps) => {
       
       <div className="communities-list">
         {communities && communities.map((community: Community, index: number) => (
-          <div 
+          <a 
             key={index}
             className="community-item"
-            onClick={() => handleCommunityClick(community.link)}
+            href={community.link}
+            target='_blank'
+            rel="noopener noreferrer"
           >
             {community.name}
-          </div>
+          </a>
         ))}
       </div>
     </div>

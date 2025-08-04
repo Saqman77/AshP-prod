@@ -1,3 +1,4 @@
+'use client';
 import React, { useState } from 'react';
 import styles from './contactForm.module.scss';
 import content from './contactFormContent';
