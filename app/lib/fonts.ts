@@ -145,7 +145,7 @@ const comfortaa = NextFont({
   variable: '--font-comfortaa',
 });
 
-// Nunito Sans Font
+// NunitoSans Font
 const nunitoSans = NextFont({
   src: [
     {
