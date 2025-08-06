@@ -48,7 +48,7 @@ const Testimonial = ({heading, description, feedbacks}: ITestimonialsProps) => {
     useEffect(() => {
         const interval = setInterval(() => {
             instanceRef.current?.next();
-        }, 3000);
+        }, 7000);
 
         return () => clearInterval(interval);
     }, [instanceRef]);
