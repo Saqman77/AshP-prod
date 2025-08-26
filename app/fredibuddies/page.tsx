@@ -39,10 +39,10 @@ export async function generateMetadata() {
     "We are Ash P and Hira P, a sibling duo with more than two decades of experience between us";
 
   return {
-    title: "fredi Buddies | Ash P Reads Editing Services",
+    title: "FrEdiBuddies | Ash P Reads Editing Services",
     description,
     openGraph: {
-      title: "fredi Buddies | Ash P Reads Editing Services",
+      title: "FrEdiBuddies | Ash P Reads Editing Services",
       description,
       url: "https://ashpreads.com/fredibuddies",
       images: [
@@ -53,7 +53,7 @@ export async function generateMetadata() {
     },
     twitter: {
       card: "summary_large_image",
-      title: "Fredi Buddies | Ash P Reads Editing Services",
+      title: "FrEdiBuddies | Ash P Reads Editing Services",
       description,
       images: ["https://ashpreads.com/muslim woman.svg"],
     },
