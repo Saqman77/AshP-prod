@@ -49,9 +49,9 @@
 }
 
 /* Target the 7th card (the last one) to place it in the middle column */
-.cardsContainer :nth-child(7) {
-    grid-column: 2 / 3; /* Place item in the second column */
-}
+// .cardsContainer :nth-child(7) {
+//     grid-column: 2 / 3; /* Place item in the second column */
+// }
 
 /* Adjust for screens where 3 columns might be too wide for card size */
 @media (max-width: 1450px) {
