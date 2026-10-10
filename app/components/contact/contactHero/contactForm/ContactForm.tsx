@@ -1,11 +1,12 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from './contactForm.module.scss';
 import content from './contactFormContent';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 import { useFormspark } from "@formspark/use-formspark";
 import Image from 'next/image';
+import Script from 'next/script';
 
 interface IContactFormProps {
   sendButtonText: string;
@@ -31,6 +32,24 @@ interface IContactFormProps {
 // import FORMSPARK_FORM_ID from .env
 const FORMSPARK_FORM_ID = process.env.NEXT_PUBLIC_FORMSPARK_FORM_ID || '';
 
+const RECAPTCHA_SITE_KEY = '6LcIx-gtAAAAAOYi6kHo4phMwOXFUU2p9F31lFwq';
+
+type RecaptchaApi = {
+  ready: (callback: () => void) => void;
+  render: (container: HTMLElement, options: {
+    sitekey: string;
+    size: 'normal' | 'compact';
+    callback: (token: string) => void;
+    'expired-callback': () => void;
+    'error-callback': () => void;
+  }) => number;
+  getResponse: (widgetId: number) => string;
+  reset: (widgetId: number) => void;
+};
+
+const getRecaptcha = () =>
+  (window as Window & { grecaptcha?: RecaptchaApi }).grecaptcha;
+
 const ContactForm = ({ sendButtonText, name, email, message, phone}: IContactFormProps) => {
    const [submit, submitting] = useFormspark({
     formId: FORMSPARK_FORM_ID,
@@ -45,6 +64,50 @@ const ContactForm = ({ sendButtonText, name, email, message, phone}: IContactFor
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
 
+  const [captchaReady, setCaptchaReady] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState('');
+  const [captchaError, setCaptchaError] = useState('');
+  const captchaContainer = useRef<HTMLDivElement>(null);
+  const captchaWidget = useRef<number | null>(null);
+  const sending = useRef(false);
+
+  useEffect(() => {
+    const recaptcha = getRecaptcha();
+    const container = captchaContainer.current;
+    if (!captchaReady || !recaptcha || !container) return;
+
+    let active = true;
+    recaptcha.ready(() => {
+      if (!active) return;
+      captchaWidget.current = recaptcha.render(container, {
+        sitekey: RECAPTCHA_SITE_KEY,
+        size: window.matchMedia('(max-width: 400px)').matches ? 'compact' : 'normal',
+        callback: (token) => {
+          if (!active) return;
+          setCaptchaToken(token);
+          setCaptchaError('');
+        },
+        'expired-callback': () => {
+          if (!active) return;
+          setCaptchaToken('');
+          setCaptchaError('Verification expired. Please complete reCAPTCHA again.');
+        },
+        'error-callback': () => {
+          if (!active) return;
+          setCaptchaToken('');
+          setCaptchaError('Verification failed. Please check your connection and try again.');
+        },
+      });
+    });
+
+    return () => {
+      active = false;
+      if (captchaWidget.current !== null) recaptcha.reset(captchaWidget.current);
+      captchaWidget.current = null;
+      container.replaceChildren();
+    };
+  }, [captchaReady]);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -55,8 +118,21 @@ const ContactForm = ({ sendButtonText, name, email, message, phone}: IContactFor
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (sending.current || submitting || success || error || isFormIncomplete) return;
+
+    const recaptcha = getRecaptcha();
+    const token = captchaWidget.current !== null
+      ? recaptcha?.getResponse(captchaWidget.current)
+      : '';
+    if (!token) {
+      setCaptchaToken('');
+      setCaptchaError('Please complete reCAPTCHA before sending your message.');
+      return;
+    }
+
+    sending.current = true;
     try {
-      await submit({ ...form });
+      await submit({ ...form, 'g-recaptcha-response': token });
       // if successful
       setSuccess(true);
       setError(false);
@@ -66,21 +142,14 @@ const ContactForm = ({ sendButtonText, name, email, message, phone}: IContactFor
       setError(true);
       setSuccess(false);
       console.error(e);
+    } finally {
+      sending.current = false;
+      setCaptchaToken('');
+      if (captchaWidget.current !== null) recaptcha?.reset(captchaWidget.current);
     }
-
-
-
-    // Simulate random success/failure
-    // const isSuccess = Math.random() > 0.5;
-    // if (isSuccess) {
-    //   setSuccess(true);
-    //   setError(false);
-    //   setForm({ name: '', email: '', number: '', message: '' });
-    // } else {
-    //   setError(true);
-    //   setSuccess(false);
-    // }
   };
+
+
 
   const handleRetry = () => {
     setError(false);
@@ -92,6 +161,16 @@ const ContactForm = ({ sendButtonText, name, email, message, phone}: IContactFor
 
   return (
     <form className={styles.contactForm} onSubmit={handleSubmit}>
+      <Script
+        id="contact-recaptcha"
+        src="https://www.google.com/recaptcha/api.js?render=explicit"
+        strategy="afterInteractive"
+        onReady={() => setCaptchaReady(true)}
+        onError={() => {
+          setCaptchaToken('');
+          setCaptchaError('Unable to load reCAPTCHA. Please check your connection and reload the page.');
+        }}
+      />
       {(success || error) && (
         <div style={{textAlign: 'center', padding: '12px 0 24px 0'}}>
           {success && (
@@ -156,8 +235,12 @@ const ContactForm = ({ sendButtonText, name, email, message, phone}: IContactFor
           disabled={success || error}
         />
       </div>
+      <div className={styles.captchaSection} hidden={success || error}>
+        <div ref={captchaContainer} />
+        {captchaError && <p className={styles.captchaError} role="alert">{captchaError}</p>}
+      </div>
       <div className={styles.buttonRow}>
-        <button className={styles.sendButton} type="submit" disabled={submitting || isFormIncomplete}>
+        <button className={styles.sendButton} type="submit" disabled={submitting || success || error || isFormIncomplete || !captchaToken}>
           {sendButtonText && sendButtonText}
           <div className={styles.arrow}><Image width={100} height={100} src={"/buttons/right-arrow.svg"} alt="" /></div>
         </button>
