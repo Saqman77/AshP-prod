@@ -32,7 +32,7 @@ interface IContactFormProps {
 // import FORMSPARK_FORM_ID from .env
 const FORMSPARK_FORM_ID = process.env.NEXT_PUBLIC_FORMSPARK_FORM_ID || '';
 
-const RECAPTCHA_SITE_KEY = '6LcIx-gtAAAAAOYi6kHo4phMwOXFUU2p9F31lFwq';
+const RECAPTCHA_SITE_KEY = '6LcHDuotAAAAAO3La3oTt6QtAOHezEpDwz9Frjdp';
 
 type RecaptchaApi = {
   ready: (callback: () => void) => void;
